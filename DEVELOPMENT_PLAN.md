@@ -14,7 +14,7 @@ This document defines the staged construction of the Chronos historical knowledg
 
 ---
 
-## Stage 0 — Schema and Tooling Foundation
+## Stage 0 — Schema and Tooling Foundation ✅
 **Goal:** A validated, documented data model and the CLI tools to work with it. No UI.
 
 ### Deliverables
@@ -36,13 +36,12 @@ This document defines the staged construction of the Chronos historical knowledg
 - The CSV exporter produces a clean persons list and a GIS points file from baseline data
 
 ### Seed Data
-- Port the ~60 nodes from the prototype visualizer into proper schema format
-- These become `epoch-000-baseline`
-- Manually curate ~40 canonical edges between them
+- Built `epoch-000-baseline` from scratch: 60 nodes (Axial Age + classical antiquity, ~1000 BCE–400 CE), 40 canonical edges
+- Built `epoch-001-world-history-scaffold`: 45 additional nodes covering Mesopotamia, Egypt, South Asia, East Asia, Islamic world, Medieval Europe, Byzantium, Sub-Saharan Africa, Americas, Mongols; 27 edges including cross-epoch connections (e.g., Aristotle → Ibn Rushd → Aquinas)
 
 ---
 
-## Stage 1 — Core Query Engine
+## Stage 1 — Core Query Engine ✅
 **Goal:** A programmatic API (TypeScript functions) that any consumer — UI or AI agent — calls to interrogate the graph.
 
 ### Deliverables
@@ -65,28 +64,37 @@ This document defines the staged construction of the Chronos historical knowledg
   - `flowPaths(scope)` — route and edge paths for flow map rendering
 
 ### Endpoint Manifest (machine-readable, in `chronos.config.json`)
-All functions above are documented with their input/output signatures and exposed in the manifest so AI agents can discover and call them.
+All functions above are documented with their input/output signatures and exposed in the manifest so AI agents can discover and call them. 20 endpoints defined covering Stages 1–7.
 
-### Acceptance Criteria
+### Acceptance Criteria (all met)
 - `subgraph({ time_range: [-500, 500], tags: ["philosophy"] })` returns the correct filtered node and edge sets
 - `contemporaries("confucius", 50)` returns Siddhartha Gautama, Heraclitus, and other Axial Age figures
 - `fuzzyPosition` correctly returns a range display for a node with `precision: "century"`
+- 40/40 unit tests passing across graph.test.ts, timeline.test.ts, map.test.ts
 
 ---
 
-## Stage 2 — Map View (Port and Extend Prototype)
-**Goal:** The existing prototype visualizer rebuilt as a proper React application reading from the query engine.
+## Stage 2 — Map View
+**Goal:** A React application reading from the query engine, rendering the graph as an interactive map.
+
+### Stack
+- **Vite** — build tool and dev server
+- **React + TypeScript** — UI framework
+- **Zustand** — reactive scope store shared across all views
+- **react-map-gl** — React wrapper for MapLibre GL JS
+- **MapLibre GL JS** — open-source map renderer, no token required; migration path to Mapbox GL JS (for terrain, historical tiles) in Stage 8 requires only a style URL change and a token
+- **Deck.gl** — data overlay layers (ScatterplotLayer for points, ArcLayer for flows, HeatmapLayer for density)
 
 ### Deliverables
 
 - `src/render/MapView.tsx` — Point map mode, fully driven by `subgraph()` query
-- `src/render/layers/PointLayer.tsx` — Node dots with glow, fade, density halos
-- `src/render/layers/FlowLayer.tsx` — Directional edge arcs
-- `src/render/layers/DensityLayer.tsx` — Aggregate intensity surface
-- `src/ui/ScopePanel.tsx` — Filter/activation controls (time range, tags, node types)
+- `src/render/layers/PointLayer.tsx` — Deck.gl ScatterplotLayer; fuzzy-temporal nodes render as halos (low opacity, gradient edge) rather than crisp points
+- `src/render/layers/FlowLayer.tsx` — Deck.gl ArcLayer for directional edge arcs
+- `src/render/layers/DensityLayer.tsx` — Deck.gl HeatmapLayer for aggregate intensity surface
+- `src/ui/ScopePanel.tsx` — Filter/activation controls (time range, tags, node types, connection classes)
 - `src/ui/DetailPanel.tsx` — Node detail view with description, connections, prose
 - `src/ui/TimelineScrubber.tsx` — Timeline with epoch markers, draggable cursor
-- `src/state/scope-store.ts` — Reactive shared scope state (all views subscribe to this)
+- `src/state/scope-store.ts` — Zustand store; reactive scope shared across all views
 
 ### Map Sub-modes (this stage)
 - Point map — complete
@@ -95,8 +103,8 @@ All functions above are documented with their input/output signatures and expose
 
 ### Map Sub-modes (deferred)
 - Choropleth — Stage 4
-- Terrain integration (Deck.gl) — Stage 5
-- Isochrone — Stage 6
+- Terrain integration — Stage 8
+- Isochrone — Stage 8
 
 ### Acceptance Criteria
 - Scrubbing the timeline updates node visibility and density halos in real time
@@ -277,19 +285,20 @@ Inferred edges display with:
 ---
 
 ## Stage 8 — Terrain Map and GIS Integration
-**Goal:** Real geographic data underneath the visualization; QGIS-compatible output.
+**Goal:** Real geographic basemap data, historical tile layers, and GIS-ready output.
 
 ### Deliverables
 
-- Deck.gl or Mapbox GL JS integration replacing the canvas map renderer
+- Upgrade basemap from MapLibre free tiles to **Mapbox GL JS** (change style URL + add API token — no other code changes needed)
 - Historical map tile layers (e.g., from the Digital Atlas of Roman and Medieval Civilizations)
-- Terrain elevation layer
+- Terrain elevation layer via Mapbox terrain API
 - River system and coastline data as static GeoJSON overlays
 - Choropleth mode: regions shaded by a computed attribute at a given timestamp
 - Isochrone mode: influence propagation rings from a selected node
+- QGIS compatibility verification for GeoJSON export
 
 ### Note on Scope
-This stage deliberately comes last. The data model, query layer, and analysis tools do not depend on a specific map renderer. Swapping the renderer in Stage 8 does not require touching the schema, the engine, or the AI layer — it is purely a presentation change. This is by design.
+Deck.gl is already present from Stage 2 and continues to render data overlays throughout. Stage 8 is purely a basemap upgrade — swapping MapLibre for Mapbox as the tile provider — plus terrain and historical layers on top. The data model, query layer, and AI layer are untouched. This is by design: the render layer is the last thing to specialize.
 
 ---
 

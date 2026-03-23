@@ -35,8 +35,9 @@ A few commitments that shape every design decision:
 ```
 chronos/
 ├── data/
-│   ├── nodes/              # One JSON file per node or grouped by epoch/region
-│   ├── edges/              # Edge definitions, keyed by epoch
+│   ├── epochs/             # Batch JSON files, one per research epoch
+│   │   ├── epoch-000-baseline.json
+│   │   └── epoch-001-world-history-scaffold.json
 │   ├── staging/            # Incoming epoch batches awaiting audit
 │   ├── stories/            # Saved story states
 │   ├── prose-cache/        # Cached AI-generated prose, keyed by subject+angle
@@ -61,16 +62,24 @@ chronos/
 │   │   ├── enrich.ts       # Web search → staged batch JSON
 │   │   └── key-reconcile.ts  # Key quantization and provisional key management
 │   ├── render/
-│   │   ├── MapView.tsx         # Point, flow, density, choropleth, terrain sub-modes
+│   │   ├── App.tsx             # Root component, panel layout
+│   │   ├── MapView.tsx         # Point, flow, density, choropleth sub-modes
 │   │   ├── TimelineView.tsx    # Swimlane timeline with event overlays
 │   │   ├── NetworkView.tsx     # Force graph, hierarchical, bipartite, chord
 │   │   ├── EntityPage.tsx      # Deep-dive single node view
 │   │   ├── ComparisonView.tsx  # Side-by-side node comparison
 │   │   ├── NarrativeView.tsx   # Story state as linked prose
-│   │   └── AuditView.tsx       # Epoch review and conflict resolution UI
+│   │   ├── AuditView.tsx       # Epoch review and conflict resolution UI
+│   │   └── layers/
+│   │       ├── PointLayer.tsx      # Deck.gl ScatterplotLayer wrapper
+│   │       ├── FlowLayer.tsx       # Deck.gl ArcLayer wrapper
+│   │       └── DensityLayer.tsx    # Deck.gl HeatmapLayer wrapper
+│   ├── state/
+│   │   └── scope-store.ts      # Zustand store — reactive scope shared across all views
 │   └── ui/
 │       ├── ScopePanel.tsx      # Filter and activation controls
 │       ├── DetailPanel.tsx     # Contextual node/edge details
+│       ├── TimelineScrubber.tsx # Draggable timeline cursor with epoch markers
 │       ├── AIPanel.tsx         # Inference, enrichment, prose requests
 │       ├── StoryPanel.tsx      # Save/load/annotate story states
 │       ├── ExportPanel.tsx     # CSV, GeoJSON, GraphML export
@@ -82,6 +91,8 @@ chronos/
 │   └── export.ts           # CLI: generate structured exports
 ├── dist/
 │   └── graph.json          # Compiled runtime graph (generated, not canonical)
+├── index.html              # Vite entry point
+├── vite.config.ts          # Vite build configuration
 ├── chronos.config.json     # Project config, endpoint manifest, display defaults
 ├── README.md               # This file
 ├── DEVELOPMENT_PLAN.md     # Staged construction plan
@@ -136,7 +147,7 @@ All views are linked through a shared reactive `scope` object. Changing the scop
 - **Flow Map** — directional edge arcs and route paths
 - **Density Surface** — aggregate civilizational intensity field
 - **Choropleth** — regions shaded by a computed attribute *(Stage 4)*
-- **Terrain Map** — Deck.gl with elevation, rivers, historical tile layers *(Stage 8)*
+- **Terrain Map** — MapLibre GL JS with elevation, rivers, historical tile layers *(Stage 8)*
 - **Isochrone Map** — influence propagation rings from a selected node *(Stage 8)*
 
 ### Time-Primary
@@ -184,6 +195,22 @@ Research sessions use a separate Claude thread loaded with `CHRONOS_INGESTION_PR
 Research thread → batch JSON → validate → stage epoch → audit (conflict detection, duplicate detection, key reconciliation) → human review of flagged items → promote to canonical → recompile graph
 ```
 
+In practice:
+
+```bash
+# 1. Validate a batch file produced by a research thread
+npx ts-node scripts/validate.ts data/epochs/my-epoch.json
+
+# 2. Stage it for audit (assigns epoch ID, copies to data/staging/)
+npx ts-node scripts/stage-epoch.ts data/epochs/my-epoch.json
+
+# 3. After review, drop approved files into data/epochs/ and recompile
+npx ts-node scripts/compile-graph.ts
+
+# 4. Export to CSV or GeoJSON for external analysis
+npx ts-node scripts/export.ts --schema persons-list --time-range -600,400
+```
+
 Epochs are named and preserved. Every piece of data in the canonical graph can be traced to the epoch that introduced it. Retracting an epoch is possible without corrupting later ones, though it triggers a re-audit of anything that depended on it.
 
 ---
@@ -223,36 +250,38 @@ Export schemas are defined in `data/schema/export-schemas.json` and can be exten
 
 ## TODOs
 
-### Stage 0
-- [ ] Write `data/schema/node.schema.json` with all types and validation rules
-- [ ] Write `data/schema/edge.schema.json`
-- [ ] Seed `data/schema/keys-registry.json` with ~100 canonical keys from baseline data
-- [ ] Write `data/schema/export-schemas.json` with persons, works, events, gis-points schemas
-- [ ] Convert prototype's ~60 nodes to proper schema format as `epoch-000-baseline`
-- [ ] Write `scripts/validate.ts`
-- [ ] Write `scripts/compile-graph.ts`
-- [ ] Write `scripts/stage-epoch.ts`
-- [ ] Write initial `chronos.config.json` with endpoint manifest skeleton
-- [ ] Write `scripts/export.ts` with CSV and GeoJSON output
+### Stage 0 ✅
+- [x] Write `data/schema/node.schema.json` with all types and validation rules
+- [x] Write `data/schema/edge.schema.json`
+- [x] Seed `data/schema/keys-registry.json` with ~90 canonical keys
+- [x] Write `data/schema/export-schemas.json` with persons, works, events, gis-points schemas
+- [x] Build `epoch-000-baseline` (60 nodes, Axial Age + classical antiquity)
+- [x] Build `epoch-001-world-history-scaffold` (45 nodes, sparse global coverage)
+- [x] Write `scripts/validate.ts`
+- [x] Write `scripts/compile-graph.ts`
+- [x] Write `scripts/stage-epoch.ts`
+- [x] Write `chronos.config.json` with full 20-endpoint manifest
+- [x] Write `scripts/export.ts` with CSV and GeoJSON output
 
-### Stage 1
-- [ ] Write `src/engine/types.ts`
-- [ ] Write `src/engine/scope.ts`
-- [ ] Implement `graph.ts`: `loadGraph`, `getNode`, `subgraph`, `neighbors`, `path`, `contemporaries`, `keyOverlap`
-- [ ] Implement `timeline.ts`: `lanesToScope`, `fuzzyPosition`
-- [ ] Implement `map.ts`: `clusters`, `flowPaths`
-- [ ] Write unit tests for all engine functions
-- [ ] Generate `ENDPOINTS.md` from config manifest
+### Stage 1 ✅
+- [x] Write `src/engine/types.ts`
+- [x] Write `src/engine/scope.ts`
+- [x] Implement `graph.ts`: `loadGraph`, `getNode`, `subgraph`, `neighbors`, `path`, `contemporaries`, `keyOverlap`
+- [x] Implement `timeline.ts`: `lanesToScope`, `fuzzyPosition`
+- [x] Implement `map.ts`: `clusters`, `flowPaths`
+- [x] Write unit tests for all engine functions (40/40 passing)
 
 ### Stage 2
-- [ ] Initialize React project with TypeScript
-- [ ] Implement `ScopePanel.tsx` and reactive scope store
-- [ ] Port prototype canvas renderer to `MapView.tsx` / `PointLayer.tsx`
-- [ ] Implement `FlowLayer.tsx`
-- [ ] Implement `DensityLayer.tsx`
-- [ ] Implement `DetailPanel.tsx` with prose display
-- [ ] Implement `TimelineScrubber.tsx`
-- [ ] Implement fuzzy-temporal display (halo rendering for uncertain nodes)
+- [ ] Initialize Vite + React + TypeScript project
+- [ ] Set up react-map-gl with MapLibre GL JS basemap
+- [ ] Implement `src/state/scope-store.ts` (Zustand reactive scope store)
+- [ ] Implement `src/ui/ScopePanel.tsx` — filter and activation controls
+- [ ] Implement `src/render/MapView.tsx` driving `subgraph()` queries
+- [ ] Implement `src/render/layers/PointLayer.tsx` (Deck.gl ScatterplotLayer) with fuzzy-temporal halo rendering
+- [ ] Implement `src/render/layers/FlowLayer.tsx` (Deck.gl ArcLayer)
+- [ ] Implement `src/render/layers/DensityLayer.tsx` (Deck.gl HeatmapLayer)
+- [ ] Implement `src/ui/DetailPanel.tsx` with prose display and clickable connections
+- [ ] Implement `src/ui/TimelineScrubber.tsx` with draggable cursor and epoch markers
 
 ### Stage 3
 - [ ] Implement `TimelineView.tsx` with `PersonLane`, `PeriodLane`, `EventOverlay`, `ConnectionOverlay`
@@ -285,10 +314,12 @@ Export schemas are defined in `data/schema/export-schemas.json` and can be exten
 - [ ] Implement `ExportPanel.tsx`
 
 ### Stage 8
-- [ ] Evaluate Deck.gl vs. Mapbox GL JS for terrain integration
-- [ ] Source historical map tile layers
-- [ ] Implement choropleth mode
-- [ ] Implement isochrone mode
+- [ ] Switch basemap from MapLibre free tiles to Mapbox (change style URL + add token)
+- [ ] Integrate historical map tile layers (e.g., Digital Atlas of Roman and Medieval Civilizations)
+- [ ] Add terrain elevation layer via Mapbox terrain API
+- [ ] Add river system and coastline data as static GeoJSON overlays
+- [ ] Implement choropleth mode (regions shaded by computed attribute)
+- [ ] Implement isochrone mode (influence propagation rings from selected node)
 - [ ] Verify QGIS compatibility of GeoJSON export
 
 ### Ongoing
@@ -304,14 +335,18 @@ Export schemas are defined in `data/schema/export-schemas.json` and can be exten
 
 | Package | Purpose |
 |---------|---------|
+| Vite | Build tool and dev server |
 | React + TypeScript | UI framework |
-| Zustand or Jotai | Reactive scope state |
+| Zustand | Reactive scope state shared across all views |
 | D3.js | Timeline and network layout calculations |
-| Deck.gl or Mapbox GL JS | Terrain map mode (Stage 8) |
+| MapLibre GL JS | Open-source map renderer (no token required) |
+| react-map-gl | React wrapper for MapLibre |
+| Deck.gl | Data overlay layers: ScatterplotLayer, ArcLayer, HeatmapLayer |
 | Zod | Runtime schema validation |
 | Ajv | JSON Schema validation for CLI tools |
 | better-sqlite3 | Optional local cache for compiled graph at scale |
 | Anthropic SDK | AI integration layer |
+| Mapbox GL JS | Stage 8 upgrade: replace MapLibre for terrain, historical tiles (requires token) |
 
 ---
 

@@ -1,0 +1,5094 @@
+{
+  "epoch": "epoch-001-world-history-scaffold",
+  "description": "Sparse world history scaffold: one or two nodes per major civilization not covered in epoch-000, prioritizing geographic and temporal spread. ~3000 BCE \u2013 1500 CE.",
+  "produced_by": "claude-research-thread",
+  "produced_at": "2026-03-23T00:00:00Z",
+  "nodes": [
+    {
+      "id": "sargon-of-akkad",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Sargon of Akkad",
+      "aliases": [
+        "Sargon I",
+        "Sharru-Kinu"
+      ],
+      "temporal": {
+        "start": -2334,
+        "end": -2279,
+        "precision": "year",
+        "confidence": 0.7,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 33.1,
+          "lon": 44.4,
+          "precision": "city",
+          "confidence": 0.6,
+          "place_label": "Akkad",
+          "modern_equivalent": "Central Iraq"
+        },
+        "active_regions": [
+          {
+            "region_id": "mesopotamia",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "mesopotamia",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "military-technology"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "First empire builder in recorded history, founder of the Akkadian Empire.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.75,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Sargon of Akkad",
+          "url": "https://en.wikipedia.org/wiki/Sargon_of_Akkad"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "hammurabi",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Hammurabi",
+      "aliases": [],
+      "temporal": {
+        "start": -1810,
+        "end": -1750,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": -1820,
+          "latest": -1750
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 32.5,
+          "lon": 44.4,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Babylon",
+          "modern_equivalent": "Central Iraq"
+        },
+        "active_regions": [
+          {
+            "region_id": "mesopotamia",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "mesopotamia",
+          "law"
+        ],
+        "keys": [
+          "law-and-jurisprudence",
+          "governance",
+          "empire"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Babylonian king who codified one of the earliest written law codes.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Hammurabi",
+          "url": "https://en.wikipedia.org/wiki/Hammurabi"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "epic-of-gilgamesh",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Epic of Gilgamesh",
+      "aliases": [],
+      "temporal": {
+        "start": -2100,
+        "end": -2100,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -2200,
+          "latest": -2000
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 31.3,
+          "lon": 45.6,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Uruk",
+          "modern_equivalent": "Southern Iraq"
+        },
+        "active_regions": [
+          {
+            "region_id": "mesopotamia",
+            "role": "origin"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "mesopotamia",
+          "literature"
+        ],
+        "keys": [
+          "literary-culture",
+          "cultural-memory",
+          "oral-tradition"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The earliest surviving great work of literature, recording the deeds of the king of Uruk.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Epic of Gilgamesh",
+          "url": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "babylonian-astronomy",
+      "schema_version": "1.0",
+      "node_type": "concept",
+      "label": "Babylonian Astronomy",
+      "aliases": [],
+      "temporal": {
+        "start": -700,
+        "end": -700,
+        "precision": "century",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -800,
+          "latest": -600
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 32.5,
+          "lon": 44.4,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Babylon",
+          "modern_equivalent": "Central Iraq"
+        },
+        "active_regions": [
+          {
+            "region_id": "mesopotamia",
+            "role": "origin"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "mesopotamia",
+          "science"
+        ],
+        "keys": [
+          "astronomy",
+          "mathematics",
+          "technology"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Systematic observation and mathematical modeling of celestial cycles by Babylonian scholars.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Babylonian astronomy",
+          "url": "https://en.wikipedia.org/wiki/Babylonian_astronomy"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "ramesses-ii",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Ramesses II",
+      "aliases": [
+        "Ramesses the Great",
+        "Ramses II"
+      ],
+      "temporal": {
+        "start": -1303,
+        "end": -1213,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -1310,
+          "latest": -1213
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.7,
+          "lon": 32.6,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Thebes",
+          "modern_equivalent": "Luxor, Egypt"
+        },
+        "active_regions": [
+          {
+            "region_id": "egypt",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "egypt",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "divine-kingship",
+          "military-technology",
+          "court-patronage"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Egyptian pharaoh of the New Kingdom, one of the most celebrated rulers of ancient Egypt.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Ramesses II",
+          "url": "https://en.wikipedia.org/wiki/Ramesses_II"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "egyptian-new-kingdom",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Egyptian New Kingdom",
+      "aliases": [
+        "New Kingdom of Egypt"
+      ],
+      "temporal": {
+        "start": -1550,
+        "end": -1070,
+        "precision": "decade",
+        "confidence": 0.9,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "egypt",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "egypt",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "divine-kingship",
+          "art-and-aesthetics"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The era of Egypt's greatest power, encompassing the 18th\u201320th dynasties.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: New Kingdom of Egypt",
+          "url": "https://en.wikipedia.org/wiki/New_Kingdom_of_Egypt"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "vedic-period",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Vedic Period",
+      "aliases": [
+        "Vedic Age"
+      ],
+      "temporal": {
+        "start": -1500,
+        "end": -500,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -1700,
+          "latest": -500
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "indian-subcontinent",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "india",
+          "religion",
+          "hinduism"
+        ],
+        "keys": [
+          "hinduism",
+          "oral-tradition",
+          "dharma",
+          "religion"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The period of composition of the Vedas and early development of the Brahmanical tradition.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.75,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Vedic period",
+          "url": "https://en.wikipedia.org/wiki/Vedic_period"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "chanakya",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Chanakya",
+      "aliases": [
+        "Kautilya",
+        "Vishnugupta"
+      ],
+      "temporal": {
+        "start": -350,
+        "end": -275,
+        "precision": "decade",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -375,
+          "latest": -275
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.6,
+          "lon": 85.1,
+          "precision": "city",
+          "confidence": 0.75,
+          "place_label": "Pataliputra",
+          "modern_equivalent": "Patna, Bihar, India"
+        },
+        "active_regions": [
+          {
+            "region_id": "maurya-empire",
+            "role": "advisor"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "india",
+          "philosophy",
+          "governance"
+        ],
+        "keys": [
+          "governance",
+          "political-philosophy",
+          "law-and-jurisprudence"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Indian statesman and philosopher, author of the Arthashastra \u2014 an ancient treatise on statecraft.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.75,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Chanakya",
+          "url": "https://en.wikipedia.org/wiki/Chanakya"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "arthashastra",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Arthashastra",
+      "aliases": [],
+      "temporal": {
+        "start": -300,
+        "end": -300,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -350,
+          "latest": -250
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.6,
+          "lon": 85.1,
+          "precision": "city",
+          "confidence": 0.75,
+          "place_label": "Pataliputra",
+          "modern_equivalent": "Patna, Bihar, India"
+        },
+        "active_regions": [
+          {
+            "region_id": "maurya-empire",
+            "role": "origin"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "india",
+          "philosophy",
+          "governance"
+        ],
+        "keys": [
+          "governance",
+          "political-philosophy",
+          "law-and-jurisprudence"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Ancient Indian treatise on statecraft, economic policy, and military strategy, attributed to Chanakya.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Arthashastra",
+          "url": "https://en.wikipedia.org/wiki/Arthashastra"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "gupta-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Gupta Empire",
+      "aliases": [
+        "Gupta period"
+      ],
+      "temporal": {
+        "start": 320,
+        "end": 550,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "northern-india",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "india",
+          "empire",
+          "science"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "mathematics",
+          "astronomy",
+          "art-and-aesthetics"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The 'Golden Age' of ancient India, marked by advances in science, mathematics, literature, and philosophy.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Gupta Empire",
+          "url": "https://en.wikipedia.org/wiki/Gupta_Empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "kalidasa",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Kalidasa",
+      "aliases": [],
+      "temporal": {
+        "start": 380,
+        "end": 440,
+        "precision": "century",
+        "confidence": 0.5,
+        "fuzzy_range": {
+          "earliest": 350,
+          "latest": 450
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Dates are highly uncertain; scholarly consensus places him in the Gupta period.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 23.2,
+          "lon": 75.8,
+          "precision": "city",
+          "confidence": 0.6,
+          "place_label": "Ujjain",
+          "modern_equivalent": "Ujjain, Madhya Pradesh, India"
+        },
+        "active_regions": [
+          {
+            "region_id": "gupta-empire",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 200,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "india",
+          "literature",
+          "art"
+        ],
+        "keys": [
+          "literary-culture",
+          "art-and-aesthetics",
+          "court-patronage"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The foremost poet and dramatist of classical Sanskrit literature, associated with the Gupta court.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.6,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Kalidasa",
+          "url": "https://en.wikipedia.org/wiki/Kalidasa"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "han-dynasty",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Han Dynasty",
+      "aliases": [
+        "Han China"
+      ],
+      "temporal": {
+        "start": -206,
+        "end": 220,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "china",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "china",
+          "empire",
+          "confucianism"
+        ],
+        "keys": [
+          "empire",
+          "bureaucracy",
+          "confucianism",
+          "silk-road"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The dynasty that consolidated Chinese imperial rule, established the Silk Road trade, and made Confucianism state orthodoxy.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Han dynasty",
+          "url": "https://en.wikipedia.org/wiki/Han_dynasty"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "silk-road",
+      "schema_version": "1.0",
+      "node_type": "route",
+      "label": "Silk Road",
+      "aliases": [
+        "Silk Route"
+      ],
+      "temporal": {
+        "start": -130,
+        "end": 1450,
+        "precision": "century",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "eurasia",
+            "role": "path"
+          }
+        ],
+        "spatial_mode": "path",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "multi-point path"
+      },
+      "semantic": {
+        "tags": [
+          "trade",
+          "transmission"
+        ],
+        "keys": [
+          "silk-road",
+          "overland-trade",
+          "cultural-diffusion",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Network of Eurasian trade routes connecting China, Central Asia, the Middle East, and Europe.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Silk Road",
+          "url": "https://en.wikipedia.org/wiki/Silk_Road"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "xuanzang",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Xuanzang",
+      "aliases": [
+        "Hsuan-tsang",
+        "Tang Sanzang"
+      ],
+      "temporal": {
+        "start": 602,
+        "end": 664,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 34.3,
+          "lon": 108.9,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Chang'an",
+          "modern_equivalent": "Xi'an, Shaanxi, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "tang-china",
+            "role": "origin"
+          },
+          {
+            "region_id": "india",
+            "role": "traveled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "china",
+          "buddhism",
+          "translation"
+        ],
+        "keys": [
+          "buddhism",
+          "text-translation",
+          "transmission-of-knowledge",
+          "cultural-diffusion"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Chinese Buddhist monk who traveled to India to retrieve scriptures, whose journey became a cornerstone of East-West cultural transmission.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Xuanzang",
+          "url": "https://en.wikipedia.org/wiki/Xuanzang"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "tang-dynasty",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Tang Dynasty",
+      "aliases": [],
+      "temporal": {
+        "start": 618,
+        "end": 907,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "china",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "china",
+          "empire",
+          "culture"
+        ],
+        "keys": [
+          "empire",
+          "bureaucracy",
+          "literary-culture",
+          "court-patronage",
+          "silk-road"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Often regarded as the high point of Chinese civilization \u2014 a cosmopolitan empire open to foreign cultures, with flourishing poetry, art, and governance.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Tang dynasty",
+          "url": "https://en.wikipedia.org/wiki/Tang_dynasty"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "song-dynasty",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Song Dynasty",
+      "aliases": [],
+      "temporal": {
+        "start": 960,
+        "end": 1279,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "china",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "china",
+          "empire",
+          "science"
+        ],
+        "keys": [
+          "empire",
+          "technology",
+          "science",
+          "urbanization",
+          "political-economy"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "A period of remarkable technological innovation in China \u2014 printing, gunpowder, the compass \u2014 alongside a sophisticated commercial economy.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Song dynasty",
+          "url": "https://en.wikipedia.org/wiki/Song_dynasty"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "movable-type-printing",
+      "schema_version": "1.0",
+      "node_type": "technology",
+      "label": "Movable Type Printing",
+      "aliases": [
+        "Bi Sheng's movable type"
+      ],
+      "temporal": {
+        "start": 1040,
+        "end": 1040,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 30.3,
+          "lon": 120.2,
+          "precision": "city",
+          "confidence": 0.75,
+          "place_label": "Hangzhou",
+          "modern_equivalent": "Hangzhou, Zhejiang, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "song-china",
+            "role": "origin"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "china",
+          "technology"
+        ],
+        "keys": [
+          "technology",
+          "writing-systems",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Bi Sheng's invention of movable-type printing in Song Dynasty China, enabling large-scale text reproduction.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Bi Sheng",
+          "url": "https://en.wikipedia.org/wiki/Bi_Sheng"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "muhammad",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Muhammad",
+      "aliases": [
+        "Prophet Muhammad",
+        "Mohammed"
+      ],
+      "temporal": {
+        "start": 570,
+        "end": 632,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Birth year debated between 570 and 571 CE.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 21.4,
+          "lon": 39.8,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Mecca",
+          "modern_equivalent": "Mecca, Saudi Arabia"
+        },
+        "active_regions": [
+          {
+            "region_id": "arabia",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "arabia",
+          "islam",
+          "religion"
+        ],
+        "keys": [
+          "monotheism",
+          "religion",
+          "governance",
+          "prophecy"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Founder of Islam, regarded by Muslims as the final prophet; his teachings, compiled as the Quran, shaped civilization across three continents.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Muhammad",
+          "url": "https://en.wikipedia.org/wiki/Muhammad"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "islamic-golden-age",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Islamic Golden Age",
+      "aliases": [],
+      "temporal": {
+        "start": 750,
+        "end": 1258,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "islamic-world",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "science",
+          "philosophy"
+        ],
+        "keys": [
+          "science",
+          "mathematics",
+          "medicine",
+          "philosophy",
+          "transmission-of-knowledge",
+          "court-patronage"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The era of Islamic intellectual flourishing, during which scholars preserved, translated, and extended Greek science and philosophy while making original contributions.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Islamic Golden Age",
+          "url": "https://en.wikipedia.org/wiki/Islamic_Golden_Age"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "al-khwarizmi",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Al-Khwarizmi",
+      "aliases": [
+        "Muhammad ibn Musa al-Khwarizmi",
+        "Algoritmi"
+      ],
+      "temporal": {
+        "start": 780,
+        "end": 850,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": 780,
+          "latest": 850
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 33.3,
+          "lon": 44.4,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Baghdad",
+          "modern_equivalent": "Baghdad, Iraq"
+        },
+        "active_regions": [
+          {
+            "region_id": "abbasid-caliphate",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "mathematics",
+          "science"
+        ],
+        "keys": [
+          "mathematics",
+          "science",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Persian mathematician whose work on algebra (al-jabr) and Hindu-Arabic numerals transformed mathematics worldwide.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Muhammad ibn Musa al-Khwarizmi",
+          "url": "https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "ibn-sina",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Ibn Sina",
+      "aliases": [
+        "Avicenna",
+        "Abu Ali Sina"
+      ],
+      "temporal": {
+        "start": 980,
+        "end": 1037,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 39.8,
+          "lon": 64.4,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Bukhara",
+          "modern_equivalent": "Bukhara, Uzbekistan"
+        },
+        "active_regions": [
+          {
+            "region_id": "persia",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "philosophy",
+          "medicine"
+        ],
+        "keys": [
+          "medicine",
+          "philosophy",
+          "natural-philosophy",
+          "peripatetic-philosophy",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Persian polymath whose Canon of Medicine was the dominant medical textbook in Europe and the Islamic world for centuries; major Aristotelian commentator.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Avicenna",
+          "url": "https://en.wikipedia.org/wiki/Avicenna"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "house-of-wisdom",
+      "schema_version": "1.0",
+      "node_type": "institution",
+      "label": "House of Wisdom",
+      "aliases": [
+        "Bayt al-Hikma"
+      ],
+      "temporal": {
+        "start": 830,
+        "end": 1258,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 33.3,
+          "lon": 44.4,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Baghdad",
+          "modern_equivalent": "Baghdad, Iraq"
+        },
+        "active_regions": [
+          {
+            "region_id": "abbasid-caliphate",
+            "role": "located"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "scholarship",
+          "translation"
+        ],
+        "keys": [
+          "institution-building",
+          "transmission-of-knowledge",
+          "text-translation",
+          "science"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The intellectual center of the Islamic Golden Age in Baghdad, where Greek, Persian, and Indian texts were translated and studied.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: House of Wisdom",
+          "url": "https://en.wikipedia.org/wiki/House_of_Wisdom"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "al-ghazali",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Al-Ghazali",
+      "aliases": [
+        "Abu Hamid al-Ghazali",
+        "Algazel"
+      ],
+      "temporal": {
+        "start": 1058,
+        "end": 1111,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 36.2,
+          "lon": 59.6,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Tus",
+          "modern_equivalent": "Mashhad area, Iran"
+        },
+        "active_regions": [
+          {
+            "region_id": "persia",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "philosophy",
+          "theology"
+        ],
+        "keys": [
+          "philosophy",
+          "religion",
+          "mysticism",
+          "ethics",
+          "scholasticism"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Persian theologian and mystic whose critique of Aristotelian philosophy (The Incoherence of the Philosophers) reshaped Islamic intellectual life.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Al-Ghazali",
+          "url": "https://en.wikipedia.org/wiki/Al-Ghazali"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "ibn-rushd",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Ibn Rushd",
+      "aliases": [
+        "Averroes",
+        "Abu al-Walid Muhammad ibn Ahmad ibn Rushd"
+      ],
+      "temporal": {
+        "start": 1126,
+        "end": 1198,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.9,
+          "lon": -4.8,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Cordoba",
+          "modern_equivalent": "C\u00f3rdoba, Spain"
+        },
+        "active_regions": [
+          {
+            "region_id": "al-andalus",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "philosophy"
+        ],
+        "keys": [
+          "philosophy",
+          "peripatetic-philosophy",
+          "commentary-tradition",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Andalusian philosopher and physician whose extensive commentaries on Aristotle earned him the title 'The Commentator' in medieval Europe, bridging Islamic and scholastic thought.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Averroes",
+          "url": "https://en.wikipedia.org/wiki/Averroes"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "quran",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Quran",
+      "aliases": [
+        "Koran",
+        "Al-Quran"
+      ],
+      "temporal": {
+        "start": 610,
+        "end": 632,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 21.4,
+          "lon": 39.8,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Mecca",
+          "modern_equivalent": "Mecca, Saudi Arabia"
+        },
+        "active_regions": [
+          {
+            "region_id": "arabia",
+            "role": "origin"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "religion",
+          "literature"
+        ],
+        "keys": [
+          "monotheism",
+          "religion",
+          "oral-tradition",
+          "literary-culture"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The central religious text of Islam, regarded by Muslims as divine revelation received by Muhammad and compiled into written form after his death.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Quran",
+          "url": "https://en.wikipedia.org/wiki/Quran"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "charlemagne",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Charlemagne",
+      "aliases": [
+        "Charles the Great",
+        "Carolus Magnus"
+      ],
+      "temporal": {
+        "start": 742,
+        "end": 814,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 50.8,
+          "lon": 6.1,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Aachen",
+          "modern_equivalent": "Aachen, Germany"
+        },
+        "active_regions": [
+          {
+            "region_id": "frankish-empire",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 200,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "europe",
+          "empire",
+          "church"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "institution-building",
+          "christianity"
+        ],
+        "keys_provisional": [
+          {
+            "proposed_key": "christianity",
+            "description": "Christianity as a historical institutional and cultural force",
+            "candidate_canonical_parents": [
+              "monotheism",
+              "religion"
+            ],
+            "status": "provisional"
+          }
+        ],
+        "facets": {},
+        "description": {
+          "short": "Frankish king and first Holy Roman Emperor, whose reign unified much of Western Europe and spurred the Carolingian Renaissance.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Charlemagne",
+          "url": "https://en.wikipedia.org/wiki/Charlemagne"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "thomas-aquinas",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Thomas Aquinas",
+      "aliases": [
+        "Aquinas",
+        "Doctor Angelicus"
+      ],
+      "temporal": {
+        "start": 1225,
+        "end": 1274,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.9,
+          "lon": 12.5,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Naples",
+          "modern_equivalent": "Naples, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "western-europe",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "europe",
+          "philosophy",
+          "theology"
+        ],
+        "keys": [
+          "scholasticism",
+          "philosophy",
+          "aristotelian-logic",
+          "commentary-tradition",
+          "ethics"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Italian Dominican friar and theologian who synthesized Aristotelian philosophy with Christian theology, completing the scholastic project.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Thomas Aquinas",
+          "url": "https://en.wikipedia.org/wiki/Thomas_Aquinas"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "black-death",
+      "schema_version": "1.0",
+      "node_type": "phenomenon",
+      "label": "Black Death",
+      "aliases": [
+        "Bubonic Plague pandemic",
+        "Great Pestilence"
+      ],
+      "temporal": {
+        "start": 1347,
+        "end": 1351,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "europe",
+            "role": "affected"
+          },
+          {
+            "region_id": "asia",
+            "role": "affected"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "europe",
+          "asia",
+          "epidemic"
+        ],
+        "keys": [
+          "population-movement",
+          "empire-decline",
+          "cultural-memory"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The most devastating pandemic in human history, killing an estimated one-third of Europe's population and reshaping medieval society.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Black Death",
+          "url": "https://en.wikipedia.org/wiki/Black_Death"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "dante-alighieri",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Dante Alighieri",
+      "aliases": [
+        "Dante"
+      ],
+      "temporal": {
+        "start": 1265,
+        "end": 1321,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 43.8,
+          "lon": 11.2,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Florence",
+          "modern_equivalent": "Florence, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "italy",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "europe",
+          "literature",
+          "religion"
+        ],
+        "keys": [
+          "literary-culture",
+          "cultural-memory",
+          "religion",
+          "scholasticism"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Italian poet whose Divine Comedy synthesized medieval Christian theology, classical learning, and vernacular literature into the foundational work of Italian literature.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Dante Alighieri",
+          "url": "https://en.wikipedia.org/wiki/Dante_Alighieri"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "byzantine-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Byzantine Empire",
+      "aliases": [
+        "Eastern Roman Empire"
+      ],
+      "temporal": {
+        "start": 330,
+        "end": 1453,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.0,
+          "lon": 28.9,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Constantinople",
+          "modern_equivalent": "Istanbul, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "eastern-mediterranean",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "byzantine",
+          "empire",
+          "christianity"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "cultural-memory",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The continuation of the Eastern Roman Empire, preserving Greco-Roman culture and transmitting classical learning to the medieval West and Islamic world.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Byzantine Empire",
+          "url": "https://en.wikipedia.org/wiki/Byzantine_Empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "justinian-i",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Justinian I",
+      "aliases": [
+        "Justinian the Great"
+      ],
+      "temporal": {
+        "start": 483,
+        "end": 565,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.0,
+          "lon": 28.9,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Constantinople",
+          "modern_equivalent": "Istanbul, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "byzantine-empire",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "byzantine",
+          "law",
+          "empire"
+        ],
+        "keys": [
+          "law-and-jurisprudence",
+          "governance",
+          "empire"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Byzantine emperor who codified Roman law in the Corpus Juris Civilis \u2014 the foundation of legal systems across Europe \u2014 and briefly reconquered the western Mediterranean.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Justinian I",
+          "url": "https://en.wikipedia.org/wiki/Justinian_I"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "mali-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Mali Empire",
+      "aliases": [
+        "Manden Kurufaba"
+      ],
+      "temporal": {
+        "start": 1235,
+        "end": 1600,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": 1230,
+          "latest": 1610
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "west-africa",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "africa",
+          "empire",
+          "trade"
+        ],
+        "keys": [
+          "empire",
+          "trade",
+          "overland-trade",
+          "governance",
+          "institution-building"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The largest empire in West African history, controlling trans-Saharan gold and salt trade and home to the great centers of Timbuktu.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Mali Empire",
+          "url": "https://en.wikipedia.org/wiki/Mali_Empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "mansa-musa",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Mansa Musa",
+      "aliases": [
+        "Musa I of Mali",
+        "Musa Keita I"
+      ],
+      "temporal": {
+        "start": 1280,
+        "end": 1337,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": 1270,
+          "latest": 1337
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 12.0,
+          "lon": -8.0,
+          "precision": "city",
+          "confidence": 0.6,
+          "place_label": "Niani",
+          "modern_equivalent": "Niani area, Guinea/Mali border"
+        },
+        "active_regions": [
+          {
+            "region_id": "mali-empire",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 200,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "africa",
+          "empire",
+          "islam"
+        ],
+        "keys": [
+          "empire",
+          "court-patronage",
+          "trade",
+          "institution-building",
+          "religion"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Ruler of the Mali Empire whose 1324 hajj to Mecca \u2014 during which he distributed so much gold it caused inflation across North Africa and the Middle East \u2014 announced sub-Saharan Africa's wealth to the medieval world.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Mansa Musa",
+          "url": "https://en.wikipedia.org/wiki/Mansa_Musa"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "great-zimbabwe",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Great Zimbabwe",
+      "aliases": [],
+      "temporal": {
+        "start": 1100,
+        "end": 1450,
+        "precision": "century",
+        "confidence": 0.75,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": -20.3,
+          "lon": 30.9,
+          "precision": "region",
+          "confidence": 0.9,
+          "place_label": "Zimbabwe Plateau",
+          "modern_equivalent": "Masvingo, Zimbabwe"
+        },
+        "active_regions": [
+          {
+            "region_id": "southeastern-africa",
+            "role": "located"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "africa",
+          "place",
+          "trade"
+        ],
+        "keys": [
+          "urbanization",
+          "trade",
+          "empire",
+          "institution-building"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The stone-walled city that was the capital of the Kingdom of Zimbabwe, a major center of trade between the African interior and the Indian Ocean coast.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Great Zimbabwe",
+          "url": "https://en.wikipedia.org/wiki/Great_Zimbabwe"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "maya-classic-period",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Maya Classic Period",
+      "aliases": [
+        "Classic Maya"
+      ],
+      "temporal": {
+        "start": 250,
+        "end": 900,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 17.0,
+          "lon": -89.0,
+          "precision": "region",
+          "confidence": 0.85,
+          "place_label": "Yucat\u00e1n Peninsula",
+          "modern_equivalent": "Yucat\u00e1n, Mexico / Guatemala / Belize"
+        },
+        "active_regions": [
+          {
+            "region_id": "mesoamerica",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "americas",
+          "maya",
+          "civilization"
+        ],
+        "keys": [
+          "urbanization",
+          "astronomy",
+          "writing-systems",
+          "art-and-aesthetics",
+          "political-economy"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The height of Maya civilization, characterized by large city-states, monumental architecture, a sophisticated calendar system, and hieroglyphic writing.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Maya civilization",
+          "url": "https://en.wikipedia.org/wiki/Maya_civilization"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "tenochtitlan",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Tenochtitlan",
+      "aliases": [],
+      "temporal": {
+        "start": 1325,
+        "end": 1521,
+        "precision": "decade",
+        "confidence": 0.9,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 19.4,
+          "lon": -99.1,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Tenochtitlan",
+          "modern_equivalent": "Mexico City, Mexico"
+        },
+        "active_regions": [
+          {
+            "region_id": "mesoamerica",
+            "role": "capital"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "americas",
+          "aztec",
+          "city"
+        ],
+        "keys": [
+          "urbanization",
+          "empire",
+          "political-economy",
+          "agricultural-technology"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The island capital of the Aztec Empire, one of the largest cities in the world at the time of Spanish contact.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Tenochtitlan",
+          "url": "https://en.wikipedia.org/wiki/Tenochtitlan"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "inca-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Inca Empire",
+      "aliases": [
+        "Tawantinsuyu"
+      ],
+      "temporal": {
+        "start": 1438,
+        "end": 1533,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": -13.5,
+          "lon": -71.978,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Cusco",
+          "modern_equivalent": "Cusco, Peru"
+        },
+        "active_regions": [
+          {
+            "region_id": "south-america-andes",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 1000,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "americas",
+          "inca",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "agricultural-technology",
+          "technology",
+          "overland-trade"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The largest pre-Columbian empire, stretching along the Andes with an extraordinary road network, administrative system, and agricultural engineering.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Inca Empire",
+          "url": "https://en.wikipedia.org/wiki/Inca_Empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "genghis-khan",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Genghis Khan",
+      "aliases": [
+        "Tem\u00fcjin",
+        "Chinggis Khan"
+      ],
+      "temporal": {
+        "start": 1162,
+        "end": 1227,
+        "precision": "decade",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": 1155,
+          "latest": 1167
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Birth year disputed, traditionally 1162.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 47.9,
+          "lon": 106.9,
+          "precision": "region",
+          "confidence": 0.75,
+          "place_label": "Mongolia",
+          "modern_equivalent": "Mongolia"
+        },
+        "active_regions": [
+          {
+            "region_id": "mongolia",
+            "role": "origin"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "mongolia",
+          "empire",
+          "conquest"
+        ],
+        "keys": [
+          "empire",
+          "warfare",
+          "military-technology",
+          "silk-road",
+          "cultural-diffusion"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Founder and first Great Khan of the Mongol Empire, whose conquests created the largest contiguous land empire in history.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Genghis Khan",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "mongol-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Mongol Empire",
+      "aliases": [],
+      "temporal": {
+        "start": 1206,
+        "end": 1368,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "eurasia",
+            "role": "territory"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "mongolia",
+          "empire",
+          "trade"
+        ],
+        "keys": [
+          "empire",
+          "warfare",
+          "silk-road",
+          "cultural-diffusion",
+          "trade"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The largest contiguous land empire in history, whose Pax Mongolica enabled unprecedented trade and cultural exchange across Eurasia but whose conquests caused massive destruction.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Mongol Empire",
+          "url": "https://en.wikipedia.org/wiki/Mongol_Empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "indian-ocean-trade-network",
+      "schema_version": "1.0",
+      "node_type": "route",
+      "label": "Indian Ocean Trade Network",
+      "aliases": [
+        "Indian Ocean trade",
+        "Maritime Silk Road"
+      ],
+      "temporal": {
+        "start": -100,
+        "end": 1500,
+        "precision": "century",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "indian-ocean",
+            "role": "path"
+          }
+        ],
+        "spatial_mode": "path",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "multi-point path"
+      },
+      "semantic": {
+        "tags": [
+          "trade",
+          "maritime",
+          "india",
+          "africa",
+          "arabia"
+        ],
+        "keys": [
+          "maritime-trade",
+          "silk-road",
+          "cultural-diffusion",
+          "maritime-technology",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The ancient maritime trade network connecting East Africa, Arabia, India, and Southeast Asia, one of the most sustained commercial systems in world history.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Indian Ocean trade",
+          "url": "https://en.wikipedia.org/wiki/Indian_Ocean_trade"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "roman-catholic-church",
+      "schema_version": "1.0",
+      "node_type": "institution",
+      "label": "Roman Catholic Church",
+      "aliases": [
+        "Catholic Church",
+        "Holy See"
+      ],
+      "temporal": {
+        "start": 380,
+        "end": null,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.9,
+          "lon": 12.5,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Rome",
+          "modern_equivalent": "Vatican City / Rome, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "western-europe",
+            "role": "institutional-center"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "europe",
+          "christianity",
+          "institution"
+        ],
+        "keys": [
+          "religion",
+          "institution-building",
+          "governance",
+          "transmission-of-knowledge",
+          "cultural-memory"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The Western Christian church centered in Rome, the dominant institutional force in medieval European culture, politics, and scholarship.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Catholic Church",
+          "url": "https://en.wikipedia.org/wiki/Catholic_Church"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "constantine-i",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Constantine I",
+      "aliases": [
+        "Constantine the Great"
+      ],
+      "temporal": {
+        "start": 272,
+        "end": 337,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": 272,
+          "latest": 280
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.0,
+          "lon": 28.9,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Constantinople",
+          "modern_equivalent": "Istanbul, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "roman-empire",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "rome",
+          "christianity",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "religion",
+          "governance"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Roman emperor who legalized Christianity and founded Constantinople, reshaping the late Roman Empire and European civilization.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Constantine the Great",
+          "url": "https://en.wikipedia.org/wiki/Constantine_the_Great"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "ibn-battuta",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Ibn Battuta",
+      "aliases": [
+        "Abu Abdallah Muhammad ibn Battuta"
+      ],
+      "temporal": {
+        "start": 1304,
+        "end": 1368,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 35.8,
+          "lon": -5.8,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Tangier",
+          "modern_equivalent": "Tangier, Morocco"
+        },
+        "active_regions": [
+          {
+            "region_id": "islamic-world",
+            "role": "origin"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "morocco",
+          "travel",
+          "islam"
+        ],
+        "keys": [
+          "cultural-diffusion",
+          "geography-and-environment",
+          "transmission-of-knowledge",
+          "trade"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "Moroccan explorer whose 29-year journey across the Islamic world, Africa, India, China, and Southeast Asia produced one of the greatest travel narratives in history.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Ibn Battuta",
+          "url": "https://en.wikipedia.org/wiki/Ibn_Battuta"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "plague-of-justinian",
+      "schema_version": "1.0",
+      "node_type": "phenomenon",
+      "label": "Plague of Justinian",
+      "aliases": [],
+      "temporal": {
+        "start": 541,
+        "end": 549,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          {
+            "region_id": "mediterranean",
+            "role": "affected"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "diffuse geographic extent"
+      },
+      "semantic": {
+        "tags": [
+          "epidemic",
+          "byzantine",
+          "mediterranean"
+        ],
+        "keys": [
+          "empire-decline",
+          "population-movement",
+          "cultural-memory"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The first major pandemic of bubonic plague in recorded history, devastating the Byzantine Empire and weakening its reconquest of the west.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Plague of Justinian",
+          "url": "https://en.wikipedia.org/wiki/Plague_of_Justinian"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "fall-of-western-rome",
+      "schema_version": "1.0",
+      "node_type": "event",
+      "label": "Fall of Western Rome",
+      "aliases": [
+        "Fall of the Western Roman Empire",
+        "Deposition of Romulus Augustulus"
+      ],
+      "temporal": {
+        "start": 476,
+        "end": 476,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 44.4,
+          "lon": 12.2,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Ravenna",
+          "modern_equivalent": "Ravenna, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "western-roman-empire",
+            "role": "site"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "rome",
+          "empire",
+          "europe"
+        ],
+        "keys": [
+          "empire-decline",
+          "population-movement",
+          "cultural-memory"
+        ],
+        "keys_provisional": [],
+        "facets": {},
+        "description": {
+          "short": "The deposition of Romulus Augustulus by Odoacer in 476 CE, conventionally marking the end of the Western Roman Empire.",
+          "medium": "",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-001-world-history-scaffold",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {},
+      "sources": [
+        {
+          "label": "Wikipedia: Fall of the Western Roman Empire",
+          "url": "https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sargon-of-akkad-hammurabi-temporal",
+      "schema_version": "1.0",
+      "source": "sargon-of-akkad",
+      "target": "hammurabi",
+      "connection_class": "temporal",
+      "connection_types": [
+        "preceded-by"
+      ],
+      "direction": "undirected",
+      "strength": 0.6,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": "Separated by roughly five centuries within the Mesopotamian tradition."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Both based in Mesopotamia."
+      },
+      "semantic": {
+        "tags": [
+          "mesopotamia",
+          "kingship"
+        ],
+        "keys": [
+          "empire",
+          "governance"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.75,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Sequential Mesopotamian rulers within the same civilizational tradition.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Both rulers of Mesopotamian empires separated by five centuries, linked by the tradition of Babylonian kingship.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: History of Mesopotamia",
+          "url": "https://en.wikipedia.org/wiki/History_of_Mesopotamia"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-hammurabi-epic-of-gilgamesh-temporal",
+      "schema_version": "1.0",
+      "source": "hammurabi",
+      "target": "epic-of-gilgamesh",
+      "connection_class": "temporal",
+      "connection_types": [
+        "contemporary-with"
+      ],
+      "direction": "undirected",
+      "strength": 0.5,
+      "temporal_context": {
+        "approximate_year": -1750,
+        "notes": "The Old Babylonian version of the Epic was being compiled during Hammurabi's era."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Both Mesopotamian."
+      },
+      "semantic": {
+        "tags": [
+          "mesopotamia",
+          "literature"
+        ],
+        "keys": [
+          "literary-culture",
+          "governance"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.65,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Old Babylonian recension of Gilgamesh dates to approximately Hammurabi's period.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Hammurabi ruled during the period when the Epic of Gilgamesh was being compiled in its Babylonian form.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Epic of Gilgamesh",
+          "url": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-chanakya-arthashastra-material",
+      "schema_version": "1.0",
+      "source": "chanakya",
+      "target": "arthashastra",
+      "connection_class": "material",
+      "connection_types": [
+        "authored"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": {
+        "approximate_year": -300,
+        "notes": ""
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Composed at Pataliputra."
+      },
+      "semantic": {
+        "tags": [
+          "india",
+          "governance"
+        ],
+        "keys": [
+          "governance",
+          "political-philosophy"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Chanakya is the traditional attributed author of the Arthashastra.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Chanakya is the attributed author of the Arthashastra.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Arthashastra",
+          "url": "https://en.wikipedia.org/wiki/Arthashastra"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-chanakya-han-dynasty-analogical",
+      "schema_version": "1.0",
+      "source": "chanakya",
+      "target": "han-dynasty",
+      "connection_class": "analogical",
+      "connection_types": [
+        "parallel-statecraft"
+      ],
+      "direction": "undirected",
+      "strength": 0.55,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": "Roughly contemporaneous developments in statecraft theory."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Independent developments in South Asia and East Asia."
+      },
+      "semantic": {
+        "tags": [
+          "governance",
+          "legalism"
+        ],
+        "keys": [
+          "governance",
+          "political-philosophy",
+          "bureaucracy"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.6,
+        "evidence_type": "scholarly_debate",
+        "reasoning": "Both Chanakya's Arthashastra and Han Legalist governance represent the independent emergence of systematic statecraft.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Both Chanakya's Arthashastra and Legalist Han Dynasty governance represent the early development of systematic statecraft independent of each other.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Chanakya",
+          "url": "https://en.wikipedia.org/wiki/Chanakya"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-silk-road-han-dynasty-causal",
+      "schema_version": "1.0",
+      "source": "silk-road",
+      "target": "han-dynasty",
+      "connection_class": "causal",
+      "connection_types": [
+        "enabled-by"
+      ],
+      "direction": "target_to_source",
+      "strength": 0.85,
+      "temporal_context": {
+        "approximate_year": -130,
+        "notes": "The Han Dynasty's westward military expansion opened overland routes."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Central Asia corridor."
+      },
+      "semantic": {
+        "tags": [
+          "trade",
+          "china"
+        ],
+        "keys": [
+          "silk-road",
+          "empire",
+          "overland-trade"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.9,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Han military campaigns into Central Asia under Emperor Wu opened the Silk Road.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "The Han Dynasty's westward expansion opened and secured the overland Silk Road.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Silk Road",
+          "url": "https://en.wikipedia.org/wiki/Silk_Road"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-silk-road-indian-ocean-trade-network-spatial",
+      "schema_version": "1.0",
+      "source": "silk-road",
+      "target": "indian-ocean-trade-network",
+      "connection_class": "spatial",
+      "connection_types": [
+        "connected-to"
+      ],
+      "direction": "bidirectional",
+      "strength": 0.75,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": "Overlapping for most of the common era."
+      },
+      "spatial_context": {
+        "via": [
+          "persia",
+          "arabia"
+        ],
+        "notes": "Trade goods transferred between overland and maritime routes at Persian Gulf and Red Sea ports."
+      },
+      "semantic": {
+        "tags": [
+          "trade",
+          "transmission"
+        ],
+        "keys": [
+          "silk-road",
+          "maritime-trade",
+          "cultural-diffusion"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The two networks were interconnected through Persian Gulf and Red Sea transshipment points.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "The overland Silk Road and maritime Indian Ocean network were complementary and interconnected trade systems.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Silk Road",
+          "url": "https://en.wikipedia.org/wiki/Silk_Road"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-xuanzang-tang-dynasty-biographical",
+      "schema_version": "1.0",
+      "source": "xuanzang",
+      "target": "tang-dynasty",
+      "connection_class": "biographical",
+      "connection_types": [
+        "lived-during"
+      ],
+      "direction": "undirected",
+      "strength": 0.9,
+      "temporal_context": {
+        "approximate_year": 629,
+        "notes": "Xuanzang's journey west began in 629 CE, during the Tang."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": ""
+      },
+      "semantic": {
+        "tags": [
+          "china",
+          "buddhism"
+        ],
+        "keys": [
+          "buddhism",
+          "transmission-of-knowledge",
+          "court-patronage"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Xuanzang's pilgrimage and translation work were sponsored by Tang Emperor Taizong.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Xuanzang's journey occurred during the Tang Dynasty, which sponsored translation of the texts he returned with.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Xuanzang",
+          "url": "https://en.wikipedia.org/wiki/Xuanzang"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-muhammad-quran-material",
+      "schema_version": "1.0",
+      "source": "muhammad",
+      "target": "quran",
+      "connection_class": "material",
+      "connection_types": [
+        "source-person"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.98,
+      "temporal_context": {
+        "approximate_year": 610,
+        "notes": "Revelations received 610\u2013632 CE."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Mecca and Medina."
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "religion"
+        ],
+        "keys": [
+          "monotheism",
+          "religion",
+          "oral-tradition"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Quran is the record of revelations attributed to Muhammad in Islamic tradition.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "The Quran is the text of divine revelations received by Muhammad according to Islamic tradition.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Quran",
+          "url": "https://en.wikipedia.org/wiki/Quran"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-muhammad-islamic-golden-age-causal",
+      "schema_version": "1.0",
+      "source": "muhammad",
+      "target": "islamic-golden-age",
+      "connection_class": "causal",
+      "connection_types": [
+        "founded-tradition"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.9,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": "Islamic civilization founded in 7th century, Golden Age peaked 8th\u201313th century."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": ""
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "civilization"
+        ],
+        "keys": [
+          "religion",
+          "science",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Islamic civilization that produced the Golden Age was founded on Muhammad's religious and political movement.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "The Islamic civilization that produced the Golden Age was founded by Muhammad's religious and political movement.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Islamic Golden Age",
+          "url": "https://en.wikipedia.org/wiki/Islamic_Golden_Age"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-house-of-wisdom-al-khwarizmi-biographical",
+      "schema_version": "1.0",
+      "source": "house-of-wisdom",
+      "target": "al-khwarizmi",
+      "connection_class": "biographical",
+      "connection_types": [
+        "hosted"
+      ],
+      "direction": "target_to_source",
+      "strength": 0.9,
+      "temporal_context": {
+        "approximate_year": 820,
+        "notes": "Al-Khwarizmi worked at the House of Wisdom under Caliph al-Mamun."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Baghdad."
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "mathematics"
+        ],
+        "keys": [
+          "mathematics",
+          "institution-building",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.9,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Al-Khwarizmi is documented as working at the House of Wisdom.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Al-Khwarizmi conducted his mathematical research at the House of Wisdom in Baghdad.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: House of Wisdom",
+          "url": "https://en.wikipedia.org/wiki/House_of_Wisdom"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-house-of-wisdom-ibn-sina-intellectual",
+      "schema_version": "1.0",
+      "source": "house-of-wisdom",
+      "target": "ibn-sina",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "influenced"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.75,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": "Ibn Sina's education built on the Baghdad scholarly tradition."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": ""
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "philosophy",
+          "medicine"
+        ],
+        "keys": [
+          "philosophy",
+          "medicine",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.75,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Ibn Sina's intellectual formation was shaped by the translation and commentary tradition centered in Baghdad.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Ibn Sina's education and early career built on the translation and scholarship tradition centered at Baghdad.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Avicenna",
+          "url": "https://en.wikipedia.org/wiki/Avicenna"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-house-of-wisdom-islamic-golden-age-causal",
+      "schema_version": "1.0",
+      "source": "house-of-wisdom",
+      "target": "islamic-golden-age",
+      "connection_class": "causal",
+      "connection_types": [
+        "epitomized"
+      ],
+      "direction": "undirected",
+      "strength": 0.9,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": "The House of Wisdom operated at the heart of the Golden Age."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Baghdad."
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "scholarship"
+        ],
+        "keys": [
+          "institution-building",
+          "science",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.9,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The House of Wisdom is widely regarded as the institutional center of Islamic Golden Age scholarship.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "The House of Wisdom was the institutional center of the Islamic Golden Age.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: House of Wisdom",
+          "url": "https://en.wikipedia.org/wiki/House_of_Wisdom"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-ibn-rushd-thomas-aquinas-intellectual",
+      "schema_version": "1.0",
+      "source": "ibn-rushd",
+      "target": "thomas-aquinas",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "influenced"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.92,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": "Averroes's texts reached Paris via Latin translations in the 12th\u201313th centuries."
+      },
+      "spatial_context": {
+        "via": [
+          "toledo",
+          "paris"
+        ],
+        "notes": "Transmitted through the Toledo translation school."
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "scholasticism"
+        ],
+        "keys": [
+          "philosophy",
+          "peripatetic-philosophy",
+          "scholasticism",
+          "commentary-tradition"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Aquinas explicitly engaged with Averroes throughout the Summa Theologica and his Aristotle commentaries.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Averroes's commentaries on Aristotle were the primary texts through which Thomas Aquinas engaged with Greek philosophy.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Averroes",
+          "url": "https://en.wikipedia.org/wiki/Averroes"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-al-ghazali-ibn-rushd-intellectual",
+      "schema_version": "1.0",
+      "source": "al-ghazali",
+      "target": "ibn-rushd",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "critiqued-by"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.88,
+      "temporal_context": {
+        "approximate_year": 1180,
+        "notes": "Ibn Rushd wrote Tahafut al-Tahafut as a direct response to al-Ghazali's Tahafut al-Falasifa."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": ""
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "philosophy"
+        ],
+        "keys": [
+          "philosophy",
+          "scholasticism",
+          "peripatetic-philosophy"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Ibn Rushd's Incoherence of the Incoherence is a direct rebuttal of al-Ghazali's Incoherence of the Philosophers.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Ibn Rushd's Incoherence of the Incoherence was a direct rebuttal of al-Ghazali's attack on Aristotelian philosophy.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Averroes",
+          "url": "https://en.wikipedia.org/wiki/Averroes"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-ibn-sina-ibn-rushd-intellectual",
+      "schema_version": "1.0",
+      "source": "ibn-sina",
+      "target": "ibn-rushd",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "influenced"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.8,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": ""
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": ""
+      },
+      "semantic": {
+        "tags": [
+          "islam",
+          "philosophy"
+        ],
+        "keys": [
+          "philosophy",
+          "peripatetic-philosophy",
+          "commentary-tradition"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Ibn Rushd critically engaged with Ibn Sina's Aristotelian interpretations throughout his commentaries.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Ibn Rushd engaged extensively with Ibn Sina's Aristotelian interpretations, often correcting them in favor of a stricter reading.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Averroes",
+          "url": "https://en.wikipedia.org/wiki/Averroes"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-byzantine-empire-house-of-wisdom-intellectual",
+      "schema_version": "1.0",
+      "source": "byzantine-empire",
+      "target": "house-of-wisdom",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "transmitted-texts-to"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.85,
+      "temporal_context": {
+        "approximate_year": 830,
+        "notes": "The Translation Movement in Baghdad drew heavily on Greek manuscripts preserved in Byzantine libraries."
+      },
+      "spatial_context": {
+        "via": [
+          "constantinople",
+          "antioch"
+        ],
+        "notes": ""
+      },
+      "semantic": {
+        "tags": [
+          "transmission",
+          "scholarship"
+        ],
+        "keys": [
+          "transmission-of-knowledge",
+          "text-translation",
+          "cultural-memory"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Byzantine scholars and manuscripts were key sources for the Abbasid translation movement.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Byzantine scholars preserved Greek manuscripts that were translated into Arabic at the House of Wisdom during the Translation Movement.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Translation Movement",
+          "url": "https://en.wikipedia.org/wiki/Translation_Movement"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-justinian-i-byzantine-empire-biographical",
+      "schema_version": "1.0",
+      "source": "justinian-i",
+      "target": "byzantine-empire",
+      "connection_class": "biographical",
+      "connection_types": [
+        "ruled"
+      ],
+      "direction": "undirected",
+      "strength": 1.0,
+      "temporal_context": {
+        "approximate_year": 527,
+        "notes": "Justinian reigned 527\u2013565 CE."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Constantinople."
+      },
+      "semantic": {
+        "tags": [
+          "byzantine",
+          "governance"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "law-and-jurisprudence"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Justinian I was emperor of the Byzantine Empire, a well-established historical fact.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Justinian I was emperor of the Byzantine Empire at its greatest extent.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Justinian I",
+          "url": "https://en.wikipedia.org/wiki/Justinian_I"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-thomas-aquinas-dante-alighieri-intellectual",
+      "schema_version": "1.0",
+      "source": "thomas-aquinas",
+      "target": "dante-alighieri",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "influenced"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.88,
+      "temporal_context": {
+        "approximate_year": 1300,
+        "notes": "Dante composed the Divine Comedy ca. 1308\u20131320."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Both Italian."
+      },
+      "semantic": {
+        "tags": [
+          "europe",
+          "scholasticism",
+          "literature"
+        ],
+        "keys": [
+          "scholasticism",
+          "literary-culture",
+          "religion"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.9,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Dante placed Aquinas in Paradiso and drew extensively on his theology throughout the Comedy.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Dante's theological framework in the Divine Comedy draws extensively on Aquinas's synthesis of Aristotle and Christian doctrine.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Divine Comedy",
+          "url": "https://en.wikipedia.org/wiki/Divine_Comedy"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-mali-empire-mansa-musa-biographical",
+      "schema_version": "1.0",
+      "source": "mali-empire",
+      "target": "mansa-musa",
+      "connection_class": "biographical",
+      "connection_types": [
+        "ruled-by"
+      ],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": {
+        "approximate_year": 1312,
+        "notes": "Mansa Musa reigned approximately 1312\u20131337 CE."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "West Africa."
+      },
+      "semantic": {
+        "tags": [
+          "africa",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "court-patronage"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.9,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Mansa Musa was the most celebrated emperor of the Mali Empire.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Mansa Musa was the most celebrated emperor of the Mali Empire.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Mansa Musa",
+          "url": "https://en.wikipedia.org/wiki/Mansa_Musa"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-mali-empire-indian-ocean-trade-network-spatial",
+      "schema_version": "1.0",
+      "source": "mali-empire",
+      "target": "indian-ocean-trade-network",
+      "connection_class": "spatial",
+      "connection_types": [
+        "connected-via-trans-saharan"
+      ],
+      "direction": "undirected",
+      "strength": 0.6,
+      "temporal_context": {
+        "approximate_year": null,
+        "notes": ""
+      },
+      "spatial_context": {
+        "via": [
+          "trans-saharan-route",
+          "egypt",
+          "red-sea"
+        ],
+        "notes": "Gold from West Africa reached the Indian Ocean via trans-Saharan and Nile routes."
+      },
+      "semantic": {
+        "tags": [
+          "africa",
+          "trade"
+        ],
+        "keys": [
+          "trade",
+          "overland-trade",
+          "maritime-trade"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.7,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "West African gold reached Indian Ocean markets through intermediary Saharan and Egyptian trade routes.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "West African gold from the Mali Empire reached the Indian Ocean trade network via trans-Saharan and Nile corridor routes.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Trans-Saharan trade route",
+          "url": "https://en.wikipedia.org/wiki/Trans-Saharan_trade_route"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-mongol-empire-silk-road-causal",
+      "schema_version": "1.0",
+      "source": "mongol-empire",
+      "target": "silk-road",
+      "connection_class": "causal",
+      "connection_types": [
+        "secured"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.88,
+      "temporal_context": {
+        "approximate_year": 1250,
+        "notes": "The Pax Mongolica roughly 1250\u20131350 CE."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Eurasian steppe corridor."
+      },
+      "semantic": {
+        "tags": [
+          "mongolia",
+          "trade"
+        ],
+        "keys": [
+          "silk-road",
+          "empire",
+          "cultural-diffusion"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.9,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Pax Mongolica enabled safe travel across Central Asia, stimulating Silk Road trade.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "The Pax Mongolica created an era of safe Silk Road travel, stimulating trade and cultural exchange across Eurasia.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Pax Mongolica",
+          "url": "https://en.wikipedia.org/wiki/Pax_Mongolica"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-mongol-empire-black-death-causal",
+      "schema_version": "1.0",
+      "source": "mongol-empire",
+      "target": "black-death",
+      "connection_class": "causal",
+      "connection_types": [
+        "transmitted"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.8,
+      "temporal_context": {
+        "approximate_year": 1347,
+        "notes": "Plague spread west along Mongol trade routes, reaching Crimea ca. 1346."
+      },
+      "spatial_context": {
+        "via": [
+          "central-asia",
+          "crimea",
+          "constantinople"
+        ],
+        "notes": ""
+      },
+      "semantic": {
+        "tags": [
+          "mongolia",
+          "epidemic"
+        ],
+        "keys": [
+          "empire-decline",
+          "cultural-memory",
+          "population-movement"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.8,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The plague's westward spread is linked to Mongol trade routes and the siege of Caffa (1346).",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Mongol trade and military networks are implicated in the rapid spread of plague from Central Asia across Eurasia.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Black Death",
+          "url": "https://en.wikipedia.org/wiki/Black_Death"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-genghis-khan-mongol-empire-biographical",
+      "schema_version": "1.0",
+      "source": "genghis-khan",
+      "target": "mongol-empire",
+      "connection_class": "biographical",
+      "connection_types": [
+        "founded"
+      ],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": {
+        "approximate_year": 1206,
+        "notes": "Proclaimed Great Khan at a kurultai in 1206."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Mongolia."
+      },
+      "semantic": {
+        "tags": [
+          "mongolia",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "warfare",
+          "military-technology"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Genghis Khan founded the Mongol Empire in 1206.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Genghis Khan unified the Mongol tribes and founded the empire through military conquest.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Genghis Khan",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-constantine-i-byzantine-empire-causal",
+      "schema_version": "1.0",
+      "source": "constantine-i",
+      "target": "byzantine-empire",
+      "connection_class": "causal",
+      "connection_types": [
+        "founded"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": {
+        "approximate_year": 330,
+        "notes": "Constantinople founded 330 CE."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Constantinople."
+      },
+      "semantic": {
+        "tags": [
+          "rome",
+          "byzantine"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "religion"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Constantine's founding of Constantinople and patronage of Christianity directly established Byzantine civilization.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Constantine's founding of Constantinople and Christian patronage laid the institutional foundations of the Byzantine Empire.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Constantine the Great",
+          "url": "https://en.wikipedia.org/wiki/Constantine_the_Great"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plague-of-justinian-byzantine-empire-causal",
+      "schema_version": "1.0",
+      "source": "plague-of-justinian",
+      "target": "byzantine-empire",
+      "connection_class": "causal",
+      "connection_types": [
+        "weakened"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.85,
+      "temporal_context": {
+        "approximate_year": 541,
+        "notes": "Plague struck at the height of Justinian's reconquest campaigns."
+      },
+      "spatial_context": {
+        "via": [],
+        "notes": "Mediterranean basin."
+      },
+      "semantic": {
+        "tags": [
+          "epidemic",
+          "byzantine"
+        ],
+        "keys": [
+          "empire-decline",
+          "population-movement"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The plague severely reduced Byzantine manpower and tax base, contributing to the failure of the reconquest.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "The Plague of Justinian devastated Byzantine population and resources, contributing to the failure of Justinian's reconquest.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Wikipedia: Plague of Justinian",
+          "url": "https://en.wikipedia.org/wiki/Plague_of_Justinian"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-aristotle-to-ibn-rushd-intellectual",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "ibn-rushd",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "foundational-influence",
+        "commented-on"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": {
+        "approximate_year": 1180,
+        "notes": "Ibn Rushd's commentaries on Aristotle written c. 1169\u20131195 CE."
+      },
+      "spatial_context": {
+        "via": [
+          "house-of-wisdom",
+          "byzantine-empire"
+        ],
+        "notes": "Transmitted via Arabic translations of Greek texts."
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "transmission"
+        ],
+        "keys": [
+          "peripatetic-philosophy",
+          "commentary-tradition",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Ibn Rushd was known in medieval Europe as 'The Commentator' on Aristotle \u2014 his life's work was systematic commentary on the Aristotelian corpus.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Ibn Rushd devoted his career to commenting on Aristotle's complete works, earning the title 'The Commentator' \u2014 the most direct intellectual lineage in medieval philosophy.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy \u2014 Ibn Rushd",
+          "url": "https://plato.stanford.edu/entries/ibn-rushd/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-aristotle-to-ibn-sina-intellectual",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "ibn-sina",
+      "connection_class": "intellectual",
+      "connection_types": [
+        "foundational-influence",
+        "transformed"
+      ],
+      "direction": "source_to_target",
+      "strength": 0.97,
+      "temporal_context": {
+        "approximate_year": 1000,
+        "notes": "Ibn Sina engaged with Aristotle throughout his career, beginning in his youth."
+      },
+      "spatial_context": {
+        "via": [
+          "house-of-wisdom"
+        ],
+        "notes": "Transmitted via the Arabic translation movement centered in Baghdad."
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "transmission",
+          "medicine"
+        ],
+        "keys": [
+          "peripatetic-philosophy",
+          "natural-philosophy",
+          "transmission-of-knowledge",
+          "text-translation"
+        ],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence": 0.97,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Ibn Sina described reading Aristotle's Metaphysics forty times before understanding it with al-Farabi's help. His philosophy is a creative synthesis of Aristotelian and Neoplatonic thought.",
+        "contradictions": [],
+        "epoch": "epoch-001-world-history-scaffold"
+      },
+      "description": {
+        "short": "Ibn Sina's philosophy was built on Aristotle's framework, which he encountered through Arabic translations and transformed into a distinctive synthesis with Neoplatonic and Islamic thought.",
+        "detailed": "",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy \u2014 Ibn Sina",
+          "url": "https://plato.stanford.edu/entries/ibn-sina/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    }
+  ],
+  "provisional_keys": [],
+  "ingestion_notes": "Sparse coverage epoch. Temporal precision is honest. Coordinates are approximate. Intended as a scaffold for future focused epochs."
+}
