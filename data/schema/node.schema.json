@@ -1,0 +1,297 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://chronos/node.schema.json",
+  "title": "ChronosNode",
+  "type": "object",
+  "required": ["id", "schema_version", "node_type", "label", "temporal", "spatial", "semantic", "epistemic", "export", "sources", "created_at", "updated_at"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$",
+      "description": "Slug-style unique identifier"
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$"
+    },
+    "node_type": {
+      "type": "string",
+      "enum": ["person", "event", "period", "place", "work", "concept", "institution", "technology", "route", "phenomenon", "dataset"]
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "temporal": {
+      "type": "object",
+      "required": ["precision", "confidence", "display_mode"],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": ["integer", "null"]
+        },
+        "end": {
+          "type": ["integer", "null"]
+        },
+        "precision": {
+          "type": "string",
+          "enum": ["exact", "year", "decade", "century", "ordinal"]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "fuzzy_range": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["earliest", "latest"],
+              "additionalProperties": false,
+              "properties": {
+                "earliest": { "type": "integer" },
+                "latest": { "type": "integer" }
+              }
+            },
+            { "type": "null" }
+          ]
+        },
+        "ordinal_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(after|before|contemporary-with|during):.+"
+          }
+        },
+        "calendar_system": {
+          "type": "string"
+        },
+        "native_date": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["system", "value"],
+              "additionalProperties": false,
+              "properties": {
+                "system": { "type": "string" },
+                "value": { "type": "string" }
+              }
+            },
+            { "type": "null" }
+          ]
+        },
+        "contested": {
+          "type": "boolean"
+        },
+        "dating_notes": {
+          "type": "string"
+        },
+        "display_mode": {
+          "type": "string",
+          "enum": ["exact", "fuzzy", "range", "ordinal"]
+        }
+      }
+    },
+    "spatial": {
+      "type": "object",
+      "required": ["spatial_mode", "no_coordinates"],
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["lat", "lon", "precision", "confidence"],
+              "additionalProperties": false,
+              "properties": {
+                "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+                "lon": { "type": "number", "minimum": -180, "maximum": 180 },
+                "precision": {
+                  "type": "string",
+                  "enum": ["exact", "city", "region", "country", "continent"]
+                },
+                "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+                "place_label": { "type": "string" },
+                "modern_equivalent": { "type": "string" }
+              }
+            },
+            { "type": "null" }
+          ]
+        },
+        "active_regions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["region_id", "role"],
+            "additionalProperties": false,
+            "properties": {
+              "region_id": { "type": "string" },
+              "role": { "type": "string" }
+            }
+          }
+        },
+        "spatial_mode": {
+          "type": "string",
+          "enum": ["point", "region", "path", "diffuse"]
+        },
+        "fuzzy_radius_km": {
+          "type": ["integer", "null"]
+        },
+        "no_coordinates": {
+          "type": "boolean"
+        },
+        "no_coordinates_reason": {
+          "type": ["string", "null"]
+        }
+      },
+      "if": {
+        "properties": { "no_coordinates": { "const": true } }
+      },
+      "then": {
+        "properties": {
+          "no_coordinates_reason": { "type": "string", "minLength": 1 }
+        },
+        "required": ["no_coordinates_reason"]
+      }
+    },
+    "semantic": {
+      "type": "object",
+      "required": ["tags", "keys", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "keys": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "keys_provisional": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["proposed_key", "description", "status"],
+            "additionalProperties": false,
+            "properties": {
+              "proposed_key": { "type": "string" },
+              "description": { "type": "string" },
+              "candidate_canonical_parents": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "status": {
+                "type": "string",
+                "enum": ["provisional"]
+              }
+            }
+          }
+        },
+        "facets": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "description": {
+          "type": "object",
+          "required": ["short"],
+          "additionalProperties": false,
+          "properties": {
+            "short": { "type": "string", "minLength": 1 },
+            "medium": { "type": "string" },
+            "long": { "type": "string" }
+          }
+        }
+      }
+    },
+    "epistemic": {
+      "type": "object",
+      "required": ["curation_status", "confidence_overall", "source_quality", "epoch"],
+      "additionalProperties": false,
+      "properties": {
+        "curation_status": {
+          "type": "string",
+          "enum": ["canonical", "ingested", "provisional", "inferred", "deprecated", "contested"]
+        },
+        "confidence_overall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "source_quality": {
+          "type": "string",
+          "enum": ["primary_source", "scholarly_consensus", "scholarly_debate", "popular_synthesis", "ai_inference", "unverified"]
+        },
+        "epoch": { "type": "string" },
+        "ingestion_notes": { "type": "string" },
+        "contradictions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "prose_cache_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "works": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "year": { "type": ["integer", "null"] },
+          "year_precision": {
+            "type": "string",
+            "enum": ["exact", "approximate", "century", "unknown"]
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "export": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "csv_fields": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

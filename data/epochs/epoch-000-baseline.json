@@ -1,0 +1,5523 @@
+{
+  "epoch": "epoch-000-baseline",
+  "description": "Baseline seed data: major figures of the Axial Age and classical antiquity, c. 650 BCE \u2013 400 CE.",
+  "produced_by": "manual-curation",
+  "produced_at": "2026-03-23T00:00:00Z",
+  "nodes": [
+    {
+      "id": "confucius",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Confucius",
+      "aliases": [
+        "Kong Qiu",
+        "Kong Fuzi",
+        "Master Kong"
+      ],
+      "temporal": {
+        "start": -551,
+        "end": -479,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -555,
+          "latest": -548
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Traditional dates broadly accepted by scholarship.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 35.6,
+          "lon": 117.0,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "State of Lu",
+          "modern_equivalent": "Qufu, Shandong, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "born_and_died"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "confucianism",
+          "axial-age",
+          "ethics",
+          "governance"
+        ],
+        "keys": [
+          "social-harmony",
+          "governance",
+          "self-cultivation",
+          "filial-piety",
+          "ritual-propriety",
+          "ethics",
+          "moral-philosophy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Confucianism",
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Chinese philosopher and founder of Confucianism.",
+          "medium": "Kong Qiu, known as Confucius, was a Chinese philosopher of the Spring and Autumn period whose teachings on ethics, ritual, and governance shaped East Asian civilisation for millennia.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        {
+          "id": "analects",
+          "label": "Analects",
+          "year": -551,
+          "year_precision": "approximate",
+          "tags": [
+            "philosophy",
+            "confucianism"
+          ],
+          "notes": ""
+        }
+      ],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Confucius",
+          "url": "https://www.britannica.com/biography/Confucius"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "laozi",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Laozi",
+      "aliases": [
+        "Lao Tzu",
+        "Lao-Tze",
+        "Li Er"
+      ],
+      "temporal": {
+        "start": -570,
+        "end": -490,
+        "precision": "century",
+        "confidence": 0.4,
+        "fuzzy_range": {
+          "earliest": -650,
+          "latest": -400
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Dates and even historicity are heavily contested. Floruit placed around 6th century BCE by tradition; some scholars date the Tao Te Ching to 4th century BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 33.5,
+          "lon": 114.0,
+          "precision": "region",
+          "confidence": 0.4,
+          "place_label": "State of Chu (traditional)",
+          "modern_equivalent": "Henan province, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 300,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "daoism",
+          "axial-age",
+          "metaphysics"
+        ],
+        "keys": [
+          "daoism",
+          "metaphysics",
+          "self-cultivation"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Daoism",
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Legendary Chinese philosopher and reputed author of the Tao Te Ching.",
+          "medium": "Laozi is the semi-legendary founder of Daoism, traditionally credited with composing the Tao Te Ching. His historical existence is debated; he may be a composite figure.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.4,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Contested historicity. Dates assigned are conventional floruit.",
+        "contradictions": [
+          "Some scholars deny historical existence entirely",
+          "Tao Te Ching may postdate traditional floruit by 150+ years"
+        ],
+        "prose_cache_ids": []
+      },
+      "works": [
+        {
+          "id": "tao-te-ching",
+          "label": "Tao Te Ching",
+          "year": -570,
+          "year_precision": "approximate",
+          "tags": [
+            "philosophy",
+            "daoism"
+          ],
+          "notes": ""
+        }
+      ],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Laozi",
+          "url": "https://plato.stanford.edu/entries/laozi/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "siddhartha-gautama",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Siddhartha Gautama",
+      "aliases": [
+        "The Buddha",
+        "Shakyamuni",
+        "Gautama Buddha"
+      ],
+      "temporal": {
+        "start": -563,
+        "end": -483,
+        "precision": "decade",
+        "confidence": 0.65,
+        "fuzzy_range": {
+          "earliest": -623,
+          "latest": -400
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Theravada tradition gives 623\u2013543 BCE; scholarly consensus leans toward 480\u2013400 BCE. Dates used here follow a middle estimate.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 27.47,
+          "lon": 83.28,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Lumbini",
+          "modern_equivalent": "Lumbini, Rupandehi District, Nepal"
+        },
+        "active_regions": [
+          {
+            "region_id": "gangetic-plain",
+            "role": "active"
+          },
+          {
+            "region_id": "magadha",
+            "role": "enlightenment_and_teaching"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "religion",
+          "buddhism",
+          "axial-age",
+          "philosophy"
+        ],
+        "keys": [
+          "buddhism",
+          "liberation",
+          "impermanence",
+          "asceticism",
+          "dharma",
+          "ethics",
+          "self-cultivation"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Buddhism",
+          "region": "South Asia"
+        },
+        "description": {
+          "short": "Founder of Buddhism; the historical Buddha.",
+          "medium": "Siddhartha Gautama was a wandering ascetic and teacher of ancient India whose insights into suffering, impermanence, and liberation founded the Buddhist tradition.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.65,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Birth date contested between multiple scholarly traditions.",
+        "contradictions": [
+          "Theravada long chronology vs. short chronology debate"
+        ],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Gautama Buddha",
+          "url": "https://www.britannica.com/biography/Gautama-Buddha"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "socrates",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Socrates",
+      "aliases": [],
+      "temporal": {
+        "start": -470,
+        "end": -399,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -475,
+          "latest": -465
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Death date 399 BCE is fixed by historical record. Birth c. 470 BCE is conventional.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "born_and_died"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "axial-age",
+          "ethics",
+          "epistemology"
+        ],
+        "keys": [
+          "socratic-method",
+          "ethics",
+          "epistemology",
+          "self-cultivation"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Greek Philosophy",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Athenian philosopher; foundational figure of Western philosophy.",
+          "medium": "Socrates was an Athenian philosopher known for the Socratic method of inquiry. He wrote nothing himself; his thought is known through Plato, Xenophon, and Aristophanes.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Socrates",
+          "url": "https://plato.stanford.edu/entries/socrates/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "plato",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Plato",
+      "aliases": [
+        "Aristocles"
+      ],
+      "temporal": {
+        "start": -428,
+        "end": -348,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -430,
+          "latest": -424
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Birth 428/427 BCE; death 348/347 BCE \u2014 conventional scholarly dates.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "born_and_died"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "metaphysics",
+          "ethics",
+          "political-philosophy"
+        ],
+        "keys": [
+          "platonic-idealism",
+          "metaphysics",
+          "political-philosophy",
+          "ethics"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Platonism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Athenian philosopher, student of Socrates, founder of the Academy.",
+          "medium": "Plato was a student of Socrates and teacher of Aristotle. His dialogues explored metaphysics, epistemology, ethics, and political philosophy, establishing Platonism as a dominant Western intellectual tradition.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        {
+          "id": "republic-plato",
+          "label": "Republic Plato",
+          "year": -428,
+          "year_precision": "approximate",
+          "tags": [
+            "philosophy",
+            "metaphysics"
+          ],
+          "notes": ""
+        }
+      ],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Plato",
+          "url": "https://plato.stanford.edu/entries/plato/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "aristotle",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Aristotle",
+      "aliases": [
+        "The Philosopher",
+        "Aristoteles"
+      ],
+      "temporal": {
+        "start": -384,
+        "end": -322,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": {
+          "earliest": -385,
+          "latest": -383
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "384\u2013322 BCE; well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.53,
+          "lon": 23.75,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Stagira",
+          "modern_equivalent": "Stagira, Chalkidiki, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "studied_and_taught"
+          },
+          {
+            "region_id": "macedon",
+            "role": "tutor_to_alexander"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "science",
+          "natural-philosophy",
+          "ethics",
+          "political-philosophy"
+        ],
+        "keys": [
+          "peripatetic-philosophy",
+          "aristotelian-logic",
+          "natural-philosophy",
+          "ethics",
+          "political-philosophy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Aristotelianism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Greek philosopher, student of Plato, founder of the Lyceum.",
+          "medium": "Aristotle was a polymath of ancient Greece whose works spanned logic, biology, physics, metaphysics, ethics, and politics. He founded the Peripatetic school and shaped Western and Islamic intellectual traditions.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        {
+          "id": "nicomachean-ethics",
+          "label": "Nicomachean Ethics",
+          "year": -384,
+          "year_precision": "approximate",
+          "tags": [
+            "philosophy",
+            "science"
+          ],
+          "notes": ""
+        }
+      ],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Aristotle",
+          "url": "https://plato.stanford.edu/entries/aristotle/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "heraclitus",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Heraclitus",
+      "aliases": [
+        "Heraclitus of Ephesus",
+        "The Obscure"
+      ],
+      "temporal": {
+        "start": -535,
+        "end": -475,
+        "precision": "decade",
+        "confidence": 0.6,
+        "fuzzy_range": {
+          "earliest": -545,
+          "latest": -460
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Floruit c. 500 BCE; birth and death estimated.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.94,
+          "lon": 27.34,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Ephesus",
+          "modern_equivalent": "Sel\u00e7uk, Izmir, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "ionia",
+            "role": "born_and_active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "axial-age",
+          "metaphysics",
+          "natural-philosophy"
+        ],
+        "keys": [
+          "impermanence",
+          "metaphysics",
+          "natural-philosophy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Pre-Socratic Philosophy",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Pre-Socratic Greek philosopher known for the doctrine of universal flux.",
+          "medium": "Heraclitus held that fire is the fundamental element and that all things are in constant flux. His concept of the Logos as the rational principle governing change was influential on later Stoicism.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.65,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Only fragments survive.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Heraclitus",
+          "url": "https://plato.stanford.edu/entries/heraclitus/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "pythagoras",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Pythagoras",
+      "aliases": [
+        "Pythagoras of Samos"
+      ],
+      "temporal": {
+        "start": -570,
+        "end": -495,
+        "precision": "decade",
+        "confidence": 0.6,
+        "fuzzy_range": {
+          "earliest": -580,
+          "latest": -560
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Birth c. 570 BCE, death c. 495 BCE \u2014 approximate.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.75,
+          "lon": 26.98,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Samos",
+          "modern_equivalent": "Samos, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "magna-graecia",
+            "role": "founded_school"
+          },
+          {
+            "region_id": "ionia",
+            "role": "born"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 30,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "mathematics",
+          "axial-age",
+          "religion"
+        ],
+        "keys": [
+          "mathematics",
+          "metaphysics",
+          "asceticism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Pythagoreanism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Greek philosopher and mathematician, founder of Pythagoreanism.",
+          "medium": "Pythagoras founded a religious and philosophical community at Croton. He is credited with contributions to number theory, geometry, and the transmigration of souls doctrine.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.6,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Much attributed to Pythagoras may be the work of his school.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Pythagoras",
+          "url": "https://plato.stanford.edu/entries/pythagoras/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "thales",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Thales of Miletus",
+      "aliases": [
+        "Thales"
+      ],
+      "temporal": {
+        "start": -624,
+        "end": -546,
+        "precision": "decade",
+        "confidence": 0.6,
+        "fuzzy_range": {
+          "earliest": -635,
+          "latest": -610
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Approximate dates; the solar eclipse prediction of 585 BCE is used as an anchor.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.53,
+          "lon": 27.26,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Miletus",
+          "modern_equivalent": "Didim, Ayd\u0131n, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "ionia",
+            "role": "born_and_active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "science",
+          "axial-age",
+          "mathematics",
+          "astronomy"
+        ],
+        "keys": [
+          "natural-philosophy",
+          "mathematics",
+          "astronomy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Pre-Socratic Philosophy",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "First recorded Greek philosopher; proposed water as the arche.",
+          "medium": "Thales of Miletus is traditionally regarded as the first Greek philosopher. He proposed water as the fundamental substance, predicted a solar eclipse, and applied geometry to practical problems.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.65,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "No writings survive; known only through later sources.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Thales",
+          "url": "https://plato.stanford.edu/entries/thales/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "anaxagoras",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Anaxagoras",
+      "aliases": [
+        "Anaxagoras of Clazomenae"
+      ],
+      "temporal": {
+        "start": -500,
+        "end": -428,
+        "precision": "decade",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -510,
+          "latest": -490
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Conventional dates c. 500\u2013428 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 38.38,
+          "lon": 26.44,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Clazomenae",
+          "modern_equivalent": "Urla, Izmir, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "active"
+          },
+          {
+            "region_id": "ionia",
+            "role": "born"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 30,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "science",
+          "axial-age",
+          "natural-philosophy"
+        ],
+        "keys": [
+          "natural-philosophy",
+          "metaphysics"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Pre-Socratic Philosophy",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Greek philosopher who introduced Nous (mind) as a cosmological principle.",
+          "medium": "Anaxagoras was among the first to bring philosophy to Athens. He proposed that all things contain portions of all other things, governed by an immaterial Nous.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.7,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Anaxagoras",
+          "url": "https://plato.stanford.edu/entries/anaxagoras/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "democritus",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Democritus",
+      "aliases": [
+        "Democritus of Abdera",
+        "The Laughing Philosopher"
+      ],
+      "temporal": {
+        "start": -460,
+        "end": -370,
+        "precision": "decade",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -470,
+          "latest": -450
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 460\u2013370 BCE; approximate.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.93,
+          "lon": 24.97,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Abdera",
+          "modern_equivalent": "Avdira, Xanthi, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "thrace",
+            "role": "born"
+          },
+          {
+            "region_id": "classical-athens",
+            "role": "visited"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 30,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "science",
+          "axial-age",
+          "natural-philosophy"
+        ],
+        "keys": [
+          "natural-philosophy",
+          "metaphysics",
+          "epistemology"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Atomism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Pre-Socratic philosopher who developed atomic theory.",
+          "medium": "Democritus proposed that all matter consists of indivisible atoms moving in void. His materialist philosophy was foundational for later Epicureanism and early modern science.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.75,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Democritus",
+          "url": "https://plato.stanford.edu/entries/democritus/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "parmenides",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Parmenides",
+      "aliases": [
+        "Parmenides of Elea"
+      ],
+      "temporal": {
+        "start": -515,
+        "end": -450,
+        "precision": "decade",
+        "confidence": 0.6,
+        "fuzzy_range": {
+          "earliest": -530,
+          "latest": -475
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Floruit c. 500 BCE; lifespan estimated.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.18,
+          "lon": 15.28,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Elea",
+          "modern_equivalent": "Velia, Salerno, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "magna-graecia",
+            "role": "born_and_active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "axial-age",
+          "metaphysics",
+          "epistemology"
+        ],
+        "keys": [
+          "metaphysics",
+          "epistemology"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Eleatic Philosophy",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Pre-Socratic philosopher who argued that Being is one and unchanging.",
+          "medium": "Parmenides founded the Eleatic school and argued that reality is one, indivisible, and changeless. His challenge to sense perception shaped all subsequent Greek philosophy.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.65,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Only partial poem survives.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Parmenides",
+          "url": "https://plato.stanford.edu/entries/parmenides/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "zeno-of-elea",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Zeno of Elea",
+      "aliases": [
+        "Zeno"
+      ],
+      "temporal": {
+        "start": -490,
+        "end": -430,
+        "precision": "decade",
+        "confidence": 0.65,
+        "fuzzy_range": {
+          "earliest": -500,
+          "latest": -480
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Approximate dates; he was a disciple of Parmenides.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.18,
+          "lon": 15.28,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Elea",
+          "modern_equivalent": "Velia, Salerno, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "magna-graecia",
+            "role": "born_and_active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "axial-age",
+          "logic",
+          "metaphysics"
+        ],
+        "keys": [
+          "logic",
+          "metaphysics",
+          "epistemology"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Eleatic Philosophy",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Eleatic philosopher known for paradoxes of motion and plurality.",
+          "medium": "Zeno of Elea devised paradoxes \u2014 most famously Achilles and the Tortoise \u2014 to defend Parmenides' thesis that motion and plurality are illusions.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.7,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Zeno of Elea",
+          "url": "https://plato.stanford.edu/entries/paradox-zeno/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "protagoras",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Protagoras",
+      "aliases": [
+        "Protagoras of Abdera"
+      ],
+      "temporal": {
+        "start": -490,
+        "end": -420,
+        "precision": "decade",
+        "confidence": 0.65,
+        "fuzzy_range": {
+          "earliest": -500,
+          "latest": -480
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Approximate dates.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.93,
+          "lon": 24.97,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Abdera",
+          "modern_equivalent": "Avdira, Xanthi, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 30,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "axial-age",
+          "epistemology",
+          "rhetoric"
+        ],
+        "keys": [
+          "epistemology",
+          "ethics",
+          "socratic-method"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Sophistry",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Sophist philosopher; proponent of relativism ('Man is the measure of all things').",
+          "medium": "Protagoras was the foremost Sophist of 5th-century Athens, teaching rhetoric for a fee and arguing that truth is relative to the observer.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.7,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Protagoras",
+          "url": "https://plato.stanford.edu/entries/protagoras/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "sophocles",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Sophocles",
+      "aliases": [],
+      "temporal": {
+        "start": -496,
+        "end": -406,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -500,
+          "latest": -490
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 496\u2013406 BCE; well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "born_and_died"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "literary-culture",
+          "art",
+          "drama",
+          "religion"
+        ],
+        "keys": [
+          "literary-culture",
+          "polytheism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Greek Drama",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Athenian tragedian; author of Oedipus Rex and Antigone.",
+          "medium": "Sophocles was one of three great tragedians of ancient Athens. His plays, including Oedipus Rex, Antigone, and Electra, advanced stagecraft and explored fate, duty, and divine law.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Sophocles",
+          "url": "https://www.britannica.com/biography/Sophocles"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "thucydides",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Thucydides",
+      "aliases": [],
+      "temporal": {
+        "start": -460,
+        "end": -400,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": -470,
+          "latest": -450
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 460\u2013400 BCE; approximate.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "born_and_active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "literary-culture",
+          "history",
+          "warfare",
+          "governance"
+        ],
+        "keys": [
+          "governance",
+          "warfare",
+          "literary-culture"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Greek Historiography",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Athenian historian of the Peloponnesian War.",
+          "medium": "Thucydides wrote the History of the Peloponnesian War, pioneering a rigorous, evidence-based approach to historiography that contrasted sharply with the mythological accounts of his predecessors.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Thucydides",
+          "url": "https://www.britannica.com/biography/Thucydides-Greek-historian"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "xenophon",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Xenophon",
+      "aliases": [
+        "Xenophon of Athens"
+      ],
+      "temporal": {
+        "start": -430,
+        "end": -354,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": -435,
+          "latest": -425
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 430\u2013354 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "born"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "literary-culture",
+          "history",
+          "philosophy"
+        ],
+        "keys": [
+          "governance",
+          "biography",
+          "literary-culture"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Greek Historiography",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Athenian soldier, historian, and student of Socrates.",
+          "medium": "Xenophon wrote memoirs of Socrates, accounts of the Persian expedition (Anabasis), and works on leadership and household management.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Xenophon",
+          "url": "https://www.britannica.com/biography/Xenophon"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "mencius",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Mencius",
+      "aliases": [
+        "Mengzi",
+        "Meng Ke"
+      ],
+      "temporal": {
+        "start": -372,
+        "end": -289,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": -380,
+          "latest": -365
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Traditional dates 372\u2013289 BCE.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 35.4,
+          "lon": 116.97,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Zou",
+          "modern_equivalent": "Zoucheng, Shandong, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "born_and_active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "confucianism",
+          "ethics"
+        ],
+        "keys": [
+          "confucianism",
+          "social-harmony",
+          "governance",
+          "moral-philosophy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Confucianism",
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Confucian philosopher who argued for the innate goodness of human nature.",
+          "medium": "Mencius was the most important Confucian philosopher after Confucius himself. He argued that human nature is innately good and that benevolent government is the foundation of a just society.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Mengzi",
+          "url": "https://plato.stanford.edu/entries/mengzi/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "zhuangzi",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Zhuangzi",
+      "aliases": [
+        "Zhuang Zhou",
+        "Chuang Tzu"
+      ],
+      "temporal": {
+        "start": -369,
+        "end": -286,
+        "precision": "decade",
+        "confidence": 0.65,
+        "fuzzy_range": {
+          "earliest": -380,
+          "latest": -360
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Traditional dates 369\u2013286 BCE; approximate.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 34.0,
+          "lon": 115.0,
+          "precision": "region",
+          "confidence": 0.6,
+          "place_label": "State of Song (traditional)",
+          "modern_equivalent": "Henan/Shandong border, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 200,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "daoism",
+          "metaphysics"
+        ],
+        "keys": [
+          "daoism",
+          "metaphysics",
+          "self-cultivation"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Daoism",
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Daoist philosopher and author of the Zhuangzi.",
+          "medium": "Zhuangzi was a foundational Daoist thinker whose text bears his name. He explored relativism, spontaneity, and the limitations of language and conventional distinctions.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.7,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Zhuangzi",
+          "url": "https://plato.stanford.edu/entries/zhuangzi/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "alexander-the-great",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Alexander the Great",
+      "aliases": [
+        "Alexander III of Macedon",
+        "Alexandros"
+      ],
+      "temporal": {
+        "start": -356,
+        "end": -323,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": {
+          "earliest": -357,
+          "latest": -355
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "356\u2013323 BCE; well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.52,
+          "lon": 22.37,
+          "precision": "region",
+          "confidence": 0.9,
+          "place_label": "Pella, Macedonia",
+          "modern_equivalent": "Pella, Macedonia, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "macedon",
+            "role": "born"
+          },
+          {
+            "region_id": "persia",
+            "role": "conquered"
+          },
+          {
+            "region_id": "bactria",
+            "role": "campaigned"
+          },
+          {
+            "region_id": "india",
+            "role": "campaigned"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "warfare",
+          "empire",
+          "hellenism",
+          "governance"
+        ],
+        "keys": [
+          "empire",
+          "hellenism",
+          "warfare",
+          "cultural-diffusion"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Macedonian Empire",
+          "region": "Mediterranean / Near East / Central Asia"
+        },
+        "description": {
+          "short": "Macedonian king who created one of the largest empires of antiquity.",
+          "medium": "Alexander III of Macedon conquered the Persian Empire, Egypt, and parts of Central Asia and India, spreading Hellenistic culture across an enormous swath of the ancient world.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Alexander the Great",
+          "url": "https://www.britannica.com/biography/Alexander-the-Great"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "epicurus",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Epicurus",
+      "aliases": [
+        "Epicurus of Samos"
+      ],
+      "temporal": {
+        "start": -341,
+        "end": -270,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": {
+          "earliest": -342,
+          "latest": -340
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "341\u2013270 BCE; well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.75,
+          "lon": 26.98,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Samos",
+          "modern_equivalent": "Samos, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "founded_school"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "ethics",
+          "metaphysics"
+        ],
+        "keys": [
+          "ethics",
+          "metaphysics",
+          "epistemology",
+          "asceticism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Epicureanism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Greek philosopher who founded Epicureanism, teaching that pleasure is the highest good.",
+          "medium": "Epicurus founded a philosophical community in Athens known as the Garden. He taught that the goal of life is tranquil pleasure (ataraxia) achieved through friendship, reason, and modest living.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Epicurus",
+          "url": "https://plato.stanford.edu/entries/epicurus/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "zeno-of-citium",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Zeno of Citium",
+      "aliases": [
+        "Zeno the Stoic"
+      ],
+      "temporal": {
+        "start": -334,
+        "end": -262,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -340,
+          "latest": -328
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 334\u2013262 BCE; conventional dates.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 34.9,
+          "lon": 33.62,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Citium",
+          "modern_equivalent": "Larnaca, Cyprus"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "founded_school"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "stoicism",
+          "ethics"
+        ],
+        "keys": [
+          "stoicism",
+          "ethics",
+          "cosmopolitanism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Stoicism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Founder of the Stoic school of philosophy.",
+          "medium": "Zeno of Citium founded Stoicism at Athens around 300 BCE, teaching in the Stoa Poikile. Stoicism became immensely influential throughout the Hellenistic and Roman worlds.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Zeno of Citium",
+          "url": "https://plato.stanford.edu/entries/stoicism/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "archimedes",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Archimedes",
+      "aliases": [
+        "Archimedes of Syracuse"
+      ],
+      "temporal": {
+        "start": -287,
+        "end": -212,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -295,
+          "latest": -280
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 287\u2013212 BCE; death in Roman siege of Syracuse is well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.08,
+          "lon": 15.29,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Syracuse",
+          "modern_equivalent": "Syracuse, Sicily, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "magna-graecia",
+            "role": "born_and_died"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "science",
+          "mathematics",
+          "technology"
+        ],
+        "keys": [
+          "mathematics",
+          "natural-philosophy",
+          "technology"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Hellenistic Science",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Greek mathematician, physicist, and engineer of antiquity.",
+          "medium": "Archimedes made fundamental contributions to mathematics (pi, volumes of curved surfaces), physics (buoyancy, levers), and military engineering.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Archimedes",
+          "url": "https://www.britannica.com/biography/Archimedes"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "ashoka",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Ashoka",
+      "aliases": [
+        "Ashoka the Great",
+        "Ashoka Maurya",
+        "Dev\u0101n\u0101mpriya Priyadar\u015bin"
+      ],
+      "temporal": {
+        "start": -304,
+        "end": -232,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": -310,
+          "latest": -295
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 304\u2013232 BCE; dates approximate.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.6,
+          "lon": 85.14,
+          "precision": "city",
+          "confidence": 0.8,
+          "place_label": "Pataliputra",
+          "modern_equivalent": "Patna, Bihar, India"
+        },
+        "active_regions": [
+          {
+            "region_id": "maurya-empire",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "governance",
+          "buddhism",
+          "empire"
+        ],
+        "keys": [
+          "empire",
+          "buddhism",
+          "governance",
+          "diplomacy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Mauryan Empire",
+          "region": "South Asia"
+        },
+        "description": {
+          "short": "Mauryan emperor who converted to Buddhism and spread dharma across Asia.",
+          "medium": "Ashoka ruled the Maurya Empire at its greatest extent. After the bloody Kalinga War, he embraced Buddhism and propagated non-violence, religious tolerance, and welfare governance across his realm and beyond.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Ashoka",
+          "url": "https://www.britannica.com/biography/Ashoka"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "cicero",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Cicero",
+      "aliases": [
+        "Marcus Tullius Cicero"
+      ],
+      "temporal": {
+        "start": -106,
+        "end": -43,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": {
+          "earliest": -107,
+          "latest": -105
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "106\u201343 BCE; well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.64,
+          "lon": 13.34,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Arpinum",
+          "modern_equivalent": "Arpino, Frosinone, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "roman-republic",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "governance",
+          "rhetoric",
+          "law"
+        ],
+        "keys": [
+          "republicanism",
+          "stoicism",
+          "political-philosophy",
+          "literary-culture"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Roman Stoicism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Roman orator, statesman, and philosopher.",
+          "medium": "Cicero was the foremost orator and one of the most important philosophical writers of ancient Rome. He translated Greek philosophy for a Latin audience and championed the Republic against Caesar and Antony.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Cicero",
+          "url": "https://www.britannica.com/biography/Cicero"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "julius-caesar",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Julius Caesar",
+      "aliases": [
+        "Gaius Julius Caesar"
+      ],
+      "temporal": {
+        "start": -100,
+        "end": -44,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": {
+          "earliest": -102,
+          "latest": -99
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "100\u201344 BCE; well-attested. Birth year is 100 BCE by convention.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.9,
+          "lon": 12.5,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Rome",
+          "modern_equivalent": "Rome, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "roman-republic",
+            "role": "active"
+          },
+          {
+            "region_id": "gaul",
+            "role": "conquered"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "warfare",
+          "governance",
+          "empire",
+          "literary-culture"
+        ],
+        "keys": [
+          "empire",
+          "warfare",
+          "governance",
+          "republicanism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Roman Republic / Late Republic",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Roman general and statesman who transformed the Republic into an Empire.",
+          "medium": "Julius Caesar conquered Gaul, crossed the Rubicon, became perpetual dictator, and was assassinated in 44 BCE. His crossing of the Rubicon marks the effective end of the Roman Republic.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Julius Caesar",
+          "url": "https://www.britannica.com/biography/Julius-Caesar-Roman-ruler"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "virgil",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Virgil",
+      "aliases": [
+        "Publius Vergilius Maro",
+        "Vergil"
+      ],
+      "temporal": {
+        "start": -70,
+        "end": -19,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": {
+          "earliest": -71,
+          "latest": -69
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "70\u201319 BCE; well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 45.14,
+          "lon": 10.74,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Andes (near Mantua)",
+          "modern_equivalent": "Virgilio, Mantua, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "roman-empire",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "literary-culture",
+          "poetry",
+          "roman-culture"
+        ],
+        "keys": [
+          "literary-culture",
+          "romanization",
+          "cultural-memory"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Latin Literature",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Roman poet; author of the Aeneid, Georgics, and Eclogues.",
+          "medium": "Virgil was the greatest poet of the Augustan age. The Aeneid provided Rome with a founding epic linking it to Troy and encoding the values of the new imperial order.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Virgil",
+          "url": "https://www.britannica.com/biography/Virgil-Roman-poet"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "augustus-caesar",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Augustus Caesar",
+      "aliases": [
+        "Octavian",
+        "Gaius Octavius",
+        "Gaius Julius Caesar Octavianus Augustus"
+      ],
+      "temporal": {
+        "start": -63,
+        "end": 14,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": {
+          "earliest": -64,
+          "latest": -62
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "63 BCE\u201314 CE; well-attested.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.9,
+          "lon": 12.5,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Rome",
+          "modern_equivalent": "Rome, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "roman-empire",
+            "role": "founded_and_ruled"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "governance",
+          "empire",
+          "roman-culture"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "romanization",
+          "court-patronage"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Roman Empire",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "First Roman Emperor; architect of the Principate.",
+          "medium": "Augustus transformed the Roman Republic into the Empire while maintaining republican forms. His long reign established the Pax Romana and a golden age of Latin literature.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Augustus",
+          "url": "https://www.britannica.com/biography/Augustus-Roman-emperor"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "jesus-of-nazareth",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Jesus of Nazareth",
+      "aliases": [
+        "Jesus Christ",
+        "Yeshua",
+        "Jesus"
+      ],
+      "temporal": {
+        "start": -4,
+        "end": 30,
+        "precision": "decade",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -7,
+          "latest": -2
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Birth conventionally 4\u20136 BCE (before Herod's death); crucifixion c. 30\u201333 CE. The conventional AD 1 is a later medieval calculation error.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 32.7,
+          "lon": 35.3,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Nazareth",
+          "modern_equivalent": "Nazareth, Israel"
+        },
+        "active_regions": [
+          {
+            "region_id": "roman-judaea",
+            "role": "born_and_active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "religion",
+          "christianity",
+          "ethics"
+        ],
+        "keys": [
+          "monotheism",
+          "religion",
+          "social-harmony",
+          "asceticism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Early Christianity / Second Temple Judaism",
+          "region": "Near East"
+        },
+        "description": {
+          "short": "Jewish preacher whose life and teachings founded Christianity.",
+          "medium": "Jesus of Nazareth was a Jewish teacher in Roman-occupied Judaea whose crucifixion and reported resurrection became the foundation of Christianity, one of the world's largest religions.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.7,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Historical existence broadly accepted by scholarship; details contested.",
+        "contradictions": [
+          "Birth year disputed between different scholarly traditions"
+        ],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Jesus Christ",
+          "url": "https://www.britannica.com/biography/Jesus"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "paul-of-tarsus",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Paul of Tarsus",
+      "aliases": [
+        "Saint Paul",
+        "Saul of Tarsus",
+        "Apostle Paul"
+      ],
+      "temporal": {
+        "start": 5,
+        "end": 67,
+        "precision": "decade",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": 1,
+          "latest": 10
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "c. 5\u201367 CE; approximate.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 36.9,
+          "lon": 34.9,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Tarsus",
+          "modern_equivalent": "Tarsus, Mersin, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "roman-empire",
+            "role": "missionary"
+          },
+          {
+            "region_id": "greece",
+            "role": "missionary"
+          },
+          {
+            "region_id": "roman-judaea",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 30,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "religion",
+          "christianity",
+          "philosophy"
+        ],
+        "keys": [
+          "monotheism",
+          "religion",
+          "cosmopolitanism",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Early Christianity",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Apostle who spread Christianity throughout the Roman Mediterranean world.",
+          "medium": "Paul of Tarsus was a Jewish-Roman convert who became Christianity's most prolific missionary and letter-writer. His epistles are foundational to Christian theology and shaped church doctrine.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.75,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Saint Paul",
+          "url": "https://www.britannica.com/biography/Saint-Paul-the-Apostle"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "spring-autumn-period",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Spring and Autumn Period",
+      "aliases": [
+        "Chunqiu Period"
+      ],
+      "temporal": {
+        "start": -771,
+        "end": -476,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -775,
+          "latest": -769
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Traditional Chinese historiographic period; boundaries conventional.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 35.0,
+          "lon": 113.0,
+          "precision": "region",
+          "confidence": 0.9,
+          "place_label": "Northern China",
+          "modern_equivalent": "North China Plain"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "governance",
+          "philosophy",
+          "chinese-history"
+        ],
+        "keys": [
+          "confucianism",
+          "governance"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Period of Chinese history characterized by competing Zhou vassal states.",
+          "medium": "The Spring and Autumn Period saw the decline of the Zhou royal house and the rise of competing feudal states. It was the age of Confucius and the beginning of the Hundred Schools of Thought.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Spring and Autumn Period",
+          "url": "https://www.britannica.com/event/Spring-and-Autumn-Period"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "warring-states-period",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Warring States Period",
+      "aliases": [
+        "Zhanguo Period"
+      ],
+      "temporal": {
+        "start": -475,
+        "end": -221,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -480,
+          "latest": -470
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Conventional dates; end marked by Qin unification.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 35.0,
+          "lon": 113.0,
+          "precision": "region",
+          "confidence": 0.9,
+          "place_label": "China",
+          "modern_equivalent": "China"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 800,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "warfare",
+          "governance",
+          "philosophy",
+          "chinese-history"
+        ],
+        "keys": [
+          "governance",
+          "warfare",
+          "confucianism",
+          "daoism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Period of warfare and philosophical flowering preceding Qin unification of China.",
+          "medium": "The Warring States Period saw the Hundred Schools of Thought flourish \u2014 Confucianism, Daoism, Legalism, Mohism \u2014 alongside intense interstate warfare culminating in Qin's unification in 221 BCE.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Warring States Period",
+          "url": "https://www.britannica.com/event/Warring-States-period"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "classical-athens",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Classical Athens",
+      "aliases": [
+        "Golden Age of Athens"
+      ],
+      "temporal": {
+        "start": -480,
+        "end": -323,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -490,
+          "latest": -470
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Conventionally from Persian Wars to death of Alexander.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "greece",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "democracy",
+          "philosophy",
+          "art",
+          "hellenism"
+        ],
+        "keys": [
+          "democracy",
+          "hellenism",
+          "philosophy",
+          "art-and-aesthetics"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "The golden age of Athenian democracy, philosophy, drama, and art.",
+          "medium": "Classical Athens produced an unprecedented flowering of democracy, tragedy, comedy, philosophy, sculpture and architecture. It is the period of Pericles, Socrates, Plato, Thucydides, and the Parthenon.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Classical Period, Greek Culture",
+          "url": "https://www.britannica.com/topic/ancient-Greek-civilization"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "hellenistic-period",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Hellenistic Period",
+      "aliases": [
+        "Hellenistic Age"
+      ],
+      "temporal": {
+        "start": -323,
+        "end": -31,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": {
+          "earliest": -325,
+          "latest": -321
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "From death of Alexander to Battle of Actium.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 30.0,
+          "lon": 25.0,
+          "precision": "region",
+          "confidence": 0.8,
+          "place_label": "Eastern Mediterranean and Near East",
+          "modern_equivalent": "Mediterranean / Near East / Central Asia"
+        },
+        "active_regions": [
+          {
+            "region_id": "mediterranean",
+            "role": "primary"
+          },
+          {
+            "region_id": "near-east",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 2000,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "hellenism",
+          "cultural-diffusion",
+          "syncretism",
+          "empire"
+        ],
+        "keys": [
+          "hellenism",
+          "cultural-diffusion",
+          "syncretism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean / Near East"
+        },
+        "description": {
+          "short": "Period of Greek cultural dominance following Alexander's conquests.",
+          "medium": "The Hellenistic Period was characterized by the spread of Greek language, culture, and institutions across the Near East, Central Asia, and Egypt, resulting in rich cultural syncretism.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Hellenistic Age",
+          "url": "https://www.britannica.com/event/Hellenistic-Age"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "roman-republic",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Roman Republic",
+      "aliases": [
+        "Res Publica Romana"
+      ],
+      "temporal": {
+        "start": -509,
+        "end": -27,
+        "precision": "year",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -515,
+          "latest": -505
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "From expulsion of kings to Augustus receiving the title Princeps.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.9,
+          "lon": 12.5,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Rome",
+          "modern_equivalent": "Rome, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "italy",
+            "role": "primary"
+          },
+          {
+            "region_id": "mediterranean",
+            "role": "expanding"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 1000,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "governance",
+          "republicanism",
+          "warfare",
+          "law"
+        ],
+        "keys": [
+          "republicanism",
+          "governance",
+          "warfare"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "The Roman state governed by Senate and elected magistrates, 509\u201327 BCE.",
+          "medium": "The Roman Republic developed republican institutions \u2014 Senate, consuls, tribunes \u2014 and expanded to dominate the Mediterranean, before collapsing into civil war and giving way to the Empire.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Roman Republic",
+          "url": "https://www.britannica.com/place/Roman-Republic"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "roman-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Roman Empire",
+      "aliases": [
+        "Imperium Romanum"
+      ],
+      "temporal": {
+        "start": -27,
+        "end": 476,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": {
+          "earliest": -28,
+          "latest": -26
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Conventionally 27 BCE to 476 CE (fall of Western Empire).",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.9,
+          "lon": 12.5,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Rome",
+          "modern_equivalent": "Rome, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "mediterranean",
+            "role": "primary"
+          },
+          {
+            "region_id": "north-africa",
+            "role": "province"
+          },
+          {
+            "region_id": "near-east",
+            "role": "province"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 2000,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "empire",
+          "governance",
+          "romanization",
+          "law"
+        ],
+        "keys": [
+          "empire",
+          "romanization",
+          "governance"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Rome's imperial era, 27 BCE\u2013476 CE, encompassing the Mediterranean world.",
+          "medium": "The Roman Empire at its height controlled the entire Mediterranean basin, disseminating Roman law, Latin language, and architecture across Europe, North Africa, and the Near East.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Roman Empire",
+          "url": "https://www.britannica.com/place/Roman-Empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "maurya-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Maurya Empire",
+      "aliases": [
+        "Mauryan Empire"
+      ],
+      "temporal": {
+        "start": -322,
+        "end": -185,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -325,
+          "latest": -320
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Founded by Chandragupta Maurya c. 322 BCE.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.6,
+          "lon": 85.14,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Pataliputra",
+          "modern_equivalent": "Patna, Bihar, India"
+        },
+        "active_regions": [
+          {
+            "region_id": "south-asia",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 1500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "empire",
+          "governance",
+          "buddhism",
+          "india"
+        ],
+        "keys": [
+          "empire",
+          "buddhism",
+          "governance"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "South Asia"
+        },
+        "description": {
+          "short": "First great Indian empire; reached its zenith under Ashoka.",
+          "medium": "The Maurya Empire was the first pan-Indian empire, spanning most of the subcontinent. Under Ashoka it became a vehicle for Buddhist proselytism and welfare-oriented governance.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Mauryan Empire",
+          "url": "https://www.britannica.com/place/Mauryan-empire"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "axial-age-period",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Axial Age",
+      "aliases": [
+        "Achsenzeit"
+      ],
+      "temporal": {
+        "start": -800,
+        "end": -200,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -900,
+          "latest": -100
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Karl Jaspers' concept (1949); boundaries are heuristic, not historical fact.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 30.0,
+          "lon": 60.0,
+          "precision": "continent",
+          "confidence": 0.5,
+          "place_label": "Eurasia",
+          "modern_equivalent": "Eurasia"
+        },
+        "active_regions": [
+          {
+            "region_id": "china",
+            "role": "active"
+          },
+          {
+            "region_id": "india",
+            "role": "active"
+          },
+          {
+            "region_id": "greece",
+            "role": "active"
+          },
+          {
+            "region_id": "near-east",
+            "role": "active"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Globally distributed phenomenon; no single primary coordinate is meaningful."
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "religion",
+          "history-of-ideas"
+        ],
+        "keys": [
+          "axial-age",
+          "philosophy",
+          "religion"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Eurasia"
+        },
+        "description": {
+          "short": "Karl Jaspers' concept of a pivotal era of philosophical and religious innovation across Eurasia.",
+          "medium": "The Axial Age (c. 800\u2013200 BCE) saw the emergence of Confucianism, Daoism, Buddhism, Greek philosophy, and Hebrew monotheism roughly simultaneously across Eurasia, without apparent contact.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.65,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Concept is analytical/historiographic, not a historical polity.",
+        "contradictions": [
+          "Some scholars dispute simultaneity and independence of developments"
+        ],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Axial Age",
+          "url": "https://plato.stanford.edu/entries/jaspers/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "persian-achaemenid-empire",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Persian Achaemenid Empire",
+      "aliases": [
+        "Achaemenid Empire",
+        "First Persian Empire"
+      ],
+      "temporal": {
+        "start": -550,
+        "end": -330,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": {
+          "earliest": -553,
+          "latest": -548
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Founded by Cyrus the Great c. 550 BCE; ended by Alexander c. 330 BCE.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 29.93,
+          "lon": 52.9,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Persepolis",
+          "modern_equivalent": "Persepolis, Fars Province, Iran"
+        },
+        "active_regions": [
+          {
+            "region_id": "near-east",
+            "role": "primary"
+          },
+          {
+            "region_id": "central-asia",
+            "role": "province"
+          },
+          {
+            "region_id": "egypt",
+            "role": "province"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 2500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "empire",
+          "governance",
+          "diplomacy",
+          "near-east"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "diplomacy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Near East / Central Asia"
+        },
+        "description": {
+          "short": "The first great Persian empire, stretching from Egypt to the Indus.",
+          "medium": "The Achaemenid Empire was the largest empire the ancient world had yet seen, known for its efficient administration, religious tolerance, and the Royal Road postal system.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Achaemenian dynasty",
+          "url": "https://www.britannica.com/topic/Achaemenian-dynasty"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "qin-dynasty",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Qin Dynasty",
+      "aliases": [
+        "Ch'in Dynasty"
+      ],
+      "temporal": {
+        "start": -221,
+        "end": -206,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": {
+          "earliest": -222,
+          "latest": -220
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "221\u2013206 BCE; well-attested.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 34.27,
+          "lon": 108.94,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Xianyang",
+          "modern_equivalent": "Near Xi'an, Shaanxi, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "china",
+            "role": "ruled"
+          }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": 1000,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "empire",
+          "governance",
+          "warfare",
+          "china"
+        ],
+        "keys": [
+          "empire",
+          "governance",
+          "warfare",
+          "bureaucracy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Short-lived dynasty that first unified China under a single emperor.",
+          "medium": "The Qin Dynasty unified China for the first time, standardising writing, weights and measures, and law. The First Emperor (Qin Shi Huang) began the Great Wall and was buried with the Terracotta Army.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Qin dynasty",
+          "url": "https://www.britannica.com/topic/Qin-dynasty"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "athens",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Athens",
+      "aliases": [
+        "Athenai"
+      ],
+      "temporal": {
+        "start": -800,
+        "end": null,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -1000,
+          "latest": -700
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Settlement of the Acropolis dates to Neolithic; city-state form emerges c. 800 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Attica, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "greece",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "city",
+          "democracy",
+          "hellenism",
+          "philosophy"
+        ],
+        "keys": [
+          "democracy",
+          "hellenism",
+          "philosophy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "City-state of ancient Greece; birthplace of democracy and Western philosophy.",
+          "medium": "Athens was the dominant Greek city-state of the classical period, pioneering democracy, philosophy, tragedy, and architecture. Its cultural legacy defined Western civilisation.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Athens",
+          "url": "https://www.britannica.com/place/Athens"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "alexandria-egypt",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Alexandria",
+      "aliases": [
+        "Alexandria in Egypt",
+        "Alexandreia"
+      ],
+      "temporal": {
+        "start": -331,
+        "end": null,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": {
+          "earliest": -332,
+          "latest": -330
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Founded by Alexander the Great in 331 BCE.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 31.2,
+          "lon": 29.92,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Alexandria",
+          "modern_equivalent": "Alexandria, Egypt"
+        },
+        "active_regions": [
+          {
+            "region_id": "egypt",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "city",
+          "hellenism",
+          "scholarship",
+          "institution-building"
+        ],
+        "keys": [
+          "hellenism",
+          "institution-building",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean / North Africa"
+        },
+        "description": {
+          "short": "Hellenistic capital of Egypt; home of the Library and the Mouseion.",
+          "medium": "Alexandria became the greatest city of the Hellenistic world, a hub of scholarship, trade, and cultural synthesis hosting the Library of Alexandria, the Mouseion, and large Jewish and Greek communities.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Alexandria",
+          "url": "https://www.britannica.com/place/Alexandria-Egypt"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "rome",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Rome",
+      "aliases": [
+        "Roma",
+        "Caput Mundi"
+      ],
+      "temporal": {
+        "start": -753,
+        "end": null,
+        "precision": "century",
+        "confidence": 0.6,
+        "fuzzy_range": {
+          "earliest": -800,
+          "latest": -700
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Traditional founding 753 BCE; archaeological evidence for 8th-century settlement.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.9,
+          "lon": 12.5,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Rome",
+          "modern_equivalent": "Rome, Lazio, Italy"
+        },
+        "active_regions": [
+          {
+            "region_id": "italy",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "city",
+          "empire",
+          "law",
+          "romanization"
+        ],
+        "keys": [
+          "empire",
+          "romanization",
+          "republicanism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Capital of the Roman Republic and Empire; 'Caput Mundi'.",
+          "medium": "Rome grew from a small Latin city to the capital of an empire spanning the Mediterranean. Its legal, linguistic, and architectural legacy defined European civilisation.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Rome",
+          "url": "https://www.britannica.com/place/Rome"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "athens-academy",
+      "schema_version": "1.0",
+      "node_type": "institution",
+      "label": "Plato's Academy",
+      "aliases": [
+        "Academy of Athens",
+        "Academia"
+      ],
+      "temporal": {
+        "start": -387,
+        "end": 529,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -390,
+          "latest": -384
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Founded c. 387 BCE; closed by Justinian's edict of 529 CE.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.99,
+          "lon": 23.71,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Athens (northwest suburb)",
+          "modern_equivalent": "Academy of Plato park, Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "greece",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 5,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "institution",
+          "philosophy",
+          "education"
+        ],
+        "keys": [
+          "institution-building",
+          "philosophy",
+          "platonic-idealism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Philosophical school founded by Plato in Athens, c. 387 BCE.",
+          "medium": "Plato's Academy was the first institution of higher learning in the Western world. It trained generations of philosophers including Aristotle, and survived in various forms for nearly 900 years.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Academy, Athens",
+          "url": "https://www.britannica.com/topic/Academy-ancient-Greek-school"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "lyceum-aristotle",
+      "schema_version": "1.0",
+      "node_type": "institution",
+      "label": "Aristotle's Lyceum",
+      "aliases": [
+        "Lyceum",
+        "Peripatetic School"
+      ],
+      "temporal": {
+        "start": -335,
+        "end": -86,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -337,
+          "latest": -333
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Founded c. 335 BCE; effectively ended when Sulla sacked Athens in 86 BCE.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.74,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Athens (east of walls)",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "greece",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 5,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "institution",
+          "philosophy",
+          "science",
+          "education"
+        ],
+        "keys": [
+          "institution-building",
+          "peripatetic-philosophy",
+          "natural-philosophy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Philosophical school founded by Aristotle in Athens, c. 335 BCE.",
+          "medium": "The Lyceum was Aristotle's school of philosophy and natural science. Its peripatetic tradition emphasised empirical observation across disciplines from biology to politics.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Lyceum",
+          "url": "https://www.britannica.com/topic/Lyceum-ancient-school-Athens"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "library-of-alexandria",
+      "schema_version": "1.0",
+      "node_type": "institution",
+      "label": "Library of Alexandria",
+      "aliases": [
+        "Great Library",
+        "Bibliotheke"
+      ],
+      "temporal": {
+        "start": -295,
+        "end": 400,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": -300,
+          "latest": -290
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Founded under Ptolemy I or II c. 295 BCE; decline gradual. No single 'burning' date is reliable.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 31.2,
+          "lon": 29.92,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Alexandria",
+          "modern_equivalent": "Alexandria, Egypt"
+        },
+        "active_regions": [
+          {
+            "region_id": "egypt",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 5,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "institution",
+          "scholarship",
+          "transmission-of-knowledge"
+        ],
+        "keys": [
+          "institution-building",
+          "transmission-of-knowledge",
+          "literary-culture"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean / North Africa"
+        },
+        "description": {
+          "short": "The greatest library of antiquity, located in Ptolemaic Alexandria.",
+          "medium": "The Library of Alexandria was the largest repository of texts in the ancient world, collecting and preserving works from across the Hellenistic world and serving as the hub of the Mouseion research institution.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Destruction narrative is mythologized; decline was gradual.",
+        "contradictions": [
+          "Multiple 'destruction' events attributed; no single definitive burning"
+        ],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Library of Alexandria",
+          "url": "https://www.britannica.com/topic/Library-of-Alexandria"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "pataliputra",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Pataliputra",
+      "aliases": [
+        "Patna",
+        "Palibothra"
+      ],
+      "temporal": {
+        "start": -490,
+        "end": 550,
+        "precision": "century",
+        "confidence": 0.75,
+        "fuzzy_range": {
+          "earliest": -500,
+          "latest": -480
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Founded c. 490 BCE; Mauryan capital from c. 320 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.6,
+          "lon": 85.14,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Pataliputra",
+          "modern_equivalent": "Patna, Bihar, India"
+        },
+        "active_regions": [
+          {
+            "region_id": "south-asia",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "city",
+          "empire",
+          "buddhism",
+          "governance"
+        ],
+        "keys": [
+          "empire",
+          "urbanization",
+          "buddhism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "South Asia"
+        },
+        "description": {
+          "short": "Capital of the Maurya and Gupta empires; one of the largest ancient cities.",
+          "medium": "Pataliputra was the capital of the Nanda, Maurya, and Gupta empires. At its height under Ashoka it was among the largest cities in the world, described admiringly by Megasthenes.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Pataliputra",
+          "url": "https://www.britannica.com/place/Pataliputra"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "miletus",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Miletus",
+      "aliases": [
+        "Miletos"
+      ],
+      "temporal": {
+        "start": -1000,
+        "end": 700,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -1200,
+          "latest": -800
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Mycenaean settlement predates 1000 BCE; classical floruit 600\u2013479 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.53,
+          "lon": 27.26,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Miletus",
+          "modern_equivalent": "Didim, Ayd\u0131n, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "ionia",
+            "role": "primary"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "city",
+          "philosophy",
+          "science",
+          "hellenism"
+        ],
+        "keys": [
+          "natural-philosophy",
+          "hellenism",
+          "urbanization"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "region": "Mediterranean / Ionia"
+        },
+        "description": {
+          "short": "Ionian city-state; birthplace of Greek philosophy and scientific inquiry.",
+          "medium": "Miletus was the most important Greek city of Asia Minor in the archaic period and the home of Thales, Anaximander, and Anaximenes \u2014 the first philosophers to seek natural explanations for phenomena.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Miletus",
+          "url": "https://www.britannica.com/place/Miletus"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "analects",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Analects of Confucius",
+      "aliases": [
+        "Lunyu",
+        "The Analects"
+      ],
+      "temporal": {
+        "start": -479,
+        "end": -400,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -479,
+          "latest": -249
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Compiled by disciples after Confucius' death; final form may be later.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 35.6,
+          "lon": 117.0,
+          "precision": "region",
+          "confidence": 0.8,
+          "place_label": "State of Lu",
+          "modern_equivalent": "Shandong, China"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "composed"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 100,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "confucianism",
+          "literature"
+        ],
+        "keys": [
+          "confucianism",
+          "social-harmony",
+          "governance"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Confucianism",
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Collection of sayings attributed to Confucius, compiled by his disciples.",
+          "medium": "The Analects (Lunyu) is the central text of Confucianism, recording conversations and aphorisms of Confucius on ethics, governance, and ritual. It shaped education and governance in East Asia for over two millennia.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Confucius",
+          "url": "https://plato.stanford.edu/entries/confucius/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "republic-plato",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "The Republic",
+      "aliases": [
+        "Politeia",
+        "Plato's Republic"
+      ],
+      "temporal": {
+        "start": -380,
+        "end": -360,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -390,
+          "latest": -370
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Written c. 380 BCE; a middle-period Platonic dialogue.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "composed"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "political-philosophy",
+          "ethics",
+          "metaphysics"
+        ],
+        "keys": [
+          "political-philosophy",
+          "platonic-idealism",
+          "ethics"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Platonism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Plato's dialogue on justice, the ideal state, and the philosopher-king.",
+          "medium": "The Republic is Plato's most celebrated work, exploring justice through the construction of an ideal city-state and examining the soul, education, and the theory of Forms.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Plato's Republic",
+          "url": "https://plato.stanford.edu/entries/plato-republic/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "nicomachean-ethics",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Nicomachean Ethics",
+      "aliases": [
+        "Ethika Nikomacheia"
+      ],
+      "temporal": {
+        "start": -350,
+        "end": -330,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -355,
+          "latest": -340
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Written during Aristotle's time at the Lyceum, c. 350\u2013335 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.74,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Athens (Lyceum)",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "composed"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "ethics",
+          "virtue"
+        ],
+        "keys": [
+          "ethics",
+          "peripatetic-philosophy",
+          "moral-philosophy"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Aristotelianism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Aristotle's foundational treatise on virtue, happiness, and the good life.",
+          "medium": "The Nicomachean Ethics is Aristotle's most important ethical work, arguing that eudaimonia (flourishing) is the highest human good, achieved through virtuous activity in accordance with reason.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Aristotle's Ethics",
+          "url": "https://plato.stanford.edu/entries/aristotle-ethics/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "tao-te-ching",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Tao Te Ching",
+      "aliases": [
+        "Daodejing",
+        "Laozi (text)"
+      ],
+      "temporal": {
+        "start": -400,
+        "end": -300,
+        "precision": "century",
+        "confidence": 0.55,
+        "fuzzy_range": {
+          "earliest": -600,
+          "latest": -250
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Authorship and dating contested. Mawangdui manuscripts (c. 168 BCE) provide a terminus ante quem. Text likely compiled 4th\u20133rd century BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 33.5,
+          "lon": 114.0,
+          "precision": "region",
+          "confidence": 0.4,
+          "place_label": "China (provenance uncertain)",
+          "modern_equivalent": "China"
+        },
+        "active_regions": [
+          {
+            "region_id": "zhou-china",
+            "role": "composed"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 500,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "daoism",
+          "metaphysics",
+          "governance"
+        ],
+        "keys": [
+          "daoism",
+          "metaphysics",
+          "governance"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Daoism",
+          "region": "East Asia"
+        },
+        "description": {
+          "short": "Foundational Daoist text attributed to Laozi.",
+          "medium": "The Tao Te Ching is the core text of Daoism, 81 short chapters on the nature of the Dao, virtue, and the art of governance through non-action (wu wei). Its authorship is contested.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.65,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Authorship attributed to Laozi but almost certainly composite or pseudonymous.",
+        "contradictions": [
+          "Single-author attribution to Laozi doubted by many scholars"
+        ],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Laozi",
+          "url": "https://plato.stanford.edu/entries/laozi/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "iliad",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Iliad",
+      "aliases": [
+        "Homer's Iliad"
+      ],
+      "temporal": {
+        "start": -750,
+        "end": -700,
+        "precision": "century",
+        "confidence": 0.65,
+        "fuzzy_range": {
+          "earliest": -850,
+          "latest": -650
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Conventional dating c. 750 BCE; Homeric question places composition in 8th century BCE, with oral traditions far older.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 38.0,
+          "lon": 23.7,
+          "precision": "region",
+          "confidence": 0.4,
+          "place_label": "Greece (traditional; provenance uncertain)",
+          "modern_equivalent": "Greece / Ionia"
+        },
+        "active_regions": [
+          {
+            "region_id": "greece",
+            "role": "composed"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 400,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "literary-culture",
+          "poetry",
+          "mythology",
+          "oral-tradition"
+        ],
+        "keys": [
+          "literary-culture",
+          "polytheism",
+          "cultural-memory",
+          "oral-tradition"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Greek Epic",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Greek epic poem attributed to Homer, narrating the Trojan War.",
+          "medium": "The Iliad is one of the oldest and most influential works of Western literature. It narrates key episodes of the Trojan War, exploring themes of honour, fate, grief, and heroism.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.75,
+        "source_quality": "scholarly_debate",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "Homeric authorship is disputed; oral composition and later written fixation both involved.",
+        "contradictions": [
+          "Homeric question: single author vs. oral-formulaic tradition"
+        ],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Iliad",
+          "url": "https://www.britannica.com/topic/Iliad-epic-by-Homer"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "histories-herodotus",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Histories",
+      "aliases": [
+        "The Histories of Herodotus",
+        "Historiai"
+      ],
+      "temporal": {
+        "start": -440,
+        "end": -425,
+        "precision": "decade",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -450,
+          "latest": -420
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Written c. 440\u2013425 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.04,
+          "lon": 27.43,
+          "precision": "city",
+          "confidence": 0.85,
+          "place_label": "Halicarnassus (author's origin)",
+          "modern_equivalent": "Bodrum, Mu\u011fla, Turkey"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "written"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 50,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "history",
+          "literary-culture",
+          "geography"
+        ],
+        "keys": [
+          "cultural-memory",
+          "literary-culture",
+          "geography-and-environment"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Greek Historiography",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Herodotus' account of the Greco-Persian Wars and ethnography of the known world.",
+          "medium": "The Histories is the earliest surviving major prose work in Western literature, combining a narrative of the Persian Wars with digressions on the peoples, customs, and geography of the ancient world.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Herodotus",
+          "url": "https://www.britannica.com/biography/Herodotus-Greek-historian"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "elements-euclid",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Elements",
+      "aliases": [
+        "Euclid's Elements",
+        "Stoicheia"
+      ],
+      "temporal": {
+        "start": -300,
+        "end": -290,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -310,
+          "latest": -285
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Written c. 300 BCE in Alexandria.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 31.2,
+          "lon": 29.92,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Alexandria",
+          "modern_equivalent": "Alexandria, Egypt"
+        },
+        "active_regions": [
+          {
+            "region_id": "egypt",
+            "role": "composed"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 10,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "mathematics",
+          "logic",
+          "science"
+        ],
+        "keys": [
+          "mathematics",
+          "logic",
+          "transmission-of-knowledge"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Hellenistic Science",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Euclid's systematic treatise on geometry; the most influential mathematics textbook in history.",
+          "medium": "Euclid's Elements compiled and systematised Greek mathematical knowledge into 13 books of definitions, postulates, and proofs. It was used as the primary geometry textbook until the 19th century.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Euclid's Elements",
+          "url": "https://www.britannica.com/topic/Elements-by-Euclid"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "logos",
+      "schema_version": "1.0",
+      "node_type": "concept",
+      "label": "Logos",
+      "aliases": [
+        "Word",
+        "Reason",
+        "Rational Principle"
+      ],
+      "temporal": {
+        "start": -500,
+        "end": 400,
+        "precision": "century",
+        "confidence": 0.7,
+        "fuzzy_range": {
+          "earliest": -550,
+          "latest": -450
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Concept first prominent in Heraclitus c. 500 BCE; continues through Stoicism and early Christianity.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 0.0,
+          "lon": 0.0,
+          "precision": "continent",
+          "confidence": 0.3,
+          "place_label": "Greece and Mediterranean",
+          "modern_equivalent": "Mediterranean world"
+        },
+        "active_regions": [
+          {
+            "region_id": "greece",
+            "role": "originated"
+          },
+          {
+            "region_id": "mediterranean",
+            "role": "spread"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Intellectual concept without fixed geographic locus; originated in Greece but spread across the ancient Mediterranean."
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "metaphysics",
+          "language",
+          "theology"
+        ],
+        "keys": [
+          "metaphysics",
+          "natural-philosophy",
+          "stoicism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Greek Philosophy / Stoicism / Early Christianity",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Greek concept of rational order, word, or divine reason.",
+          "medium": "Logos denotes the rational principle underlying the cosmos in Greek philosophy. Central in Heraclitus, Stoicism, and Neoplatonism, it was later adopted in the Gospel of John to describe Christ as the divine Word.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Logos",
+          "url": "https://plato.stanford.edu/entries/logos/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "dharma-concept",
+      "schema_version": "1.0",
+      "node_type": "concept",
+      "label": "Dharma",
+      "aliases": [
+        "Dhamma",
+        "Cosmic Law",
+        "Righteousness"
+      ],
+      "temporal": {
+        "start": -600,
+        "end": 800,
+        "precision": "century",
+        "confidence": 0.65,
+        "fuzzy_range": {
+          "earliest": -1000,
+          "latest": -500
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Concept attested in Vedic literature from c. 1000 BCE; prominent in Buddhist and Hindu thought from 6th century BCE.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.0,
+          "lon": 80.0,
+          "precision": "region",
+          "confidence": 0.6,
+          "place_label": "Indian Subcontinent",
+          "modern_equivalent": "South Asia"
+        },
+        "active_regions": [
+          {
+            "region_id": "south-asia",
+            "role": "originated"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Pan-South-Asian concept without fixed geographic locus; spread throughout Asia with Buddhism and Hinduism."
+      },
+      "semantic": {
+        "tags": [
+          "religion",
+          "philosophy",
+          "ethics",
+          "cosmic-order"
+        ],
+        "keys": [
+          "dharma",
+          "religion",
+          "ethics"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Buddhism / Hinduism / Jainism",
+          "region": "South Asia"
+        },
+        "description": {
+          "short": "Sanskrit concept of cosmic order, duty, and moral law.",
+          "medium": "Dharma is a multi-layered concept in Indian religions denoting cosmic order, moral duty, and the path of righteousness. In Buddhism it refers specifically to the Buddha's teaching.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.8,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Dharma",
+          "url": "https://www.britannica.com/topic/dharma"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "four-noble-truths",
+      "schema_version": "1.0",
+      "node_type": "concept",
+      "label": "Four Noble Truths",
+      "aliases": [
+        "Catv\u0101ri \u0100ryasaty\u0101ni",
+        "Ariya-sacca"
+      ],
+      "temporal": {
+        "start": -530,
+        "end": null,
+        "precision": "decade",
+        "confidence": 0.65,
+        "fuzzy_range": {
+          "earliest": -580,
+          "latest": -450
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "First taught by the Buddha after enlightenment; dating follows conventional Buddha chronology.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 25.38,
+          "lon": 83.0,
+          "precision": "city",
+          "confidence": 0.8,
+          "place_label": "Sarnath (Deer Park)",
+          "modern_equivalent": "Sarnath, Varanasi, India"
+        },
+        "active_regions": [
+          {
+            "region_id": "south-asia",
+            "role": "originated"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Teaching that spread across Asia; no single geographic instantiation is meaningful beyond its origin at Sarnath."
+      },
+      "semantic": {
+        "tags": [
+          "religion",
+          "buddhism",
+          "philosophy",
+          "ethics"
+        ],
+        "keys": [
+          "buddhism",
+          "liberation",
+          "asceticism"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Buddhism",
+          "region": "South Asia"
+        },
+        "description": {
+          "short": "The Buddha's foundational teaching on suffering, its cause, cessation, and path.",
+          "medium": "The Four Noble Truths \u2014 dukkha (suffering), samudaya (its origin in craving), nirodha (cessation), and magga (the Eightfold Path) \u2014 form the doctrinal foundation of all Buddhist traditions.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.75,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Encyclopedia Britannica: Four Noble Truths",
+          "url": "https://www.britannica.com/topic/Four-Noble-Truths"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "platonic-forms",
+      "schema_version": "1.0",
+      "node_type": "concept",
+      "label": "Theory of Forms",
+      "aliases": [
+        "Platonic Ideas",
+        "Platonic Forms",
+        "Eidos"
+      ],
+      "temporal": {
+        "start": -390,
+        "end": -348,
+        "precision": "decade",
+        "confidence": 0.85,
+        "fuzzy_range": {
+          "earliest": -400,
+          "latest": -380
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Developed in Plato's middle dialogues c. 390\u2013360 BCE.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Athens",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "originated"
+          }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 20,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "metaphysics",
+          "epistemology"
+        ],
+        "keys": [
+          "platonic-idealism",
+          "metaphysics"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Platonism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "Plato's doctrine that abstract Forms are more real than material particulars.",
+          "medium": "The Theory of Forms holds that non-material abstract Forms \u2014 such as Beauty, Justice, and Equality \u2014 are the most real entities, of which physical things are mere imperfect copies.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Plato's Middle Period Metaphysics",
+          "url": "https://plato.stanford.edu/entries/plato-metaphysics/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "stoic-logos",
+      "schema_version": "1.0",
+      "node_type": "concept",
+      "label": "Stoic Logos",
+      "aliases": [
+        "Logos Spermatikos",
+        "Universal Reason",
+        "World Soul"
+      ],
+      "temporal": {
+        "start": -300,
+        "end": 200,
+        "precision": "century",
+        "confidence": 0.8,
+        "fuzzy_range": {
+          "earliest": -310,
+          "latest": -280
+        },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Developed by Zeno of Citium and elaborated by subsequent Stoics c. 300 BCE onward.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 37.97,
+          "lon": 23.73,
+          "precision": "city",
+          "confidence": 0.8,
+          "place_label": "Athens (Stoa Poikile)",
+          "modern_equivalent": "Athens, Greece"
+        },
+        "active_regions": [
+          {
+            "region_id": "classical-athens",
+            "role": "originated"
+          },
+          {
+            "region_id": "roman-empire",
+            "role": "spread"
+          }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Concept that spread across the entire Greco-Roman Mediterranean; no single geographic instantiation beyond its Athenian origin."
+      },
+      "semantic": {
+        "tags": [
+          "philosophy",
+          "stoicism",
+          "theology",
+          "cosmology"
+        ],
+        "keys": [
+          "stoicism",
+          "cosmopolitanism",
+          "ethics"
+        ],
+        "keys_provisional": [],
+        "facets": {
+          "tradition": "Stoicism",
+          "region": "Mediterranean"
+        },
+        "description": {
+          "short": "The Stoic concept of divine rational fire permeating and governing the cosmos.",
+          "medium": "In Stoic philosophy, the Logos is the active rational principle or divine fire that structures and animates the cosmos. All human reason participates in this universal Logos, grounding Stoic cosmopolitanism.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-000-baseline",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [],
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy: Stoicism",
+          "url": "https://plato.stanford.edu/entries/stoicism/"
+        }
+      ],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    }
+  ],
+  "edges": [],
+  "provisional_keys": [],
+  "ingestion_notes": "Baseline conversion from prototype visualizer data. Temporal precision is honest \u2014 many dates are century-level. Coordinates are approximate. This is epoch-000; it will be refined."
+}

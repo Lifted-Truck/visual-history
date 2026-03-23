@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0",
+  "project": "chronos",
+  "description": "Personal historical knowledge graph and multi-modal visualizer.",
+
+  "default_scope": {
+    "time_range": [-600, 400],
+    "tags": [],
+    "regions": [],
+    "node_types": ["person", "event", "period", "place", "work", "concept", "institution", "technology", "route", "phenomenon"],
+    "connection_classes": ["causal", "intellectual", "biographical", "spatial", "temporal", "material", "analogical", "ecological"],
+    "curation_statuses": ["canonical", "ingested"],
+    "depth": 2
+  },
+
+  "display_defaults": {
+    "fuzzy_node": {
+      "halo_min_opacity": 0.15,
+      "halo_max_opacity": 0.6,
+      "halo_radius_multiplier": 2.5,
+      "certainty_sharp_threshold": 0.85,
+      "certainty_fuzzy_threshold": 0.4
+    },
+    "density_halo": {
+      "bandwidth_km": 300,
+      "min_intensity": 0.0,
+      "max_intensity": 1.0,
+      "color_scale": "viridis"
+    },
+    "timeline": {
+      "lane_height_px": 40,
+      "work_dot_radius_px": 4,
+      "event_band_opacity": 0.3,
+      "connection_arc_opacity": 0.5
+    },
+    "network": {
+      "force_strength": -80,
+      "link_distance": 80,
+      "collision_radius": 20
+    }
+  },
+
+  "ai_config": {
+    "model_version": "claude-sonnet-4-6",
+    "prose_cache_location": "data/prose-cache/",
+    "inference_confidence_threshold": 0.6,
+    "max_inferred_edges_per_subgraph": 20,
+    "prose_angles": ["intellectual_context", "historical_significance", "geographic_spread", "biographical", "controversy"]
+  },
+
+  "paths": {
+    "schema_dir": "data/schema/",
+    "epochs_dir": "data/epochs/",
+    "staging_dir": "data/staging/",
+    "stories_dir": "data/stories/",
+    "prose_cache_dir": "data/prose-cache/",
+    "compiled_graph": "dist/graph.json",
+    "exports_dir": "dist/exports/"
+  },
+
+  "endpoint_manifest": [
+    {
+      "id": "loadGraph",
+      "module": "src/engine/graph",
+      "description": "Loads the compiled runtime graph from dist/graph.json.",
+      "inputs": [],
+      "output": {
+        "type": "RuntimeGraph",
+        "description": "Nodes as id-keyed map, edges as adjacency list and flat array."
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "getNode",
+      "module": "src/engine/graph",
+      "description": "Returns a single node by ID.",
+      "inputs": [
+        { "name": "id", "type": "string", "description": "Node slug ID" }
+      ],
+      "output": {
+        "type": "ChronosNode | null",
+        "description": "The node, or null if not found."
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "subgraph",
+      "module": "src/engine/graph",
+      "description": "Returns the filtered subgraph matching a given scope. Fuzzy-temporal nodes are included if their range overlaps the scope's time_range.",
+      "inputs": [
+        { "name": "scope", "type": "Scope", "description": "Filter scope" }
+      ],
+      "output": {
+        "type": "{ nodes: ChronosNode[], edges: ChronosEdge[] }",
+        "description": "All nodes and edges matching the scope."
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "neighbors",
+      "module": "src/engine/graph",
+      "description": "Returns the ego network around a node up to a given depth.",
+      "inputs": [
+        { "name": "id", "type": "string" },
+        { "name": "depth", "type": "number", "description": "Hop depth, 1–5 recommended" },
+        { "name": "edgeFilters", "type": "EdgeFilter[]", "optional": true }
+      ],
+      "output": {
+        "type": "{ nodes: ChronosNode[], edges: ChronosEdge[] }"
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "path",
+      "module": "src/engine/graph",
+      "description": "Finds the shortest path between two nodes using BFS over the edge adjacency list.",
+      "inputs": [
+        { "name": "sourceId", "type": "string" },
+        { "name": "targetId", "type": "string" }
+      ],
+      "output": {
+        "type": "{ nodes: ChronosNode[], edges: ChronosEdge[], hops: number } | null",
+        "description": "Path or null if no path exists."
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "contemporaries",
+      "module": "src/engine/graph",
+      "description": "Returns all nodes whose temporal range overlaps with the given node within a window.",
+      "inputs": [
+        { "name": "id", "type": "string" },
+        { "name": "windowYears", "type": "number", "description": "Years to expand the node's range by in each direction" }
+      ],
+      "output": {
+        "type": "ChronosNode[]"
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "keyOverlap",
+      "module": "src/engine/graph",
+      "description": "Returns the keys shared across a set of nodes, grouped by key.",
+      "inputs": [
+        { "name": "ids", "type": "string[]" }
+      ],
+      "output": {
+        "type": "{ key: string, nodes: string[] }[]"
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "defaultScope",
+      "module": "src/engine/scope",
+      "description": "Returns the default scope from chronos.config.json.",
+      "inputs": [],
+      "output": { "type": "Scope" },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "serializeScope",
+      "module": "src/engine/scope",
+      "description": "Serializes a scope to a compact URL-safe string.",
+      "inputs": [{ "name": "scope", "type": "Scope" }],
+      "output": { "type": "string" },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "deserializeScope",
+      "module": "src/engine/scope",
+      "description": "Deserializes a scope from its compact string form.",
+      "inputs": [{ "name": "str", "type": "string" }],
+      "output": { "type": "Scope" },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "mergeScopes",
+      "module": "src/engine/scope",
+      "description": "Returns the union of two scopes.",
+      "inputs": [{ "name": "a", "type": "Scope" }, { "name": "b", "type": "Scope" }],
+      "output": { "type": "Scope" },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "lanesToScope",
+      "module": "src/engine/timeline",
+      "description": "Computes swimlane layout data for a given scope and lane type.",
+      "inputs": [
+        { "name": "scope", "type": "Scope" },
+        { "name": "laneType", "type": "NodeType" }
+      ],
+      "output": { "type": "SwimlaneLane[]" },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "fuzzyPosition",
+      "module": "src/engine/timeline",
+      "description": "Resolves a node's temporal display range and certainty score for the renderer.",
+      "inputs": [{ "name": "node", "type": "ChronosNode" }],
+      "output": {
+        "type": "{ start: number, end: number, certainty: number }",
+        "description": "certainty 1.0 = crisp edges, 0.0 = fully gradient-faded"
+      },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "clusters",
+      "module": "src/engine/map",
+      "description": "Groups spatially nearby nodes in a scope into clusters with centroids and intensity values.",
+      "inputs": [{ "name": "scope", "type": "Scope" }],
+      "output": { "type": "MapCluster[]" },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "flowPaths",
+      "module": "src/engine/map",
+      "description": "Extracts spatial edge paths (arcs and polylines) for all edges in the scope where both endpoints have coordinates.",
+      "inputs": [{ "name": "scope", "type": "Scope" }],
+      "output": { "type": "FlowPath[]" },
+      "stage": 1,
+      "status": "implemented"
+    },
+    {
+      "id": "stageEpoch",
+      "module": "src/ai/ingest",
+      "description": "Validates, assigns epoch ID, writes batch JSON to data/staging/.",
+      "inputs": [{ "name": "batchJson", "type": "EpochBatch" }],
+      "output": { "type": "{ epochId: string, nodeCount: number, edgeCount: number, conflicts: Conflict[] }" },
+      "stage": 4,
+      "status": "stub"
+    },
+    {
+      "id": "detectConflicts",
+      "module": "src/ai/ingest",
+      "description": "Finds contradictions between a staged epoch and canonical data.",
+      "inputs": [{ "name": "epoch", "type": "EpochBatch" }],
+      "output": { "type": "Conflict[]" },
+      "stage": 4,
+      "status": "stub"
+    },
+    {
+      "id": "inferEdges",
+      "module": "src/ai/connections",
+      "description": "Proposes edges not in data based on key overlap, temporal proximity, and geographic proximity.",
+      "inputs": [{ "name": "subgraph", "type": "{ nodes: ChronosNode[], edges: ChronosEdge[] }" }],
+      "output": { "type": "ChronosEdge[]", "description": "Proposed edges with curation_status: inferred" },
+      "stage": 5,
+      "status": "stub"
+    },
+    {
+      "id": "getProse",
+      "module": "src/ai/explain",
+      "description": "Returns prose for a set of nodes/edge at a given angle. Generates if not cached.",
+      "inputs": [
+        { "name": "subjectIds", "type": "string[]" },
+        { "name": "angle", "type": "string" }
+      ],
+      "output": { "type": "ProseCache" },
+      "stage": 5,
+      "status": "stub"
+    },
+    {
+      "id": "influenceRanking",
+      "module": "src/engine/analysis",
+      "description": "Returns nodes sorted by outbound edge weight within a scope.",
+      "inputs": [
+        { "name": "scope", "type": "Scope" },
+        { "name": "dimension", "type": "string", "optional": true }
+      ],
+      "output": { "type": "{ node: ChronosNode, score: number }[]" },
+      "stage": 6,
+      "status": "stub"
+    },
+    {
+      "id": "saveStory",
+      "module": "src/engine/story",
+      "description": "Serializes current scope and view layout as a named story state.",
+      "inputs": [{ "name": "state", "type": "StoryState" }],
+      "output": { "type": "string", "description": "Story ID" },
+      "stage": 7,
+      "status": "stub"
+    }
+  ]
+}

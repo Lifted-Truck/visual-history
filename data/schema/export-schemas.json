@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "description": "Named export format definitions for structured data export from the Chronos graph.",
+  "export_schemas": [
+    {
+      "id": "persons-list",
+      "label": "Persons List",
+      "format": "csv",
+      "description": "Flat CSV of all person nodes, suitable for spreadsheet import and bibliographic reference.",
+      "applies_to_types": ["person"],
+      "default_filters": {
+        "curation_statuses": ["canonical", "ingested"]
+      },
+      "fields": [
+        { "column": "id", "source": "id", "type": "string" },
+        { "column": "name", "source": "label", "type": "string" },
+        { "column": "born", "source": "temporal.start", "type": "integer" },
+        { "column": "died", "source": "temporal.end", "type": "integer" },
+        { "column": "birth_precision", "source": "temporal.precision", "type": "string" },
+        { "column": "birth_confidence", "source": "temporal.confidence", "type": "number" },
+        { "column": "primary_region", "source": "spatial.active_regions[0].region_id", "type": "string" },
+        { "column": "place_label", "source": "spatial.primary.place_label", "type": "string" },
+        { "column": "lat", "source": "spatial.primary.lat", "type": "number" },
+        { "column": "lon", "source": "spatial.primary.lon", "type": "number" },
+        { "column": "tags", "source": "semantic.tags", "type": "string_array", "separator": "|" },
+        { "column": "keys", "source": "semantic.keys", "type": "string_array", "separator": "|" },
+        { "column": "short_description", "source": "semantic.description.short", "type": "string" },
+        { "column": "curation_status", "source": "epistemic.curation_status", "type": "string" },
+        { "column": "source_quality", "source": "epistemic.source_quality", "type": "string" },
+        { "column": "epoch", "source": "epistemic.epoch", "type": "string" }
+      ]
+    },
+    {
+      "id": "works-list",
+      "label": "Works List",
+      "format": "csv",
+      "description": "Flat CSV of all work nodes, with authorship derived from incoming biographical edges.",
+      "applies_to_types": ["work"],
+      "default_filters": {
+        "curation_statuses": ["canonical", "ingested"]
+      },
+      "fields": [
+        { "column": "id", "source": "id", "type": "string" },
+        { "column": "title", "source": "label", "type": "string" },
+        { "column": "year", "source": "temporal.start", "type": "integer" },
+        { "column": "year_precision", "source": "temporal.precision", "type": "string" },
+        { "column": "place_of_composition", "source": "spatial.primary.place_label", "type": "string" },
+        { "column": "tags", "source": "semantic.tags", "type": "string_array", "separator": "|" },
+        { "column": "keys", "source": "semantic.keys", "type": "string_array", "separator": "|" },
+        { "column": "language", "source": "semantic.facets.language", "type": "string" },
+        { "column": "short_description", "source": "semantic.description.short", "type": "string" },
+        { "column": "curation_status", "source": "epistemic.curation_status", "type": "string" },
+        { "column": "epoch", "source": "epistemic.epoch", "type": "string" }
+      ]
+    },
+    {
+      "id": "events-list",
+      "label": "Events List",
+      "format": "csv",
+      "description": "Flat CSV of all event nodes by date, location, and category.",
+      "applies_to_types": ["event"],
+      "default_filters": {
+        "curation_statuses": ["canonical", "ingested"]
+      },
+      "fields": [
+        { "column": "id", "source": "id", "type": "string" },
+        { "column": "label", "source": "label", "type": "string" },
+        { "column": "year", "source": "temporal.start", "type": "integer" },
+        { "column": "year_end", "source": "temporal.end", "type": "integer" },
+        { "column": "precision", "source": "temporal.precision", "type": "string" },
+        { "column": "location", "source": "spatial.primary.place_label", "type": "string" },
+        { "column": "lat", "source": "spatial.primary.lat", "type": "number" },
+        { "column": "lon", "source": "spatial.primary.lon", "type": "number" },
+        { "column": "tags", "source": "semantic.tags", "type": "string_array", "separator": "|" },
+        { "column": "keys", "source": "semantic.keys", "type": "string_array", "separator": "|" },
+        { "column": "short_description", "source": "semantic.description.short", "type": "string" },
+        { "column": "curation_status", "source": "epistemic.curation_status", "type": "string" }
+      ]
+    },
+    {
+      "id": "gis-points",
+      "label": "GIS Points",
+      "format": "geojson",
+      "description": "GeoJSON FeatureCollection of all nodes with spatial coordinates, suitable for QGIS import. Each feature is a Point with node properties as attributes.",
+      "applies_to_types": ["person", "event", "period", "place", "work", "concept", "institution", "technology", "phenomenon"],
+      "default_filters": {
+        "curation_statuses": ["canonical", "ingested"],
+        "spatial_modes": ["point"]
+      },
+      "geometry": {
+        "type": "Point",
+        "lat_source": "spatial.primary.lat",
+        "lon_source": "spatial.primary.lon"
+      },
+      "properties": [
+        { "property": "id", "source": "id", "type": "string" },
+        { "property": "label", "source": "label", "type": "string" },
+        { "property": "node_type", "source": "node_type", "type": "string" },
+        { "property": "year", "source": "temporal.start", "type": "integer" },
+        { "property": "year_end", "source": "temporal.end", "type": "integer" },
+        { "property": "precision", "source": "temporal.precision", "type": "string" },
+        { "property": "place_label", "source": "spatial.primary.place_label", "type": "string" },
+        { "property": "modern_equivalent", "source": "spatial.primary.modern_equivalent", "type": "string" },
+        { "property": "spatial_precision", "source": "spatial.primary.precision", "type": "string" },
+        { "property": "tags", "source": "semantic.tags", "type": "string_array", "separator": "|" },
+        { "property": "keys", "source": "semantic.keys", "type": "string_array", "separator": "|" },
+        { "property": "short_description", "source": "semantic.description.short", "type": "string" },
+        { "property": "curation_status", "source": "epistemic.curation_status", "type": "string" }
+      ]
+    }
+  ]
+}

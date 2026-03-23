@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "description": "Registered node type list for the Chronos knowledge graph.",
+  "node_types": [
+    {
+      "id": "person",
+      "label": "Person",
+      "description": "An individual human being with a lifespan. Includes philosophers, rulers, scientists, artists, and any other figure whose life and work are tracked.",
+      "temporal_semantics": "start/end are birth and death years",
+      "spatial_semantics": "primary coordinates are birthplace or primary location of activity",
+      "required_fields": ["temporal.start", "semantic.description.short"]
+    },
+    {
+      "id": "event",
+      "label": "Event",
+      "description": "A discrete occurrence with a bounded time frame — a battle, a publication, a discovery, a natural disaster, a political transition.",
+      "temporal_semantics": "start is the event's occurrence year; end marks its conclusion if prolonged",
+      "spatial_semantics": "primary coordinates are the event's location",
+      "required_fields": ["temporal.start", "semantic.description.short"]
+    },
+    {
+      "id": "period",
+      "label": "Period",
+      "description": "An era, movement, dynasty, or age with a temporal span — Bronze Age, Hellenistic period, Abbasid Caliphate. Periods are background temporal containers.",
+      "temporal_semantics": "start and end delimit the period",
+      "spatial_semantics": "spatial.active_regions describes the geographic extent",
+      "required_fields": ["temporal.start", "temporal.end"]
+    },
+    {
+      "id": "place",
+      "label": "Place",
+      "description": "A city, region, empire, or geographic feature. Places have their own temporal extent (a city can be founded and destroyed) and participate in the graph as first-class nodes.",
+      "temporal_semantics": "start and end mark the place's historical existence or relevance",
+      "spatial_semantics": "primary coordinates are the geographic location",
+      "required_fields": ["spatial.primary"]
+    },
+    {
+      "id": "work",
+      "label": "Work",
+      "description": "A text, artwork, monument, or other cultural product that is itself a node in the graph — independent of its author. Enables tracking of a text's influence trajectory.",
+      "temporal_semantics": "start is the composition or creation year",
+      "spatial_semantics": "primary coordinates are the place of composition",
+      "required_fields": ["temporal.start", "semantic.description.short"]
+    },
+    {
+      "id": "concept",
+      "label": "Concept",
+      "description": "A named idea or paradigm with a traceable geographic and temporal trajectory — e.g. 'the Logos', 'karma', 'natural law'. Distinct from a school or tradition.",
+      "temporal_semantics": "start marks first known articulation; end marks obsolescence if applicable",
+      "spatial_semantics": "primary is the origin point; spatial_mode often 'diffuse'",
+      "required_fields": ["semantic.description.short"]
+    },
+    {
+      "id": "institution",
+      "label": "Institution",
+      "description": "A school, court, library, academy, religious body, or other organizational structure. Institutions are the vessels of transmission.",
+      "temporal_semantics": "start is founding; end is dissolution or transformation",
+      "spatial_semantics": "primary coordinates are the physical location",
+      "required_fields": ["temporal.start", "spatial.primary"]
+    },
+    {
+      "id": "technology",
+      "label": "Technology",
+      "description": "A technique or tool — writing, the stirrup, papermaking, the astrolabe — that spreads and transforms across cultures. Technologies have origin points and diffusion paths.",
+      "temporal_semantics": "start is the approximate invention or first documentation date",
+      "spatial_semantics": "primary is origin; active_regions track diffusion",
+      "required_fields": ["temporal.start"]
+    },
+    {
+      "id": "route",
+      "label": "Route",
+      "description": "A trade, migration, or transmission path. Routes are spatial objects connecting two or more place nodes.",
+      "temporal_semantics": "start and end mark the route's historical period of use",
+      "spatial_semantics": "spatial_mode should be 'path'; primary may be a midpoint or anchor",
+      "required_fields": ["spatial.active_regions"]
+    },
+    {
+      "id": "phenomenon",
+      "label": "Phenomenon",
+      "description": "An environmental, climatic, epidemiological, or large-scale social event — a plague, a famine, a climate period, a financial crisis. Phenomena shape history as background conditions.",
+      "temporal_semantics": "start and end delimit the phenomenon's duration",
+      "spatial_semantics": "spatial_mode often 'region' or 'diffuse'",
+      "required_fields": ["temporal.start"]
+    },
+    {
+      "id": "dataset",
+      "label": "Dataset",
+      "description": "A pointer to an external structured data file or database relevant to the graph — archaeological surveys, demographic data, climate proxies.",
+      "temporal_semantics": "start and end indicate the temporal coverage of the dataset",
+      "spatial_semantics": "active_regions indicate geographic coverage",
+      "required_fields": ["sources"]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "visual-history",
+  "version": "1.0.0",
+  "description": "A personal historical knowledge graph and multi-modal visualizer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate": "tsx scripts/validate.ts",
+    "compile-graph": "tsx scripts/compile-graph.ts",
+    "stage-epoch": "tsx scripts/stage-epoch.ts",
+    "export": "tsx scripts/export.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lifted-Truck/visual-history.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lifted-Truck/visual-history/issues"
+  },
+  "homepage": "https://github.com/Lifted-Truck/visual-history#readme",
+  "vitest": {
+    "environment": "node"
+  },
+  "dependencies": {
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0"
+  }
+}

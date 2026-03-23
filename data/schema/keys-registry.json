@@ -1,0 +1,848 @@
+{
+  "schema_version": "1.0",
+  "description": "Canonical semantic keys for the Chronos knowledge graph. Each key is a concept-handle used by the AI inference layer to propose connections and estimate relationships.",
+  "last_updated": "2026-03-23T00:00:00Z",
+  "keys": [
+
+    {
+      "id": "social-harmony",
+      "canonical_label": "Social Harmony",
+      "aliases": ["social order", "social cohesion", "li", "ren"],
+      "parent_keys": ["governance", "ethics"],
+      "child_keys": ["filial-piety", "ritual-propriety"],
+      "description": "The philosophical and political ideal of ordered, harmonious relationships between individuals and social groups, especially prominent in Confucian and related traditions.",
+      "ambiguity_notes": "Distinct from 'political stability' (which is a structural outcome) — this refers to the normative ideal itself.",
+      "status": "canonical"
+    },
+    {
+      "id": "filial-piety",
+      "canonical_label": "Filial Piety",
+      "aliases": ["xiao", "family reverence", "ancestor veneration"],
+      "parent_keys": ["social-harmony", "ethics"],
+      "child_keys": [],
+      "description": "Respect and care for parents, elders, and ancestors as a moral and social obligation; central to Confucian ethics.",
+      "ambiguity_notes": "Related to ancestor veneration but more focused on living family relations.",
+      "status": "canonical"
+    },
+    {
+      "id": "ritual-propriety",
+      "canonical_label": "Ritual Propriety",
+      "aliases": ["li", "ritual", "ceremony", "rites"],
+      "parent_keys": ["social-harmony", "religion"],
+      "child_keys": [],
+      "description": "The proper performance of ritual actions as constitutive of social order and moral cultivation; the concept of li in Confucian thought.",
+      "ambiguity_notes": "Not purely religious — in Confucian usage, ritual is as much about social structure as sacred practice.",
+      "status": "canonical"
+    },
+    {
+      "id": "governance",
+      "canonical_label": "Governance",
+      "aliases": ["statecraft", "political administration", "rulership"],
+      "parent_keys": [],
+      "child_keys": ["divine-kingship", "bureaucracy", "law-and-jurisprudence", "social-harmony"],
+      "description": "The theory and practice of organizing and directing political communities — who rules, by what authority, and toward what ends.",
+      "ambiguity_notes": "Broad parent key; prefer more specific child keys when applicable.",
+      "status": "canonical"
+    },
+    {
+      "id": "divine-kingship",
+      "canonical_label": "Divine Kingship",
+      "aliases": ["god-king", "sacred kingship", "mandate of heaven", "pharaonic authority"],
+      "parent_keys": ["governance", "religion"],
+      "child_keys": [],
+      "description": "Political legitimacy derived from or identified with divine authority; the ruler as mediator between human and divine orders.",
+      "ambiguity_notes": "Distinct from theocracy (clerical rule) — the king is himself divine or divinely appointed.",
+      "status": "canonical"
+    },
+    {
+      "id": "bureaucracy",
+      "canonical_label": "Bureaucracy",
+      "aliases": ["civil service", "administrative apparatus", "meritocracy"],
+      "parent_keys": ["governance"],
+      "child_keys": [],
+      "description": "Organized administrative structures for governing complex societies; systems for selecting and deploying administrators.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "law-and-jurisprudence",
+      "canonical_label": "Law and Jurisprudence",
+      "aliases": ["legal tradition", "law code", "jurisprudence", "fiqh", "dharmashastra"],
+      "parent_keys": ["governance"],
+      "child_keys": [],
+      "description": "The codification, interpretation, and application of legal norms — from ancient law codes to developed jurisprudence.",
+      "ambiguity_notes": "Use for both legal philosophy and practical legal systems.",
+      "status": "canonical"
+    },
+    {
+      "id": "ethics",
+      "canonical_label": "Ethics",
+      "aliases": ["moral philosophy", "virtue ethics", "normative ethics"],
+      "parent_keys": ["philosophy"],
+      "child_keys": ["social-harmony", "filial-piety", "self-cultivation", "asceticism"],
+      "description": "Systematic inquiry into moral norms, virtues, obligations, and the nature of the good life.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "self-cultivation",
+      "canonical_label": "Self-Cultivation",
+      "aliases": ["inner development", "spiritual practice", "askesis", "self-improvement"],
+      "parent_keys": ["ethics", "philosophy"],
+      "child_keys": [],
+      "description": "The idea that the individual's primary moral task is continuous development of character, wisdom, or spiritual attainment.",
+      "ambiguity_notes": "Common to Confucianism, Stoicism, Buddhism, and Neoplatonism, but with different aims.",
+      "status": "canonical"
+    },
+    {
+      "id": "philosophy",
+      "canonical_label": "Philosophy",
+      "aliases": ["philosophical tradition", "speculative thought"],
+      "parent_keys": [],
+      "child_keys": ["ethics", "metaphysics", "epistemology", "natural-philosophy", "political-philosophy", "logic"],
+      "description": "Systematic rational inquiry into the fundamental nature of reality, knowledge, value, mind, and existence.",
+      "ambiguity_notes": "Top-level key; use child keys for specific branches.",
+      "status": "canonical"
+    },
+    {
+      "id": "metaphysics",
+      "canonical_label": "Metaphysics",
+      "aliases": ["ontology", "being", "cosmology", "first principles"],
+      "parent_keys": ["philosophy"],
+      "child_keys": [],
+      "description": "Inquiry into the fundamental nature of reality: being, substance, causation, time, space, and existence itself.",
+      "ambiguity_notes": "Distinguish from cosmology as astronomy. This is philosophical cosmology.",
+      "status": "canonical"
+    },
+    {
+      "id": "epistemology",
+      "canonical_label": "Epistemology",
+      "aliases": ["theory of knowledge", "empiricism", "rationalism"],
+      "parent_keys": ["philosophy"],
+      "child_keys": [],
+      "description": "The study of the nature, sources, scope, and limits of human knowledge.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "natural-philosophy",
+      "canonical_label": "Natural Philosophy",
+      "aliases": ["pre-scientific inquiry", "physics (ancient)", "physis"],
+      "parent_keys": ["philosophy", "science"],
+      "child_keys": [],
+      "description": "The pre-disciplinary inquiry into the natural world — the ancestor of both physics and biology — primarily associated with Greek antiquity and the Islamic transmission.",
+      "ambiguity_notes": "Distinct from modern natural science; emphasizes philosophical rather than experimental method.",
+      "status": "canonical"
+    },
+    {
+      "id": "political-philosophy",
+      "canonical_label": "Political Philosophy",
+      "aliases": ["political theory", "ideal state", "republic"],
+      "parent_keys": ["philosophy", "governance"],
+      "child_keys": [],
+      "description": "Philosophical inquiry into the nature of political authority, justice, the ideal state, and political obligation.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "logic",
+      "canonical_label": "Logic",
+      "aliases": ["formal reasoning", "dialectic", "syllogistic"],
+      "parent_keys": ["philosophy", "mathematics"],
+      "child_keys": [],
+      "description": "The systematic study of valid inference, argument, and formal reasoning.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "asceticism",
+      "canonical_label": "Asceticism",
+      "aliases": ["renunciation", "self-denial", "tapas"],
+      "parent_keys": ["ethics", "religion"],
+      "child_keys": [],
+      "description": "The practice of severe self-discipline and abstention from worldly pleasures as a path to spiritual development or liberation.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "religion",
+      "canonical_label": "Religion",
+      "aliases": ["religious tradition", "sacred", "theology"],
+      "parent_keys": [],
+      "child_keys": ["divine-kingship", "ritual-propriety", "asceticism", "mysticism", "polytheism", "monotheism", "oral-tradition"],
+      "description": "Organized systems of belief, practice, and community oriented around the sacred, the divine, or ultimate reality.",
+      "ambiguity_notes": "Top-level key; use child keys for specific traditions or concepts.",
+      "status": "canonical"
+    },
+    {
+      "id": "mysticism",
+      "canonical_label": "Mysticism",
+      "aliases": ["gnosis", "contemplative tradition", "union with the divine", "sufism", "neoplatonism"],
+      "parent_keys": ["religion", "philosophy"],
+      "child_keys": [],
+      "description": "Direct experiential knowledge of or union with ultimate reality, transcending ordinary rational categories.",
+      "ambiguity_notes": "Appears in Islamic Sufism, Jewish Kabbalah, Christian mysticism, Hindu advaita — do not conflate unless connections are specific.",
+      "status": "canonical"
+    },
+    {
+      "id": "polytheism",
+      "canonical_label": "Polytheism",
+      "aliases": ["pagan religion", "pantheon", "Greek religion", "Roman religion"],
+      "parent_keys": ["religion"],
+      "child_keys": [],
+      "description": "Religious systems recognizing multiple gods, typically with differentiated divine functions and narratives.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "monotheism",
+      "canonical_label": "Monotheism",
+      "aliases": ["one God", "Abrahamic religion"],
+      "parent_keys": ["religion"],
+      "child_keys": [],
+      "description": "Religious traditions affirming the existence and worship of a single deity.",
+      "ambiguity_notes": "Distinct from henotheism (one god among many elevated) and monolatry (worship of one among many).",
+      "status": "canonical"
+    },
+    {
+      "id": "oral-tradition",
+      "canonical_label": "Oral Tradition",
+      "aliases": ["oral transmission", "bardic tradition", "memorization"],
+      "parent_keys": ["religion", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The transmission of knowledge, narrative, and religious material through speech and memory rather than writing.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "transmission-of-knowledge",
+      "canonical_label": "Transmission of Knowledge",
+      "aliases": ["intellectual transmission", "knowledge transfer", "translation movement"],
+      "parent_keys": [],
+      "child_keys": ["oral-tradition", "text-translation"],
+      "description": "The processes by which intellectual traditions, texts, and techniques move across time, languages, and cultures.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "text-translation",
+      "canonical_label": "Text Translation",
+      "aliases": ["translation movement", "translatio studii", "manuscript transmission"],
+      "parent_keys": ["transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The work of translating texts from one language to another as a vehicle for cross-cultural intellectual transmission.",
+      "ambiguity_notes": "Specifically about translation as a historical act; distinct from general scholarship.",
+      "status": "canonical"
+    },
+    {
+      "id": "court-patronage",
+      "canonical_label": "Court Patronage",
+      "aliases": ["royal patronage", "imperial patronage", "maecenas"],
+      "parent_keys": ["governance", "art-and-aesthetics"],
+      "child_keys": [],
+      "description": "The support of artists, scholars, and intellectuals by rulers and their courts as a vehicle for cultural production.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "art-and-aesthetics",
+      "canonical_label": "Art and Aesthetics",
+      "aliases": ["visual art", "aesthetics", "artistic tradition"],
+      "parent_keys": [],
+      "child_keys": ["court-patronage", "literary-culture"],
+      "description": "The production, theorization, and appreciation of art; aesthetic theory and artistic traditions.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "literary-culture",
+      "canonical_label": "Literary Culture",
+      "aliases": ["written literature", "poetry", "prose", "literary tradition"],
+      "parent_keys": ["art-and-aesthetics", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The production and circulation of written literary works — poetry, drama, historiography, philosophical dialogue.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "science",
+      "canonical_label": "Science",
+      "aliases": ["natural science", "empirical inquiry"],
+      "parent_keys": [],
+      "child_keys": ["mathematics", "astronomy", "medicine", "natural-philosophy", "technology"],
+      "description": "Systematic empirical inquiry into the natural world, broadly construed to include both modern and pre-modern forms.",
+      "ambiguity_notes": "Top-level key; use child keys for specific disciplines.",
+      "status": "canonical"
+    },
+    {
+      "id": "mathematics",
+      "canonical_label": "Mathematics",
+      "aliases": ["geometry", "algebra", "arithmetic", "number theory"],
+      "parent_keys": ["science", "philosophy"],
+      "child_keys": ["logic"],
+      "description": "The study of abstract structure, quantity, and space; foundational to scientific and philosophical inquiry.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "astronomy",
+      "canonical_label": "Astronomy",
+      "aliases": ["astrology", "celestial observation", "cosmography"],
+      "parent_keys": ["science"],
+      "child_keys": [],
+      "description": "The observation and mathematical modeling of celestial bodies; historically entangled with astrology and calendrical reckoning.",
+      "ambiguity_notes": "In pre-modern contexts, astronomy and astrology were not fully separated.",
+      "status": "canonical"
+    },
+    {
+      "id": "medicine",
+      "canonical_label": "Medicine",
+      "aliases": ["medical tradition", "healing", "pharmacology"],
+      "parent_keys": ["science"],
+      "child_keys": [],
+      "description": "The theory and practice of healing the human body; includes both empirical medicine and humoral or other theoretical frameworks.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "technology",
+      "canonical_label": "Technology",
+      "aliases": ["technique", "craft", "innovation"],
+      "parent_keys": ["science"],
+      "child_keys": ["writing-systems", "maritime-technology", "agricultural-technology", "military-technology"],
+      "description": "Practical techniques and tools that shape material life, production, and power.",
+      "ambiguity_notes": "Distinct from 'science' as organized theoretical inquiry; technology is practical application.",
+      "status": "canonical"
+    },
+    {
+      "id": "writing-systems",
+      "canonical_label": "Writing Systems",
+      "aliases": ["script", "alphabet", "cuneiform", "hieroglyphs", "literacy"],
+      "parent_keys": ["technology", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "Technologies for recording language in durable form; their invention and diffusion are transformative historical events.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "maritime-technology",
+      "canonical_label": "Maritime Technology",
+      "aliases": ["seafaring", "navigation", "shipbuilding"],
+      "parent_keys": ["technology", "maritime-trade"],
+      "child_keys": [],
+      "description": "Techniques and tools for ocean navigation, shipbuilding, and maritime commerce.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "agricultural-technology",
+      "canonical_label": "Agricultural Technology",
+      "aliases": ["farming", "irrigation", "crop cultivation"],
+      "parent_keys": ["technology"],
+      "child_keys": [],
+      "description": "Techniques of crop cultivation, irrigation, animal husbandry, and food production.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "military-technology",
+      "canonical_label": "Military Technology",
+      "aliases": ["warfare", "weapons", "tactics"],
+      "parent_keys": ["technology", "warfare"],
+      "child_keys": [],
+      "description": "Weapons, fortifications, tactics, and organizational forms that enable organized violence.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "warfare",
+      "canonical_label": "Warfare",
+      "aliases": ["war", "military conflict", "battle"],
+      "parent_keys": [],
+      "child_keys": ["military-technology", "empire"],
+      "description": "Organized armed conflict between groups; its causes, conduct, and consequences.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "empire",
+      "canonical_label": "Empire",
+      "aliases": ["imperial expansion", "conquest", "hegemony"],
+      "parent_keys": ["warfare", "governance"],
+      "child_keys": [],
+      "description": "The expansion of political authority over diverse peoples and territories through conquest or coercion.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "trade",
+      "canonical_label": "Trade",
+      "aliases": ["commerce", "mercantile activity", "exchange"],
+      "parent_keys": [],
+      "child_keys": ["maritime-trade", "overland-trade", "silk-road"],
+      "description": "The exchange of goods across local, regional, and interregional networks.",
+      "ambiguity_notes": "Top-level key; use child keys for specific trade types or routes.",
+      "status": "canonical"
+    },
+    {
+      "id": "maritime-trade",
+      "canonical_label": "Maritime Trade",
+      "aliases": ["sea trade", "ocean commerce", "Indian Ocean trade"],
+      "parent_keys": ["trade", "maritime-technology"],
+      "child_keys": [],
+      "description": "Trade conducted by sea, including the great oceanic networks of the ancient and medieval world.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "overland-trade",
+      "canonical_label": "Overland Trade",
+      "aliases": ["caravan trade", "land routes", "steppe routes"],
+      "parent_keys": ["trade"],
+      "child_keys": ["silk-road"],
+      "description": "Trade conducted by land routes — caravans, steppe networks, and mountain passes.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "silk-road",
+      "canonical_label": "Silk Road",
+      "aliases": ["silk routes", "Eurasian trade network"],
+      "parent_keys": ["overland-trade", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The network of overland and maritime trade routes connecting China, Central Asia, the Middle East, and Europe.",
+      "ambiguity_notes": "A metaphorical umbrella term for a complex of routes, not a single road.",
+      "status": "canonical"
+    },
+    {
+      "id": "urbanization",
+      "canonical_label": "Urbanization",
+      "aliases": ["city-state", "urban culture", "metropolitan development"],
+      "parent_keys": [],
+      "child_keys": [],
+      "description": "The emergence and growth of cities as centers of political, economic, and cultural life.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "syncretism",
+      "canonical_label": "Syncretism",
+      "aliases": ["religious syncretism", "cultural fusion", "hybridization"],
+      "parent_keys": ["religion", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The blending of distinct religious, philosophical, or cultural traditions into new syntheses.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "exile",
+      "canonical_label": "Exile",
+      "aliases": ["forced displacement", "expulsion", "diaspora"],
+      "parent_keys": [],
+      "child_keys": [],
+      "description": "The condition of living outside one's homeland, whether by forced expulsion or voluntary departure; often a vehicle for cultural transmission.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "scholasticism",
+      "canonical_label": "Scholasticism",
+      "aliases": ["medieval philosophy", "scholastic method", "disputatio"],
+      "parent_keys": ["philosophy", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The intellectual tradition of the medieval European universities, characterized by systematic commentary, dialectical method, and synthesis of Greek philosophy with Christian theology.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "neoplatonism",
+      "canonical_label": "Neoplatonism",
+      "aliases": ["Plotinus", "emanationism", "the One"],
+      "parent_keys": ["philosophy", "mysticism"],
+      "child_keys": [],
+      "description": "The philosophical tradition derived from Plato through Plotinus, emphasizing the emanation of reality from a single transcendent source.",
+      "ambiguity_notes": "Distinct from Plato's own work; shapes Islamic, Jewish, and Christian medieval thought.",
+      "status": "canonical"
+    },
+    {
+      "id": "stoicism",
+      "canonical_label": "Stoicism",
+      "aliases": ["Stoic philosophy", "logos", "apatheia"],
+      "parent_keys": ["philosophy", "ethics"],
+      "child_keys": [],
+      "description": "The Hellenistic and Roman philosophical school emphasizing the logos, virtue as the sole good, and equanimity in the face of circumstance.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "skepticism",
+      "canonical_label": "Skepticism",
+      "aliases": ["Pyrrhonism", "Academic skepticism", "epoché"],
+      "parent_keys": ["philosophy", "epistemology"],
+      "child_keys": [],
+      "description": "The philosophical stance of suspending judgment about knowledge claims, questioning the possibility of certainty.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "moral-philosophy",
+      "canonical_label": "Moral Philosophy",
+      "aliases": ["ethics", "virtue", "the good"],
+      "parent_keys": ["ethics"],
+      "child_keys": [],
+      "description": "The branch of philosophy concerned with the good life, virtue, duty, and moral obligation.",
+      "ambiguity_notes": "Overlaps heavily with 'ethics' as a parent; use for specific ethical schools or debates.",
+      "status": "canonical"
+    },
+    {
+      "id": "dharma",
+      "canonical_label": "Dharma",
+      "aliases": ["cosmic order", "moral law", "duty", "dhamma"],
+      "parent_keys": ["religion", "ethics"],
+      "child_keys": [],
+      "description": "In Indian religious and philosophical traditions, the cosmic order, moral duty, and proper way of living.",
+      "ambiguity_notes": "Meaning differs between Hindu, Buddhist, and Jain usage — use context to disambiguate.",
+      "status": "canonical"
+    },
+    {
+      "id": "liberation",
+      "canonical_label": "Liberation",
+      "aliases": ["moksha", "nirvana", "salvation", "enlightenment"],
+      "parent_keys": ["religion", "ethics"],
+      "child_keys": [],
+      "description": "The goal of release from suffering, rebirth, or the cycle of conditioned existence in Indian and related traditions.",
+      "ambiguity_notes": "Moksha (Hindu), nirvana (Buddhist), mukti (Jain) are related but distinct concepts.",
+      "status": "canonical"
+    },
+    {
+      "id": "impermanence",
+      "canonical_label": "Impermanence",
+      "aliases": ["anicca", "flux", "change", "Heraclitean flux"],
+      "parent_keys": ["metaphysics", "religion"],
+      "child_keys": [],
+      "description": "The philosophical doctrine that all phenomena are transient and in constant flux; central to Buddhism and present in pre-Socratic thought.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "political-economy",
+      "canonical_label": "Political Economy",
+      "aliases": ["economic governance", "fiscal policy", "tributary system"],
+      "parent_keys": ["governance", "trade"],
+      "child_keys": [],
+      "description": "The political management of economic resources, production, and distribution; the relationship between economic and political power.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "democracy",
+      "canonical_label": "Democracy",
+      "aliases": ["Athenian democracy", "popular rule", "demos"],
+      "parent_keys": ["governance", "political-philosophy"],
+      "child_keys": [],
+      "description": "Rule by the citizenry through direct participation or representation; associated particularly with ancient Athens and later republican traditions.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "tyranny",
+      "canonical_label": "Tyranny",
+      "aliases": ["despotism", "autocracy", "one-man rule"],
+      "parent_keys": ["governance"],
+      "child_keys": [],
+      "description": "Rule by an individual without constitutional constraint; analyzed by Greek philosophers as the corruption of monarchy.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "republicanism",
+      "canonical_label": "Republicanism",
+      "aliases": ["res publica", "mixed constitution", "civic virtue"],
+      "parent_keys": ["governance", "political-philosophy"],
+      "child_keys": [],
+      "description": "Political organization oriented around the public good, civic participation, and non-domination; associated with Rome and later the Atlantic revolutions.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "cosmopolitanism",
+      "canonical_label": "Cosmopolitanism",
+      "aliases": ["world citizenship", "universal community", "oikoumene"],
+      "parent_keys": ["political-philosophy", "ethics"],
+      "child_keys": [],
+      "description": "The idea that all humans share a common moral community transcending national or ethnic boundaries.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "hellenism",
+      "canonical_label": "Hellenism",
+      "aliases": ["Greek culture", "Hellenization", "Greek civilization"],
+      "parent_keys": [],
+      "child_keys": ["stoicism", "neoplatonism", "skepticism", "natural-philosophy"],
+      "description": "The culture, thought, and civilization of ancient Greece and its subsequent diffusion through Alexander's conquests and the Hellenistic kingdoms.",
+      "ambiguity_notes": "Distinct from 'Greek religion' (polytheism) — refers broadly to Greek cultural influence.",
+      "status": "canonical"
+    },
+    {
+      "id": "classical-antiquity",
+      "canonical_label": "Classical Antiquity",
+      "aliases": ["Greco-Roman", "ancient world"],
+      "parent_keys": [],
+      "child_keys": ["hellenism", "romanization"],
+      "description": "The cultural and intellectual heritage of ancient Greece and Rome, roughly 800 BCE – 500 CE.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "romanization",
+      "canonical_label": "Romanization",
+      "aliases": ["Roman culture", "Roman influence", "Latin culture"],
+      "parent_keys": ["classical-antiquity", "empire"],
+      "child_keys": [],
+      "description": "The spread of Roman language, law, institutions, and culture across the Mediterranean world.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "confucianism",
+      "canonical_label": "Confucianism",
+      "aliases": ["rujia", "ru tradition", "Neo-Confucianism"],
+      "parent_keys": ["philosophy", "governance"],
+      "child_keys": ["social-harmony", "filial-piety", "ritual-propriety"],
+      "description": "The philosophical and ethical tradition founded on the teachings of Confucius, emphasizing social harmony, ritual propriety, and benevolent governance.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "daoism",
+      "canonical_label": "Daoism",
+      "aliases": ["Taoism", "Dao", "wu wei"],
+      "parent_keys": ["philosophy", "religion"],
+      "child_keys": [],
+      "description": "The Chinese philosophical and religious tradition associated with the Dao (Way) — emphasizing naturalness, wu wei (non-action), and harmony with the cosmos.",
+      "ambiguity_notes": "Philosophical Daoism (Laozi, Zhuangzi) is distinct from later religious Daoism, though related.",
+      "status": "canonical"
+    },
+    {
+      "id": "buddhism",
+      "canonical_label": "Buddhism",
+      "aliases": ["Buddhist philosophy", "Dharma (Buddhist)", "sangha"],
+      "parent_keys": ["religion", "philosophy"],
+      "child_keys": ["impermanence", "liberation", "asceticism"],
+      "description": "The religious and philosophical tradition founded by Siddhartha Gautama, centered on the Four Noble Truths, the Eightfold Path, and liberation from suffering.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "hinduism",
+      "canonical_label": "Hinduism",
+      "aliases": ["Vedic tradition", "Brahmanical religion", "Vedanta"],
+      "parent_keys": ["religion"],
+      "child_keys": ["dharma", "liberation", "asceticism"],
+      "description": "The diverse family of Indian religious traditions rooted in the Vedas and Upanishads, encompassing ritual, philosophy, and diverse theologies.",
+      "ambiguity_notes": "'Hinduism' as a unified category is somewhat anachronistic — prefer more specific labels where applicable.",
+      "status": "canonical"
+    },
+    {
+      "id": "influence",
+      "canonical_label": "Intellectual Influence",
+      "aliases": ["influence", "intellectual lineage", "school of thought"],
+      "parent_keys": ["transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The direct or indirect effect of one thinker, text, or tradition on the development of another.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "socratic-method",
+      "canonical_label": "Socratic Method",
+      "aliases": ["dialectic", "elenchus", "aporia"],
+      "parent_keys": ["philosophy", "logic"],
+      "child_keys": [],
+      "description": "The method of philosophical inquiry through question-and-answer, associated with Socrates; aimed at exposing inconsistency and reaching clearer understanding.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "platonic-idealism",
+      "canonical_label": "Platonic Idealism",
+      "aliases": ["theory of forms", "Platonism", "idealism"],
+      "parent_keys": ["metaphysics", "philosophy"],
+      "child_keys": ["neoplatonism"],
+      "description": "The philosophical position that the true reality consists of abstract, eternal Forms of which the material world is a shadow.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "aristotelian-logic",
+      "canonical_label": "Aristotelian Logic",
+      "aliases": ["syllogistic logic", "Organon", "categorical logic"],
+      "parent_keys": ["logic", "philosophy"],
+      "child_keys": ["scholasticism"],
+      "description": "The system of formal inference developed by Aristotle in the Organon, particularly the theory of the syllogism; the dominant framework of Western logic until modern times.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "peripatetic-philosophy",
+      "canonical_label": "Peripatetic Philosophy",
+      "aliases": ["Aristotelianism", "Aristotelian tradition"],
+      "parent_keys": ["philosophy"],
+      "child_keys": ["aristotelian-logic", "natural-philosophy"],
+      "description": "The philosophical tradition deriving from Aristotle's Lyceum, encompassing logic, natural science, ethics, and politics.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "axial-age",
+      "canonical_label": "Axial Age",
+      "aliases": ["Jaspers axial period", "first millennium BCE transformation"],
+      "parent_keys": [],
+      "child_keys": [],
+      "description": "Karl Jaspers's concept of the roughly simultaneous emergence of philosophical and religious breakthroughs across Greece, India, China, and the Near East, c. 800–200 BCE.",
+      "ambiguity_notes": "The concept is analytical and retrospective, not recognized by the people living through it.",
+      "status": "canonical"
+    },
+    {
+      "id": "cultural-diffusion",
+      "canonical_label": "Cultural Diffusion",
+      "aliases": ["cultural spread", "contact and exchange"],
+      "parent_keys": ["transmission-of-knowledge"],
+      "child_keys": ["syncretism", "text-translation"],
+      "description": "The spread of cultural practices, ideas, and technologies from one society to another through contact.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "empire-decline",
+      "canonical_label": "Imperial Decline",
+      "aliases": ["fall of empire", "collapse", "fragmentation"],
+      "parent_keys": ["empire"],
+      "child_keys": [],
+      "description": "The processes by which empires weaken and fragment — military overextension, fiscal crisis, succession conflicts, external pressure.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "social-stratification",
+      "canonical_label": "Social Stratification",
+      "aliases": ["class", "caste", "hierarchy", "aristocracy"],
+      "parent_keys": ["governance"],
+      "child_keys": [],
+      "description": "The hierarchical arrangement of society into groups with differential access to resources, power, and prestige.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "slavery",
+      "canonical_label": "Slavery",
+      "aliases": ["enslaved labor", "chattel slavery", "helotry"],
+      "parent_keys": ["social-stratification"],
+      "child_keys": [],
+      "description": "The institution of human beings as property; a foundational economic and social institution of many ancient societies.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "cultural-memory",
+      "canonical_label": "Cultural Memory",
+      "aliases": ["historical consciousness", "collective memory", "tradition"],
+      "parent_keys": ["transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The ways in which communities preserve, transmit, and reconstruct their pasts through ritual, narrative, monument, and practice.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "prophecy",
+      "canonical_label": "Prophecy",
+      "aliases": ["divination", "oracle", "revelation"],
+      "parent_keys": ["religion"],
+      "child_keys": [],
+      "description": "The claim to speak for or interpret the divine will; oracular traditions, prophetic movements, and revelatory texts.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "diplomacy",
+      "canonical_label": "Diplomacy",
+      "aliases": ["alliance", "treaty", "interstate relations"],
+      "parent_keys": ["governance"],
+      "child_keys": [],
+      "description": "The conduct of relations between polities through negotiation, treaty, and formal representation.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "geography-and-environment",
+      "canonical_label": "Geography and Environment",
+      "aliases": ["environmental factors", "geographic determinism", "landscape"],
+      "parent_keys": [],
+      "child_keys": [],
+      "description": "The physical geographic and environmental conditions that shape historical development — rivers, mountains, climate, resources.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "colonization",
+      "canonical_label": "Colonization",
+      "aliases": ["Greek colonization", "settlement", "outpost"],
+      "parent_keys": ["empire", "urbanization"],
+      "child_keys": [],
+      "description": "The deliberate establishment of settlements in new territories, extending the political, cultural, or economic reach of a parent society.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "biography",
+      "canonical_label": "Biography",
+      "aliases": ["life and works", "personal history"],
+      "parent_keys": [],
+      "child_keys": [],
+      "description": "The record of an individual's life, including birth, education, career, relationships, and death.",
+      "ambiguity_notes": "Used primarily as an edge key for biographical connections between persons.",
+      "status": "canonical"
+    },
+    {
+      "id": "teacher-student",
+      "canonical_label": "Teacher-Student Relationship",
+      "aliases": ["mentor", "pupil", "disciple", "master-student"],
+      "parent_keys": ["biography", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The direct pedagogical relationship between a teacher and student as a primary vector for intellectual transmission.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "commentary-tradition",
+      "canonical_label": "Commentary Tradition",
+      "aliases": ["exegesis", "commentary", "hermeneutics", "interpretation"],
+      "parent_keys": ["transmission-of-knowledge", "literary-culture"],
+      "child_keys": [],
+      "description": "The practice of producing systematic commentaries on canonical texts as a mode of intellectual inquiry and transmission.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "institution-building",
+      "canonical_label": "Institution Building",
+      "aliases": ["academy", "library", "school", "university"],
+      "parent_keys": ["governance", "transmission-of-knowledge"],
+      "child_keys": [],
+      "description": "The founding and maintenance of institutional structures — academies, libraries, courts, religious orders — that sustain intellectual and cultural life.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    },
+    {
+      "id": "population-movement",
+      "canonical_label": "Population Movement",
+      "aliases": ["migration", "nomadism", "forced migration", "invasion"],
+      "parent_keys": [],
+      "child_keys": ["exile"],
+      "description": "Large-scale movement of peoples across geographic space, driven by conquest, famine, climate, or opportunity.",
+      "ambiguity_notes": null,
+      "status": "canonical"
+    }
+  ]
+}

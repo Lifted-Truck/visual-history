@@ -1,0 +1,1371 @@
+{
+  "epoch": "epoch-000-baseline",
+  "description": "Canonical edges for the Axial Age and classical antiquity baseline dataset.",
+  "produced_by": "manual-curation",
+  "produced_at": "2026-03-23T00:00:00Z",
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge-socrates-to-plato-teacher",
+      "schema_version": "1.0",
+      "source": "socrates",
+      "target": "plato",
+      "connection_class": "biographical",
+      "connection_types": ["taught", "mentored"],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": { "approximate_year": -400, "notes": "Socrates taught Plato during the late 5th century BCE in Athens." },
+      "spatial_context": { "via": ["classical-athens"], "notes": "Relationship took place in Athens." },
+      "semantic": {
+        "tags": ["teacher-student", "philosophy", "Athens"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Universally attested in ancient sources; Plato was Socrates' most famous student.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Socrates taught and mentored Plato in Athens.",
+        "detailed": "Plato was a devoted student of Socrates from roughly 407 BCE until Socrates' execution in 399 BCE. Plato's dialogues are the primary literary record of Socratic philosophy.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato's Phaedo; Diogenes Laertius, Lives of Eminent Philosophers", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plato-to-aristotle-teacher",
+      "schema_version": "1.0",
+      "source": "plato",
+      "target": "aristotle",
+      "connection_class": "biographical",
+      "connection_types": ["taught"],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": { "approximate_year": -367, "notes": "Aristotle studied at Plato's Academy from roughly 367 BCE until Plato's death in 347 BCE." },
+      "spatial_context": { "via": ["athens-academy"], "notes": "Relationship took place at the Academy in Athens." },
+      "semantic": {
+        "tags": ["teacher-student", "philosophy", "Academy"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Universally attested; Aristotle spent approximately 20 years at Plato's Academy.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Plato taught Aristotle at the Academy.",
+        "detailed": "Aristotle joined the Academy around age 17 and remained until Plato's death, making Plato his primary philosophical teacher.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Diogenes Laertius, Lives of Eminent Philosophers; Strabo, Geography", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-confucius-to-mencius-indirect",
+      "schema_version": "1.0",
+      "source": "confucius",
+      "target": "mencius",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced", "founded-tradition"],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": { "approximate_year": -320, "notes": "Mencius lived roughly a century after Confucius and developed Confucian thought." },
+      "spatial_context": { "via": [], "notes": "Transmission through the Confucian school tradition in Zhou-period China." },
+      "semantic": {
+        "tags": ["Confucianism", "tradition", "ethics"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Mencius is considered the most important developer of Confucian philosophy after Confucius himself.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Confucius indirectly influenced Mencius and founded the tradition Mencius developed.",
+        "detailed": "Mencius systematized and extended Confucian ethics, particularly regarding human nature (renxing), inheriting the tradition founded by Confucius through intermediate disciples.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Mencius (text); Van Norden, Bryan W., Mengzi: With Selections from Traditional Commentaries", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-aristotle-to-alexander-teacher",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "alexander-the-great",
+      "connection_class": "biographical",
+      "connection_types": ["tutored"],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": { "approximate_year": -343, "notes": "Aristotle tutored Alexander from approximately 343 to 340 BCE at Mieza." },
+      "spatial_context": { "via": ["miletus"], "notes": "Tutoring took place at the Nymphaion in Mieza, Macedonia." },
+      "semantic": {
+        "tags": ["teacher-student", "Macedonia", "philosophy", "political-education"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Attested by Plutarch and other ancient sources; Philip II of Macedon invited Aristotle to tutor Alexander.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Aristotle tutored the young Alexander the Great in Macedonia.",
+        "detailed": "Philip II invited Aristotle to tutor his son Alexander at Mieza. The education covered philosophy, medicine, science, and rhetoric, deeply shaping Alexander's intellectual outlook.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plutarch, Life of Alexander", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-socrates-to-xenophon-teacher",
+      "schema_version": "1.0",
+      "source": "socrates",
+      "target": "xenophon",
+      "connection_class": "biographical",
+      "connection_types": ["taught"],
+      "direction": "source_to_target",
+      "strength": 0.85,
+      "temporal_context": { "approximate_year": -405, "notes": "Xenophon associated with Socrates in Athens in the late 5th century BCE." },
+      "spatial_context": { "via": ["classical-athens"], "notes": "Relationship took place in Athens." },
+      "semantic": {
+        "tags": ["teacher-student", "philosophy", "Athens"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Xenophon's Memorabilia and Symposium record his association with Socrates; slightly less intimate than Plato's relationship.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Socrates taught Xenophon in Athens.",
+        "detailed": "Xenophon was a student and associate of Socrates, recording Socratic conversations and philosophy in the Memorabilia, Apology, and Symposium.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Xenophon, Memorabilia; Diogenes Laertius, Lives of Eminent Philosophers", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-pythagoras-to-plato-influence",
+      "schema_version": "1.0",
+      "source": "pythagoras",
+      "target": "plato",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.75,
+      "temporal_context": { "approximate_year": -390, "notes": "Plato's middle and late dialogues show strong Pythagorean influence." },
+      "spatial_context": { "via": [], "notes": "Influence transmitted through Pythagorean communities, especially during Plato's visits to Sicily." },
+      "semantic": {
+        "tags": ["Pythagoreanism", "mathematics", "cosmology", "soul"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.75,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato's Timaeus, Phaedo, and Republic show clear Pythagorean influence on mathematics, cosmology, and the immortality of the soul.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Pythagorean ideas significantly influenced Plato's philosophy.",
+        "detailed": "Plato absorbed Pythagorean ideas through contact with Pythagorean communities in Sicily and southern Italy, incorporating their mathematical cosmology and views on the soul into his own system.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Burkert, Walter, Lore and Science in Ancient Pythagoreanism; Plato, Timaeus", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-zeno-of-citium-stoicism",
+      "schema_version": "1.0",
+      "source": "socrates",
+      "target": "zeno-of-citium",
+      "connection_class": "intellectual",
+      "connection_types": ["indirectly-influenced"],
+      "direction": "source_to_target",
+      "strength": 0.65,
+      "temporal_context": { "approximate_year": -300, "notes": "Zeno of Citium founded Stoicism partly in response to Socratic ethics." },
+      "spatial_context": { "via": ["classical-athens"], "notes": "Zeno came to Athens and was influenced by the Socratic tradition via Cynic philosophy." },
+      "semantic": {
+        "tags": ["Stoicism", "ethics", "Cynicism", "indirect-influence"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.65,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Stoicism developed partly from the Cynic tradition, which itself drew on Socratic ethics; indirect lineage is well-attested.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Socrates indirectly influenced Zeno of Citium through the Cynic tradition.",
+        "detailed": "Zeno of Citium studied under Crates the Cynic, whose tradition traced back through Antisthenes to Socrates. Stoic ethics owe a substantial debt to Socratic moral philosophy.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Diogenes Laertius, Lives of Eminent Philosophers, Book VII", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-heraclitus-to-plato-influence",
+      "schema_version": "1.0",
+      "source": "heraclitus",
+      "target": "plato",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.80,
+      "temporal_context": { "approximate_year": -390, "notes": "Plato engaged extensively with Heraclitean flux doctrine in the Cratylus and Theaetetus." },
+      "spatial_context": { "via": [], "notes": "Influence transmitted through texts and oral tradition." },
+      "semantic": {
+        "tags": ["flux", "change", "epistemology", "pre-Socratics"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.80,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato explicitly engages with Heraclitean flux doctrine, particularly in the Cratylus and Theaetetus, using it as a foil for his theory of Forms.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Heraclitean flux doctrine influenced Plato's philosophical development.",
+        "detailed": "Plato engaged critically with Heraclitus' doctrine of universal flux, using it to motivate his theory of eternal, unchanging Forms as the objects of genuine knowledge.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato, Cratylus; Plato, Theaetetus; Kirk, Raven & Schofield, The Presocratic Philosophers", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-parmenides-to-plato-influence",
+      "schema_version": "1.0",
+      "source": "parmenides",
+      "target": "plato",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced", "critiqued"],
+      "direction": "source_to_target",
+      "strength": 0.85,
+      "temporal_context": { "approximate_year": -390, "notes": "Plato's Parmenides dialogue engages directly with Eleatic monism." },
+      "spatial_context": { "via": [], "notes": "Influence transmitted through texts and the Eleatic school tradition." },
+      "semantic": {
+        "tags": ["Eleaticism", "being", "ontology", "pre-Socratics"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.85,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato dedicated an entire dialogue to Parmenides and Eleatic philosophy; Parmenidean ontology deeply shaped Plato's concept of the Forms.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Parmenides influenced and was critiqued by Plato regarding the nature of Being.",
+        "detailed": "Parmenidean monism — the doctrine that only being exists and change is illusory — influenced Plato's Forms while also serving as a target of critique in the Parmenides and Sophist dialogues.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato, Parmenides; Plato, Sophist; Palmer, John, Parmenides and Presocratic Philosophy", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-socrates-to-plato-intellectual",
+      "schema_version": "1.0",
+      "source": "socrates",
+      "target": "plato",
+      "connection_class": "intellectual",
+      "connection_types": ["foundational-influence"],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": { "approximate_year": -400, "notes": "Socrates' philosophical method and ethical concerns are the foundation of Platonic philosophy." },
+      "spatial_context": { "via": ["classical-athens"], "notes": "Intellectual influence grounded in Athens." },
+      "semantic": {
+        "tags": ["Socratic method", "ethics", "dialectic", "foundational"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato's entire philosophical corpus is built around Socratic method and ethics; Plato himself credited Socrates as his intellectual foundation.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Socrates provided the foundational intellectual influence for Platonic philosophy.",
+        "detailed": "Beyond the biographical teacher-student relationship, Socrates' dialectical method, ethical focus, and conception of the philosopher's role were the intellectual cornerstone on which Plato built his entire system.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato, Apology; Vlastos, Gregory, Socrates: Ironist and Moral Philosopher", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plato-to-aristotle-intellectual",
+      "schema_version": "1.0",
+      "source": "plato",
+      "target": "aristotle",
+      "connection_class": "intellectual",
+      "connection_types": ["foundational-influence", "critiqued"],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": { "approximate_year": -350, "notes": "Aristotle's mature philosophy is largely a response to and critique of Platonic philosophy." },
+      "spatial_context": { "via": ["athens-academy"], "notes": "Intellectual relationship developed at the Academy." },
+      "semantic": {
+        "tags": ["Forms", "metaphysics", "epistemology", "foundational", "critique"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Aristotle's major works systematically engage with and critique Platonic doctrines, especially the theory of Forms; Platonic philosophy is the essential starting point for Aristotle's own system.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Plato's philosophy provided the foundational framework Aristotle both built on and critiqued.",
+        "detailed": "Aristotle's philosophy is deeply shaped by and in dialogue with Plato, especially on the theory of Forms, which Aristotle rejected in favor of immanent universals, epistemology, and the nature of the Good.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Aristotle, Metaphysics I; Fine, Gail, On Ideas: Aristotle's Criticism of Plato's Theory of Forms", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-thales-to-anaximander-tradition",
+      "schema_version": "1.0",
+      "source": "thales",
+      "target": "anaxagoras",
+      "connection_class": "intellectual",
+      "connection_types": ["founded-tradition", "inspired"],
+      "direction": "source_to_target",
+      "strength": 0.70,
+      "temporal_context": { "approximate_year": -450, "notes": "The Milesian naturalist tradition founded by Thales influenced later Ionian thinkers including Anaxagoras." },
+      "spatial_context": { "via": ["miletus"], "notes": "Tradition originated in Miletus and spread across the Ionian world." },
+      "semantic": {
+        "tags": ["Milesian school", "natural philosophy", "cosmology", "Ionian tradition"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.70,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Anaxagoras extended the Milesian tradition of naturalistic cosmology; Thales is considered the founder of this tradition.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Thales founded the naturalist tradition that inspired Anaxagoras.",
+        "detailed": "Thales of Miletus initiated the tradition of naturalistic explanation of the cosmos that was taken up and transformed by subsequent thinkers including Anaximander, Anaximenes, and eventually Anaxagoras.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Aristotle, Metaphysics I.3; Kirk, Raven & Schofield, The Presocratic Philosophers", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-democritus-to-epicurus-atoms",
+      "schema_version": "1.0",
+      "source": "democritus",
+      "target": "epicurus",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced", "atomism"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": -300, "notes": "Epicurus adapted Democritean atomism for his ethical and physical philosophy." },
+      "spatial_context": { "via": [], "notes": "Influence transmitted through texts and philosophical tradition." },
+      "semantic": {
+        "tags": ["atomism", "materialism", "physics", "ethics"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Epicurus explicitly adopted atomic theory from Democritus while modifying it (e.g., the swerve/clinamen) to accommodate free will and ethics.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Democritus' atomic theory directly influenced Epicurus' philosophy.",
+        "detailed": "Epicurus built his physics on Democritean atomism, adopting the basic ontology of atoms moving in void while adding the clinamen (atomic swerve) to explain free will and avoid strict determinism.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Diogenes Laertius, Life of Epicurus; Lucretius, De Rerum Natura", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plato-to-neoplatonism",
+      "schema_version": "1.0",
+      "source": "plato",
+      "target": "logos",
+      "connection_class": "intellectual",
+      "connection_types": ["originated-concept"],
+      "direction": "source_to_target",
+      "strength": 0.75,
+      "temporal_context": { "approximate_year": -380, "notes": "Plato's use of logos as rational principle contributed to later Neoplatonic and Stoic conceptions." },
+      "spatial_context": { "via": [], "notes": "" },
+      "semantic": {
+        "tags": ["logos", "rationality", "concept-origin", "Neoplatonism"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.75,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato's philosophical use of logos as rational discourse and principle contributed substantially to the later metaphysical concept of Logos.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Plato contributed to the philosophical concept of Logos.",
+        "detailed": "Plato's treatment of logos as rational discourse, cosmic reason, and the principle of intelligibility in dialogues like the Timaeus contributed to later developments of the Logos concept in Stoicism, Philo, and Neoplatonism.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato, Timaeus; Dillon, John, The Middle Platonists", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-heraclitus-to-logos",
+      "schema_version": "1.0",
+      "source": "heraclitus",
+      "target": "logos",
+      "connection_class": "intellectual",
+      "connection_types": ["originated-concept"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": -500, "notes": "Heraclitus introduced logos as a cosmic principle governing all things around 500 BCE." },
+      "spatial_context": { "via": [], "notes": "Heraclitus worked in Ephesus." },
+      "semantic": {
+        "tags": ["logos", "cosmos", "unity", "reason", "concept-origin"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Heraclitus is universally credited as the first philosopher to systematically employ logos as a cosmic principle; the opening fragments of his work center on this concept.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Heraclitus originated the concept of Logos as cosmic rational principle.",
+        "detailed": "Heraclitus of Ephesus was the first thinker to articulate Logos as the universal rational principle governing all things, describing it as the common measure behind the apparent flux of reality.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Heraclitus DK B1, B2, B50; Long, A.A., 'Heraclitus and Stoicism'", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plato-to-platonic-forms",
+      "schema_version": "1.0",
+      "source": "plato",
+      "target": "platonic-forms",
+      "connection_class": "intellectual",
+      "connection_types": ["authored", "originated"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": -380, "notes": "Theory of Forms developed in Plato's middle dialogues, c. 390–360 BCE." },
+      "spatial_context": { "via": ["athens-academy"], "notes": "Developed at the Academy in Athens." },
+      "semantic": {
+        "tags": ["Forms", "ontology", "epistemology", "metaphysics"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 1.0,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The theory of Forms is definitively Plato's contribution; no serious scholarly dispute exists on this attribution.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Plato authored and originated the theory of Platonic Forms.",
+        "detailed": "Plato developed the theory of Forms — eternal, perfect, non-material archetypes of which physical objects are imperfect copies — as the cornerstone of his metaphysics and epistemology.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato, Republic (Book VI-VII); Plato, Phaedo; Fine, Gail, Plato on Knowledge and Forms", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-aristotle-to-alexander-influence",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "alexander-the-great",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced-worldview"],
+      "direction": "source_to_target",
+      "strength": 0.80,
+      "temporal_context": { "approximate_year": -335, "notes": "Aristotle's intellectual influence on Alexander persisted into his campaigns." },
+      "spatial_context": { "via": [], "notes": "Influence shaped Alexander's approach to governance, science, and culture." },
+      "semantic": {
+        "tags": ["intellectual-influence", "cosmopolitanism", "science", "governance"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.80,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plutarch records Alexander's reverence for Aristotle; Alexander reportedly carried annotated copies of Homer and maintained scientific correspondence with Aristotle during campaigns.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Aristotle's teaching influenced Alexander the Great's worldview and campaigns.",
+        "detailed": "Beyond tutoring, Aristotle shaped Alexander's intellectual interests in science, philosophy, and culture. Alexander's campaigns spread Greek intellectual culture partly as an expression of this Aristotelian education.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plutarch, Life of Alexander, ch. 7-8", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-confucius-to-spring-autumn",
+      "schema_version": "1.0",
+      "source": "confucius",
+      "target": "spring-autumn-period",
+      "connection_class": "temporal",
+      "connection_types": ["lived-during"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": -500, "notes": "Confucius lived 551–479 BCE, corresponding to the later Spring and Autumn period." },
+      "spatial_context": { "via": [], "notes": "Confucius was from the state of Lu in present-day Shandong province." },
+      "semantic": {
+        "tags": ["period", "temporal-context", "Zhou dynasty"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 1.0,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Confucius' dates (551–479 BCE) fall within the Spring and Autumn period (770–476 BCE); this is uncontested.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Confucius lived during the Spring and Autumn period of Chinese history.",
+        "detailed": "Confucius was born and died during the Spring and Autumn period, a time of political fragmentation and cultural transformation that deeply shaped his philosophical concerns with ritual, virtue, and proper governance.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Leys, Simon (trans.), The Analects of Confucius, introduction; Chin, Annping, Confucius: A Life of Thought and Politics", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-confucius-to-analects",
+      "schema_version": "1.0",
+      "source": "confucius",
+      "target": "analects",
+      "connection_class": "material",
+      "connection_types": ["source-person", "compiled-from"],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": { "approximate_year": -400, "notes": "The Analects were compiled by Confucius' disciples after his death, c. 480–400 BCE." },
+      "spatial_context": { "via": [], "notes": "Compiled in the state of Lu." },
+      "semantic": {
+        "tags": ["text", "compilation", "sayings", "Confucianism"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Analects record Confucius' sayings and conversations compiled by his disciples; the attribution is standard, though exact composition history is complex.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "The Analects were compiled from Confucius' teachings by his disciples.",
+        "detailed": "The Lunyu (Analects) is a collection of Confucius' conversations, sayings, and aphorisms compiled by his disciples and their students after his death. It is the primary source for Confucian thought.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Brooks, E. Bruce & A. Taeko Brooks, The Original Analects", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plato-to-republic",
+      "schema_version": "1.0",
+      "source": "plato",
+      "target": "republic-plato",
+      "connection_class": "material",
+      "connection_types": ["authored"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": -375, "notes": "The Republic was written around 375 BCE." },
+      "spatial_context": { "via": ["athens-academy"], "notes": "Written at the Academy in Athens." },
+      "semantic": {
+        "tags": ["text", "political philosophy", "ethics", "epistemology"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 1.0,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato's authorship of the Republic is uncontested.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Plato authored the Republic.",
+        "detailed": "Plato's Republic (Politeia) is a dialogue exploring justice, the ideal city-state, education, and the philosopher-king, as well as the famous Allegory of the Cave and the theory of Forms.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato, Republic; Bloom, Allan (trans.), The Republic of Plato", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-aristotle-to-nicomachean-ethics",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "nicomachean-ethics",
+      "connection_class": "material",
+      "connection_types": ["authored"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": -340, "notes": "The Nicomachean Ethics was composed at the Lyceum, c. 350–330 BCE." },
+      "spatial_context": { "via": ["lyceum-aristotle"], "notes": "Written at the Lyceum in Athens." },
+      "semantic": {
+        "tags": ["text", "ethics", "virtue", "eudaimonia"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 1.0,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Aristotle's authorship of the Nicomachean Ethics is uncontested.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Aristotle authored the Nicomachean Ethics.",
+        "detailed": "The Nicomachean Ethics is Aristotle's major treatise on virtue ethics, happiness (eudaimonia), friendship, and the good life, possibly edited or named after his son Nicomachus.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Aristotle, Nicomachean Ethics; Irwin, Terence (trans.), Aristotle: Nicomachean Ethics", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-laozi-to-tao-te-ching",
+      "schema_version": "1.0",
+      "source": "laozi",
+      "target": "tao-te-ching",
+      "connection_class": "material",
+      "connection_types": ["attributed-author"],
+      "direction": "source_to_target",
+      "strength": 0.60,
+      "temporal_context": { "approximate_year": -400, "notes": "The Tao Te Ching is traditionally attributed to Laozi; modern scholarship debates its date and authorship, c. 6th–4th century BCE." },
+      "spatial_context": { "via": [], "notes": "Traditionally associated with the state of Chu." },
+      "semantic": {
+        "tags": ["text", "Taoism", "attributed-authorship", "Tao"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.60,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Traditional attribution to Laozi is accepted for canonical purposes; modern scholarship regards it as a compiled text with uncertain single authorship.",
+        "contradictions": ["Some scholars argue the text is a composite work with no single author."],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "The Tao Te Ching is traditionally attributed to Laozi.",
+        "detailed": "The Tao Te Ching (Daodejing) is the foundational text of Taoism traditionally attributed to Laozi. Modern scholarship treats it as possibly a compiled anthology, but the traditional attribution is retained for historical significance.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Lau, D.C. (trans.), Tao Te Ching; Boltz, William G., 'The Lao tzu Text That Wang Pi and Ho-shang Kung Never Saw'", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-siddhartha-to-four-noble-truths",
+      "schema_version": "1.0",
+      "source": "siddhartha-gautama",
+      "target": "four-noble-truths",
+      "connection_class": "intellectual",
+      "connection_types": ["originated", "taught"],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": { "approximate_year": -528, "notes": "The Four Noble Truths were first taught at the Deer Park at Sarnath after the Buddha's enlightenment." },
+      "spatial_context": { "via": ["pataliputra"], "notes": "First taught at Sarnath, near Varanasi." },
+      "semantic": {
+        "tags": ["Buddhism", "teaching", "suffering", "liberation"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.95,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Four Noble Truths are the foundational teaching of Buddhism universally attributed to the Buddha; attested across all major Buddhist textual traditions.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Siddhartha Gautama originated and taught the Four Noble Truths.",
+        "detailed": "The Four Noble Truths — on suffering, its origin, its cessation, and the path to its cessation — constitute the Buddha's first and most fundamental teaching, delivered at the Deer Park in Sarnath.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Dhammacakkappavattana Sutta (SN 56.11); Harvey, Peter, An Introduction to Buddhism", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-siddhartha-to-dharma",
+      "schema_version": "1.0",
+      "source": "siddhartha-gautama",
+      "target": "dharma-concept",
+      "connection_class": "intellectual",
+      "connection_types": ["reformulated", "emphasized"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": -520, "notes": "The Buddha reformulated the Vedic concept of dharma within a Buddhist ethical and cosmological framework." },
+      "spatial_context": { "via": [], "notes": "Teaching and reformulation occurred throughout the Gangetic plain." },
+      "semantic": {
+        "tags": ["dharma", "Buddhism", "ethics", "cosmology", "concept-reformulation"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Buddha reinterpreted dharma from its Vedic context (cosmic law/order) into a Buddhist framework (the teaching, the path, natural law); widely attested in comparative religion scholarship.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Siddhartha Gautama reformulated and emphasized the concept of dharma in Buddhist terms.",
+        "detailed": "The Buddha took the pre-existing Vedic concept of dharma (cosmic order, duty) and reinterpreted it as the teaching of liberation from suffering and as the natural law of conditioned existence.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Gethin, Rupert, The Foundations of Buddhism; Gombrich, Richard, What the Buddha Thought", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-aristotle-to-elements-tradition",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "elements-euclid",
+      "connection_class": "intellectual",
+      "connection_types": ["precursor", "logical-method"],
+      "direction": "source_to_target",
+      "strength": 0.60,
+      "temporal_context": { "approximate_year": -320, "notes": "Aristotle's formal logic and axiomatic method predated and influenced Euclid's Elements." },
+      "spatial_context": { "via": [], "notes": "Logical method developed at the Lyceum and transmitted to Alexandrian scholars." },
+      "semantic": {
+        "tags": ["logic", "axiomatic-method", "mathematics", "demonstration"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.60,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Aristotle's development of demonstrative science in the Posterior Analytics provides the logical framework that Euclid's Elements exemplifies; influence is indirect but recognized by scholars.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Aristotle's logical method was a precursor to the axiomatic structure of Euclid's Elements.",
+        "detailed": "Aristotle articulated the theory of demonstrative science and axiomatic deduction in the Posterior Analytics, which provided the logical framework that Euclid employed in structuring the Elements.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Aristotle, Posterior Analytics; Mueller, Ian, Philosophy of Mathematics and Deductive Structure in Euclid's Elements", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-alexander-to-hellenistic",
+      "schema_version": "1.0",
+      "source": "alexander-the-great",
+      "target": "hellenistic-period",
+      "connection_class": "causal",
+      "connection_types": ["founded", "precipitated"],
+      "direction": "source_to_target",
+      "strength": 0.98,
+      "temporal_context": { "approximate_year": -323, "notes": "Alexander's death in 323 BCE conventionally marks the beginning of the Hellenistic period." },
+      "spatial_context": { "via": ["alexandria-egypt"], "notes": "Alexander's conquests spread Hellenistic culture from Greece to Central Asia." },
+      "semantic": {
+        "tags": ["Hellenism", "periodization", "causal", "empire"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.98,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Hellenistic period is conventionally defined as beginning with Alexander's death; his conquests created the cultural and political conditions for Hellenistic civilization.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Alexander the Great's conquests founded and precipitated the Hellenistic period.",
+        "detailed": "Alexander's campaigns from 334 to 323 BCE spread Greek culture across the Near East, Egypt, Persia, and into Central Asia, creating the multicultural Hellenistic world that followed his death.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Green, Peter, Alexander to Actium: The Historical Evolution of the Hellenistic Age", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-alexander-to-library",
+      "schema_version": "1.0",
+      "source": "alexander-the-great",
+      "target": "library-of-alexandria",
+      "connection_class": "causal",
+      "connection_types": ["enabled-founding"],
+      "direction": "source_to_target",
+      "strength": 0.75,
+      "temporal_context": { "approximate_year": -295, "notes": "The Library of Alexandria was founded under Ptolemy I, whose dynasty was established by Alexander's conquest of Egypt." },
+      "spatial_context": { "via": ["alexandria-egypt"], "notes": "Alexandria was founded by Alexander in 331 BCE." },
+      "semantic": {
+        "tags": ["library", "knowledge", "Alexandria", "Ptolemaic"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.75,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Alexander founded the city of Alexandria and his conquest established the Ptolemaic dynasty that built the Library; the causal chain is clear though indirect.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Alexander the Great's founding of Alexandria enabled the later establishment of the Library.",
+        "detailed": "Alexander founded Alexandria in 331 BCE and his general Ptolemy established the dynasty that built the Library of Alexandria, making Alexander's conquests a necessary precondition for the Library's existence.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Canfora, Luciano, The Vanished Library; Fraser, P.M., Ptolemaic Alexandria", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plato-to-academy",
+      "schema_version": "1.0",
+      "source": "plato",
+      "target": "athens-academy",
+      "connection_class": "material",
+      "connection_types": ["founded"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": -387, "notes": "Plato founded the Academy around 387 BCE." },
+      "spatial_context": { "via": ["classical-athens", "athens"], "notes": "Located in a grove sacred to the hero Akademos, northwest of Athens." },
+      "semantic": {
+        "tags": ["institution", "philosophy", "education", "founding"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 1.0,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato's founding of the Academy is one of the best-attested facts of ancient philosophy.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Plato founded the Academy in Athens.",
+        "detailed": "Plato established the Academy around 387 BCE in a grove near Athens, creating one of the first institutions of higher learning in the Western world, which endured for over 900 years.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Diogenes Laertius, Life of Plato; Nails, Debra, The People of Plato", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-aristotle-to-lyceum",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "lyceum-aristotle",
+      "connection_class": "material",
+      "connection_types": ["founded"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": -335, "notes": "Aristotle founded the Lyceum around 335 BCE after returning to Athens." },
+      "spatial_context": { "via": ["classical-athens", "athens"], "notes": "Located near the temple of Apollo Lykeios in Athens." },
+      "semantic": {
+        "tags": ["institution", "philosophy", "science", "Peripatetic", "founding"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 1.0,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Aristotle's founding of the Lyceum is uncontested.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Aristotle founded the Lyceum in Athens.",
+        "detailed": "Aristotle founded the Lyceum in 335 BCE as a center for philosophical and scientific inquiry, establishing the Peripatetic school. The Lyceum became famous for its extensive library and systematic research program.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Diogenes Laertius, Life of Aristotle; Lynch, John Patrick, Aristotle's School", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-ashoka-to-buddhism",
+      "schema_version": "1.0",
+      "source": "ashoka",
+      "target": "siddhartha-gautama",
+      "connection_class": "intellectual",
+      "connection_types": ["promoted-teachings", "spread-dharma"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": -260, "notes": "Ashoka converted to Buddhism around 260 BCE and began promoting Buddhist teachings throughout his empire." },
+      "spatial_context": { "via": ["maurya-empire", "pataliputra"], "notes": "Ashoka spread Buddhist teachings across the Mauryan Empire and beyond." },
+      "semantic": {
+        "tags": ["Buddhism", "patronage", "propagation", "edicts"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Ashoka's Edicts extensively document his promotion of Buddhist teachings; he is credited with spreading Buddhism across Asia.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Ashoka promoted and spread the teachings of Siddhartha Gautama throughout his empire.",
+        "detailed": "After converting to Buddhism following the bloody Kalinga War, Ashoka became the most important royal patron of Buddhism, issuing edicts promoting dharma and sending Buddhist missionaries across Asia.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Ashoka's Rock and Pillar Edicts; Thapar, Romila, Asoka and the Decline of the Mauryas", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-cicero-to-stoicism",
+      "schema_version": "1.0",
+      "source": "zeno-of-citium",
+      "target": "cicero",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced-via-stoicism"],
+      "direction": "source_to_target",
+      "strength": 0.80,
+      "temporal_context": { "approximate_year": -60, "notes": "Cicero extensively engaged with and popularized Stoic philosophy in the Roman world." },
+      "spatial_context": { "via": ["rome"], "notes": "Influence mediated through Stoic teachers Cicero studied under in Rome and Greece." },
+      "semantic": {
+        "tags": ["Stoicism", "Roman philosophy", "influence", "transmission"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.80,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Cicero's works extensively engage with Stoic philosophy, and he studied under Stoic teachers; he was a key transmitter of Stoicism to Roman culture.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Zeno of Citium's Stoic philosophy influenced Cicero via the Stoic school tradition.",
+        "detailed": "Cicero studied Stoic philosophy under teachers in the Zenonic tradition and extensively discussed and transmitted Stoic ideas in works like De Finibus and the Tusculan Disputations.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Cicero, De Finibus; Cicero, Tusculan Disputations; Rist, John M., Stoic Philosophy", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-caesar-to-cicero",
+      "schema_version": "1.0",
+      "source": "julius-caesar",
+      "target": "cicero",
+      "connection_class": "biographical",
+      "connection_types": ["contemporary-rival", "political-adversary"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": -50, "notes": "Caesar and Cicero were contemporaries and political rivals in the late Roman Republic." },
+      "spatial_context": { "via": ["rome", "roman-republic"], "notes": "Rivalry played out in the political arena of Rome." },
+      "semantic": {
+        "tags": ["political", "Roman Republic", "rivalry", "contemporaries"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Caesar and Cicero's complex relationship as rivals, occasional allies, and adversaries is extensively documented in Cicero's letters and other ancient sources.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Julius Caesar and Cicero were political contemporaries and rivals in the late Roman Republic.",
+        "detailed": "Caesar and Cicero navigated a complex relationship as prominent contemporaries in the dying Roman Republic. Cicero supported Pompey against Caesar and was later targeted by Mark Antony after Caesar's assassination, with Caesar's legacy looming over Cicero's final years.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Cicero's Letters (Epistulae ad Familiares); Plutarch, Life of Cicero", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-augustus-to-virgil",
+      "schema_version": "1.0",
+      "source": "augustus-caesar",
+      "target": "virgil",
+      "connection_class": "biographical",
+      "connection_types": ["patronized"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": -29, "notes": "Virgil wrote the Aeneid under Augustan patronage from approximately 29–19 BCE." },
+      "spatial_context": { "via": ["rome"], "notes": "Patronage relationship based in Rome." },
+      "semantic": {
+        "tags": ["patronage", "Roman literature", "Augustan age", "poetry"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Augustus' patronage of Virgil through Maecenas is well-attested; the Aeneid was commissioned as a national epic glorifying Rome and the Julian line.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Augustus Caesar patronized Virgil, commissioning the Aeneid.",
+        "detailed": "Through his cultural minister Maecenas, Augustus patronized Virgil, who composed the Georgics and the Aeneid in part to glorify Rome's origins and the Augustan principate.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Donatus, Life of Virgil; Galinsky, Karl, Augustan Culture", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-paul-to-jesus",
+      "schema_version": "1.0",
+      "source": "jesus-of-nazareth",
+      "target": "paul-of-tarsus",
+      "connection_class": "intellectual",
+      "connection_types": ["inspired", "foundational-influence"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": 35, "notes": "Paul converted and began spreading the teachings of Jesus around 33–36 CE." },
+      "spatial_context": { "via": ["rome"], "notes": "Paul spread Jesus' teachings across the Roman Mediterranean world." },
+      "semantic": {
+        "tags": ["Christianity", "theology", "inspiration", "foundational"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Paul's letters and Acts of the Apostles document his conversion to and propagation of the teaching of Jesus; Jesus is the foundational figure of the movement Paul helped spread.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "The teachings of Jesus inspired and foundationally influenced Paul of Tarsus.",
+        "detailed": "Paul of Tarsus, following his conversion experience on the road to Damascus, became the most important early propagator of Jesus' teachings, interpreting them in a theological framework that shaped Christianity profoundly.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Paul's Epistles (esp. Galatians 1); Acts of the Apostles 9; Dunn, James D.G., The Theology of Paul the Apostle", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-socrates-to-classical-athens",
+      "schema_version": "1.0",
+      "source": "socrates",
+      "target": "classical-athens",
+      "connection_class": "biographical",
+      "connection_types": ["lived-during", "epitomized"],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": { "approximate_year": -430, "notes": "Socrates lived his entire life in classical Athens, c. 470–399 BCE." },
+      "spatial_context": { "via": ["athens"], "notes": "Socrates was a lifelong resident of Athens." },
+      "semantic": {
+        "tags": ["Athens", "classical period", "biography", "place"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Socrates is the paradigmatic Athenian philosopher; he lived and died in Athens and is inseparable from classical Athenian culture.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Socrates lived and epitomized classical Athens.",
+        "detailed": "Socrates spent his entire life in Athens, serving as a soldier, participating in civic life, and philosophizing in the agora. He refused to leave Athens even when his life was at stake, epitomizing Athenian citizenship.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Plato, Crito; Plato, Apology; Stone, I.F., The Trial of Socrates", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-plato-to-classical-athens",
+      "schema_version": "1.0",
+      "source": "plato",
+      "target": "classical-athens",
+      "connection_class": "biographical",
+      "connection_types": ["lived-during"],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": { "approximate_year": -370, "notes": "Plato lived in classical Athens for most of his life, c. 428–348 BCE." },
+      "spatial_context": { "via": ["athens", "athens-academy"], "notes": "Plato was an Athenian citizen who founded the Academy there." },
+      "semantic": {
+        "tags": ["Athens", "classical period", "biography", "place"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.99,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Plato's life was centered in classical Athens; he was born into an aristocratic Athenian family and founded the Academy there.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Plato lived in classical Athens and founded the Academy there.",
+        "detailed": "Born into an aristocratic Athenian family around 428 BCE, Plato lived most of his life in Athens, where he founded the Academy around 387 BCE and wrote his philosophical dialogues.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Diogenes Laertius, Life of Plato; Nails, Debra, The People of Plato", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-confucius-to-warring-states",
+      "schema_version": "1.0",
+      "source": "confucius",
+      "target": "warring-states-period",
+      "connection_class": "biographical",
+      "connection_types": ["contemporary-with-onset"],
+      "direction": "source_to_target",
+      "strength": 0.80,
+      "temporal_context": { "approximate_year": -479, "notes": "Confucius died in 479 BCE, the traditional beginning of the Warring States period in some periodizations." },
+      "spatial_context": { "via": [], "notes": "Confucius experienced the political instability that led into the Warring States era." },
+      "semantic": {
+        "tags": ["period", "temporal-context", "Zhou dynasty", "political instability"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.80,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The boundary between Spring and Autumn and Warring States periods varies by scholar (476 or 453 BCE); Confucius died at the cusp of this transition.",
+        "contradictions": ["Some periodizations place the Warring States start at 453 BCE, after Confucius' death."],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Confucius was contemporary with the onset of the Warring States period.",
+        "detailed": "Confucius' lifetime overlapped with the intensifying political fragmentation of Zhou China that eventually became the Warring States period, and his philosophy was largely a response to this political disorder.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Lewis, Mark Edward, Sanctioned Violence in Early China; Shaughnessy, Edward, 'Western Zhou History'", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-maurya-ashoka",
+      "schema_version": "1.0",
+      "source": "ashoka",
+      "target": "maurya-empire",
+      "connection_class": "biographical",
+      "connection_types": ["ruler-of"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": -268, "notes": "Ashoka ruled the Mauryan Empire approximately 268–232 BCE." },
+      "spatial_context": { "via": ["pataliputra"], "notes": "Capital at Pataliputra (modern Patna, Bihar)." },
+      "semantic": {
+        "tags": ["ruler", "empire", "India", "Mauryan"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 1.0,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Ashoka's rulership of the Mauryan Empire is uncontested and extensively documented in his own edicts.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Ashoka was ruler of the Mauryan Empire.",
+        "detailed": "Ashoka the Great ruled the Mauryan Empire at its height, extending it across most of the Indian subcontinent. His reign marked a high point of ancient Indian political and cultural achievement.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Ashoka's Edicts; Thapar, Romila, Asoka and the Decline of the Mauryas", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-julius-caesar-to-roman-republic",
+      "schema_version": "1.0",
+      "source": "julius-caesar",
+      "target": "roman-republic",
+      "connection_class": "causal",
+      "connection_types": ["precipitated-end-of"],
+      "direction": "source_to_target",
+      "strength": 0.90,
+      "temporal_context": { "approximate_year": -49, "notes": "Caesar's crossing of the Rubicon in 49 BCE and his subsequent dictatorship precipitated the end of the Roman Republic." },
+      "spatial_context": { "via": ["rome"], "notes": "Transformation of the Roman Republic occurred in Rome." },
+      "semantic": {
+        "tags": ["Roman Republic", "political transformation", "causal", "dictatorship"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.90,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "Caesar's crossing of the Rubicon, Civil War, and dictatorship are universally recognized as precipitating the fall of the Roman Republic, completed under Augustus.",
+        "contradictions": ["Some historians argue the Republic was already failing before Caesar; his role was catalyst rather than cause."],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Julius Caesar's actions precipitated the end of the Roman Republic.",
+        "detailed": "Caesar's crossing of the Rubicon in 49 BCE, subsequent Civil War, and assumption of perpetual dictatorship fatally undermined the Republican constitution, leading to the transformation of Rome into the Principate under Augustus.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Suetonius, Life of Julius Caesar; Goldsworthy, Adrian, Caesar: Life of a Colossus", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    },
+    {
+      "id": "edge-siddhartha-to-maurya",
+      "schema_version": "1.0",
+      "source": "siddhartha-gautama",
+      "target": "maurya-empire",
+      "connection_class": "temporal",
+      "connection_types": ["preceded", "religion-adopted-by"],
+      "direction": "source_to_target",
+      "strength": 0.75,
+      "temporal_context": { "approximate_year": -268, "notes": "Siddhartha Gautama (c. 563–483 BCE) preceded the Mauryan Empire (322–185 BCE) by about two centuries; the Mauryan emperor Ashoka adopted Buddhism." },
+      "spatial_context": { "via": ["pataliputra", "maurya-empire"], "notes": "Both figures associated with the Gangetic plain." },
+      "semantic": {
+        "tags": ["Buddhism", "Mauryan Empire", "temporal-precedence", "religion"],
+        "keys": [],
+        "keys_provisional": []
+      },
+      "epistemic": {
+        "curation_status": "canonical",
+        "confidence": 0.75,
+        "evidence_type": "scholarly_consensus",
+        "reasoning": "The Buddha predated the Mauryan Empire by roughly two centuries; the empire's most famous ruler Ashoka adopted and spread Buddhism, connecting these two nodes.",
+        "contradictions": [],
+        "epoch": "epoch-000-baseline"
+      },
+      "description": {
+        "short": "Siddhartha Gautama preceded the Mauryan Empire, whose rulers adopted Buddhism.",
+        "detailed": "The Buddha lived and taught about two centuries before the founding of the Mauryan Empire. The empire became the first major political entity to adopt and propagate Buddhism, particularly under Ashoka, creating a significant temporal and cultural connection.",
+        "prose_cache_id": null,
+        "prose_angles_covered": []
+      },
+      "sources": [{ "label": "Thapar, Romila, Asoka and the Decline of the Mauryas; Harvey, Peter, An Introduction to Buddhism", "url": "" }],
+      "created_at": "2026-03-23T00:00:00Z",
+      "updated_at": "2026-03-23T00:00:00Z"
+    }
+  ],
+  "provisional_keys": [],
+  "ingestion_notes": "Manually curated canonical edges. Teacher-student and direct intellectual influence relationships only for this baseline."
+}
