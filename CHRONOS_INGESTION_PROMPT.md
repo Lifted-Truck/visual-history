@@ -279,6 +279,42 @@ The keys registry (`data/schema/keys-registry.json`) defines canonical semantic 
 | `inferred` | Dynamically generated on request, not stored permanently |
 | `deprecated` | Superseded; kept for backward compatibility |
 | `contested` | Active contradiction with another node/edge; flagged for resolution |
+| `stub` | Referenced by edges but not yet fully encoded; minimal valid node |
+
+### Stub Nodes
+
+When you reference an entity in an edge but do not have sufficient information to encode it as a full node, create a stub node for it. Use `curation_status: "stub"` and fill only the minimum required fields. This keeps the batch JSON self-consistent and ensures the graph has no dangling references.
+
+**When to create a stub:** You know the entity exists and is relevant, but you lack dates, location, sources, or other detail needed for a complete node. A stub is better than either omitting the entity or inventing uncertain data.
+
+A minimal stub node:
+
+```json
+{
+  "id": "entity-slug",
+  "schema_version": "1.0",
+  "node_type": "person",
+  "label": "Entity Name",
+  "temporal": { "precision": "ordinal", "confidence": 0, "display_mode": "ordinal" },
+  "spatial": { "spatial_mode": "diffuse", "no_coordinates": true, "no_coordinates_reason": "stub node — location unknown" },
+  "semantic": {
+    "tags": [],
+    "keys": [],
+    "description": { "short": "Brief note on what is known about this entity." }
+  },
+  "epistemic": {
+    "curation_status": "stub",
+    "confidence_overall": 0,
+    "source_quality": "unverified",
+    "epoch": "your-epoch-id"
+  },
+  "sources": [],
+  "created_at": "ISO timestamp",
+  "updated_at": "ISO timestamp"
+}
+```
+
+Fill in `description.short` with whatever is known — even a single sentence is useful. Add `keys` if you can identify relevant canonical keys. Leave `temporal.start`/`end` and `spatial.primary` absent rather than guessing.
 
 ---
 

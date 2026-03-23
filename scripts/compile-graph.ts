@@ -13,7 +13,7 @@ const STAGING_DIR = path.join(ROOT, 'data', 'staging');
 const DIST_DIR = path.join(ROOT, 'dist');
 const OUTPUT = path.join(DIST_DIR, 'graph.json');
 
-const INCLUDED_STATUSES = new Set(['canonical', 'ingested']);
+const INCLUDED_STATUSES = new Set(['canonical', 'ingested', 'stub']);
 
 interface NodeLike {
   id: string;
@@ -70,6 +70,30 @@ function main(): void {
       const status = edge.epistemic?.curation_status ?? '';
       if (INCLUDED_STATUSES.has(status)) {
         edgeMap.set(edge.id, edge);
+      }
+    }
+  }
+
+  // Auto-generate stub nodes for any dangling edge references
+  const now = new Date().toISOString();
+  for (const edge of edgeMap.values()) {
+    for (const refId of [edge.source, edge.target]) {
+      if (!nodeMap.has(refId)) {
+        const label = refId.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        nodeMap.set(refId, {
+          id: refId,
+          schema_version: '1.0',
+          node_type: 'person',
+          label,
+          temporal: { precision: 'ordinal', confidence: 0, display_mode: 'ordinal' },
+          spatial: { spatial_mode: 'diffuse', no_coordinates: true, no_coordinates_reason: 'auto-generated stub' },
+          semantic: { tags: [], keys: [], description: { short: 'Auto-generated stub — referenced in graph but not yet encoded.' } },
+          epistemic: { curation_status: 'stub', confidence_overall: 0, source_quality: 'unverified', epoch: 'auto-stub' },
+          sources: [],
+          created_at: now,
+          updated_at: now,
+        });
+        console.log(`[auto-stub] Created stub node for: ${refId}`);
       }
     }
   }

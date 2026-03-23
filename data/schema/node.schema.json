@@ -215,7 +215,7 @@
       "properties": {
         "curation_status": {
           "type": "string",
-          "enum": ["canonical", "ingested", "provisional", "inferred", "deprecated", "contested"]
+          "enum": ["canonical", "ingested", "provisional", "inferred", "deprecated", "contested", "stub"]
         },
         "confidence_overall": {
           "type": "number",

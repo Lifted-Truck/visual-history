@@ -19,7 +19,7 @@ export const ConnectionClassEnum = z.enum([
 export type ConnectionClass = z.infer<typeof ConnectionClassEnum>;
 
 export const CurationStatusEnum = z.enum([
-  'canonical', 'ingested', 'provisional', 'inferred', 'deprecated', 'contested',
+  'canonical', 'ingested', 'provisional', 'inferred', 'deprecated', 'contested', 'stub',
 ]);
 export type CurationStatus = z.infer<typeof CurationStatusEnum>;
 
