@@ -127,12 +127,20 @@ export const SpatialBlockSchema = z.object({
 });
 export type SpatialBlock = z.infer<typeof SpatialBlockSchema>;
 
-export const ProvisionalKeySchema = z.object({
-  proposed_key: z.string(),
-  description: z.string(),
-  candidate_canonical_parents: z.array(z.string()).optional(),
-  status: z.literal('provisional'),
-});
+export const ProvisionalKeySchema = z.union([
+  z.object({
+    proposed_key: z.string(),
+    description: z.string(),
+    candidate_canonical_parents: z.array(z.string()).optional(),
+    status: z.literal('provisional'),
+  }),
+  // Shorthand: a plain string is treated as a minimal provisional key entry
+  z.string().transform((s): { proposed_key: string; description: string; status: 'provisional' } => ({
+    proposed_key: s,
+    description: '',
+    status: 'provisional',
+  })),
+]);
 export type ProvisionalKey = z.infer<typeof ProvisionalKeySchema>;
 
 export const DescriptionBlockSchema = z.object({
@@ -146,7 +154,7 @@ export const SemanticBlockSchema = z.object({
   tags: z.array(z.string()),
   keys: z.array(z.string()),
   keys_provisional: z.array(ProvisionalKeySchema).optional(),
-  facets: z.record(z.string(), z.string()).optional(),
+  facets: z.record(z.string(), z.string().nullable()).optional(),
   description: DescriptionBlockSchema,
 });
 export type SemanticBlock = z.infer<typeof SemanticBlockSchema>;
