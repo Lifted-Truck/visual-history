@@ -111,7 +111,7 @@ export function lanesToScope(scope: Scope, laneType: NodeType): SwimlaneLane[] {
       .map(wid => nodeMap.get(wid))
       .filter((n): n is ChronosNode => n !== undefined && n.node_type === 'work')
       .map(workNode => {
-        const workYear = workNode.temporal.start ?? pos.display_start;
+        const workYear = workNode.temporal.start ?? pos.start;
         return { node: workNode, year: workYear };
       })
       .sort((a, b) => a.year - b.year);
