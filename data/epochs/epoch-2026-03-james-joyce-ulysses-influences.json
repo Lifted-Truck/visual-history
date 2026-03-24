@@ -1,0 +1,2107 @@
+{
+  "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+  "description": "Major figures, works, periods, and concepts constituting the reference world of James Joyce, with particular attention to the intellectual and formal sources of Ulysses.",
+  "produced_by": "claude-research-thread",
+  "produced_at": "2026-03-24T00:00:00Z",
+
+  "nodes": [
+
+    {
+      "id": "james-joyce",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "James Joyce",
+      "aliases": ["Joyce", "JJ", "Séumas Seoighe"],
+      "temporal": {
+        "start": 1882,
+        "end": 1941,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 2 February 1882, Rathgar, Dublin; died 13 January 1941, Zurich.",
+        "display_mode": "exact",
+        "full_date": { "year": 1882, "month": 2, "day": 2 },
+        "full_date_end": { "year": 1941, "month": 1, "day": 13 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 53.3498,
+          "lon": -6.2603,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Dublin, Ireland",
+          "modern_equivalent": "Dublin, Ireland"
+        },
+        "active_regions": [
+          { "region_id": "dublin-ireland", "role": "born" },
+          { "region_id": "trieste-austria-hungary", "role": "active" },
+          { "region_id": "zurich-switzerland", "role": "active" },
+          { "region_id": "paris-france", "role": "active" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["modernism", "irish-literature", "fiction", "stream-of-consciousness", "exile"],
+        "keys": ["exile", "urban-consciousness", "syncretism", "self-cultivation", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": "lapsed-catholic",
+          "institutional_affiliation": "university-college-dublin"
+        },
+        "description": {
+          "short": "Irish modernist novelist, author of Ulysses and Finnegans Wake.",
+          "medium": "James Joyce transformed the novel form through radical experiments in voice, time, and consciousness. Ulysses (1922) maps a single Dublin day onto the structure of Homer's Odyssey; Finnegans Wake (1939) dissolves language itself into multilingual dreamwork. His work synthesizes an extraordinary range of literary, philosophical, and theological sources.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.99,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "dubliners", "label": "Dubliners", "year": 1914, "year_precision": "exact", "tags": ["short-fiction", "irish-literature"], "notes": "" },
+        { "id": "portrait-of-the-artist", "label": "A Portrait of the Artist as a Young Man", "year": 1916, "year_precision": "exact", "tags": ["bildungsroman", "modernism"], "notes": "Serialized in The Egoist 1914–1915." },
+        { "id": "ulysses", "label": "Ulysses", "year": 1922, "year_precision": "exact", "tags": ["modernism", "stream-of-consciousness"], "notes": "Published by Shakespeare and Company, Paris, 2 February 1922." },
+        { "id": "finnegans-wake", "label": "Finnegans Wake", "year": 1939, "year_precision": "exact", "tags": ["experimental-fiction", "multilingual"], "notes": "" }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Encyclopedia Britannica — James Joyce", "url": "https://www.britannica.com/biography/James-Joyce" },
+        { "label": "Richard Ellmann, James Joyce (Oxford UP, rev. ed. 1982)", "url": "https://global.oup.com/academic/product/james-joyce-9780195033816" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "ulysses-joyce",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "Ulysses",
+      "aliases": ["Ulysses (Joyce 1922)"],
+      "temporal": {
+        "start": 1922,
+        "end": null,
+        "precision": "date",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Published 2 February 1922 by Shakespeare and Company, Paris. Serialized in The Little Review 1918–1920.",
+        "display_mode": "exact",
+        "full_date": { "year": 1922, "month": 2, "day": 2 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 48.8528,
+          "lon": 2.3374,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Paris, France (place of publication)",
+          "modern_equivalent": "Paris, France"
+        },
+        "active_regions": [
+          { "region_id": "paris-france", "role": "published" },
+          { "region_id": "dublin-ireland", "role": "setting" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["modernism", "novel", "stream-of-consciousness", "mythic-method", "irish-literature"],
+        "keys": ["urban-consciousness", "syncretism", "exile", "transmission-of-knowledge"],
+        "keys_provisional": [
+          {
+            "proposed_key": "mythic-method",
+            "description": "The structural use of classical myth as a scaffolding or ironic parallel for modern narrative — coined by T.S. Eliot in his 1923 review of Ulysses.",
+            "candidate_canonical_parents": ["syncretism", "literary-technique"],
+            "status": "provisional"
+          }
+        ],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": null,
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "Joyce's encyclopedic modernist novel mapping a single Dublin day onto Homer's Odyssey.",
+          "medium": "Ulysses follows Leopold Bloom, Stephen Dedalus, and Molly Bloom through Dublin on 16 June 1904. Its eighteen episodes correspond to books of Homer's Odyssey, each employing a distinct narrative style. It is the central monument of literary modernism.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.99,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "works_list": { "title": "label", "author": "james-joyce", "year": "temporal.start", "language": "semantic.facets.language" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Ulysses (novel)", "url": "https://www.britannica.com/topic/Ulysses-novel-by-Joyce" },
+        { "label": "The James Joyce Centre — Ulysses", "url": "https://jamesjoyce.ie/ulysses/" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "homer",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Homer",
+      "aliases": ["Homeros", "Ὅμηρος"],
+      "temporal": {
+        "start": -800,
+        "end": -700,
+        "precision": "century",
+        "confidence": 0.4,
+        "fuzzy_range": { "earliest": -900, "latest": -650 },
+        "ordinal_constraints": ["after:trojan-war-period", "before:classical-greece"],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "The Homeric Question is unresolved. Many scholars dispute single authorship entirely; dates for composition of the epics range from the 9th to 7th centuries BCE. The tradition of a single blind poet from Chios is ancient but unverifiable.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 38.37,
+          "lon": 26.13,
+          "precision": "region",
+          "confidence": 0.3,
+          "place_label": "Ionia, Eastern Aegean (traditional attribution)",
+          "modern_equivalent": "Western Turkey and Aegean islands"
+        },
+        "active_regions": [
+          { "region_id": "ancient-greece", "role": "active" },
+          { "region_id": "ionia", "role": "attributed-origin" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 300,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["ancient-greece", "epic-poetry", "oral-tradition", "foundational-text"],
+        "keys": ["oral-tradition", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "ancient-greek",
+          "religious_affiliation": "polytheist-greek",
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "Attributed author of the Iliad and Odyssey; foundational figure of Western literature.",
+          "medium": "Whether a single historical person or a compositional tradition, Homer names the source of the Iliad and Odyssey. The Odyssey — ten years of wandering, homecoming, recognition — became the structural and thematic skeleton of Joyce's Ulysses.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.5,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "This node represents a tradition rather than a verifiable individual. Temporal and spatial fields deliberately encode genuine scholarly uncertainty. Do not flatten to a confident single-person record.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "the-odyssey", "label": "The Odyssey", "year": -750, "year_precision": "approximate", "tags": ["epic-poetry", "ancient-greek"], "notes": "Date of written composition disputed; oral tradition substantially older." },
+        { "id": "the-iliad", "label": "The Iliad", "year": -750, "year_precision": "approximate", "tags": ["epic-poetry", "ancient-greek"], "notes": "" }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Stanford Encyclopedia of Philosophy — Homer", "url": "https://plato.stanford.edu/entries/homer/" },
+        { "label": "Britannica — Homer", "url": "https://www.britannica.com/biography/Homer-Greek-poet" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "the-odyssey",
+      "schema_version": "1.0",
+      "node_type": "work",
+      "label": "The Odyssey",
+      "aliases": ["Odysseia", "Ὀδύσσεια"],
+      "temporal": {
+        "start": -750,
+        "end": null,
+        "precision": "century",
+        "confidence": 0.4,
+        "fuzzy_range": { "earliest": -900, "latest": -650 },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": true,
+        "dating_notes": "Written composition date uncertain; oral tradition substantially older than any written text.",
+        "display_mode": "fuzzy"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [{ "region_id": "ancient-greece", "role": "origin" }],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Origin of an oral tradition; no single place of composition can be assigned."
+      },
+      "semantic": {
+        "tags": ["epic-poetry", "ancient-greek", "foundational-text", "homecoming", "wandering"],
+        "keys": ["oral-tradition", "transmission-of-knowledge", "exile"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "ancient-greek",
+          "religious_affiliation": null,
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "Homeric epic of Odysseus's ten-year return from Troy; the structural template for Ulysses.",
+          "medium": "Joyce mapped each of the eighteen episodes of Ulysses onto a corresponding book of the Odyssey, assigning each episode a Homeric title (Telemachus, Nestor, Proteus, Calypso, etc.). This schema was circulated privately and published by Stuart Gilbert in 1930.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.95,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "works_list": { "title": "label", "author": "homer", "year": "temporal.start", "language": "semantic.facets.language" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Odyssey", "url": "https://www.britannica.com/topic/Odyssey-epic-by-Homer" },
+        { "label": "Stuart Gilbert, James Joyce's Ulysses (Princeton UP, 1930)", "url": "https://press.princeton.edu/books/paperback/9780394700144/james-joyces-ulysses" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "dante-alighieri",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Dante Alighieri",
+      "aliases": ["Dante", "Durante di Alighiero degli Alighieri"],
+      "temporal": {
+        "start": 1265,
+        "end": 1321,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born c. May–June 1265, Florence; died 14 September 1321, Ravenna.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 43.7696,
+          "lon": 11.2558,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Florence, Italy",
+          "modern_equivalent": "Florence, Italy"
+        },
+        "active_regions": [
+          { "region_id": "florence-italy", "role": "born" },
+          { "region_id": "ravenna-italy", "role": "died" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["medieval-literature", "italian-poetry", "theology", "exile", "allegory"],
+        "keys": ["exile", "syncretism", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "italian-vernacular",
+          "religious_affiliation": "catholic",
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "Italian poet, author of the Divine Comedy; a central structuring presence in Joyce's imagination.",
+          "medium": "Joyce absorbed Dante deeply through his Jesuit schooling. Dantean structural ambition — the encyclopedic work, the city as cosmos, the poet-wanderer in exile — resonates throughout Ulysses and Finnegans Wake. Stephen's aesthetic theory in Portrait and Ulysses is partly Dantean in origin.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "divine-comedy", "label": "The Divine Comedy", "year": 1320, "year_precision": "approximate", "tags": ["epic-poetry", "theology", "allegory"], "notes": "Completed shortly before Dante's death in 1321." }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Stanford Encyclopedia of Philosophy — Dante", "url": "https://plato.stanford.edu/entries/dante/" },
+        { "label": "Britannica — Dante Alighieri", "url": "https://www.britannica.com/biography/Dante-Alighieri" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "henrik-ibsen",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Henrik Ibsen",
+      "aliases": ["Ibsen"],
+      "temporal": {
+        "start": 1828,
+        "end": 1906,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 20 March 1828, Skien, Norway; died 23 May 1906, Christiania (Oslo).",
+        "display_mode": "exact",
+        "full_date": { "year": 1828, "month": 3, "day": 20 },
+        "full_date_end": { "year": 1906, "month": 5, "day": 23 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 59.2053,
+          "lon": 9.6099,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Skien, Norway",
+          "modern_equivalent": "Skien, Telemark, Norway"
+        },
+        "active_regions": [
+          { "region_id": "norway", "role": "born_and_died" },
+          { "region_id": "germany", "role": "active" },
+          { "region_id": "italy", "role": "active" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["drama", "realism", "norwegian-literature", "social-criticism", "exile"],
+        "keys": ["social-criticism", "exile"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "norwegian",
+          "religious_affiliation": "lutheran-nominal",
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "Norwegian playwright whose social realism was the first great literary influence on Joyce.",
+          "medium": "The teenage Joyce taught himself Dano-Norwegian to read Ibsen in the original, and published an admiring review of When We Dead Awaken in the Fortnightly Review (1900) at eighteen. Ibsen's uncompromising social criticism, his exile from bourgeois conformity, and his conception of the artist as solitary truth-teller left deep marks on Joyce's self-understanding.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.99,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "when-we-dead-awaken", "label": "When We Dead Awaken", "year": 1899, "year_precision": "exact", "tags": ["drama", "realism"], "notes": "The play Joyce reviewed in the Fortnightly Review, 1900." },
+        { "id": "a-doll-house", "label": "A Doll's House", "year": 1879, "year_precision": "exact", "tags": ["drama", "realism", "social-criticism"], "notes": "" }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Henrik Ibsen", "url": "https://www.britannica.com/biography/Henrik-Ibsen" },
+        { "label": "Richard Ellmann, James Joyce (Oxford UP, rev. ed. 1982)", "url": "https://global.oup.com/academic/product/james-joyce-9780195033816" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "gustave-flaubert",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Gustave Flaubert",
+      "aliases": ["Flaubert"],
+      "temporal": {
+        "start": 1821,
+        "end": 1880,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 12 December 1821, Rouen; died 8 May 1880, Croisset.",
+        "display_mode": "exact",
+        "full_date": { "year": 1821, "month": 12, "day": 12 },
+        "full_date_end": { "year": 1880, "month": 5, "day": 8 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 49.4431,
+          "lon": 1.0993,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Rouen, France",
+          "modern_equivalent": "Rouen, Normandy, France"
+        },
+        "active_regions": [{ "region_id": "france", "role": "born_and_active" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["realism", "french-literature", "prose-technique", "style"],
+        "keys": ["social-criticism", "self-cultivation"],
+        "keys_provisional": [
+          {
+            "proposed_key": "free-indirect-discourse",
+            "description": "A narratological technique blending third-person narration with a character's inner voice without quotation marks or explicit attribution (French: style indirect libre). Flaubert's central formal innovation; a direct precursor to stream-of-consciousness narration.",
+            "candidate_canonical_parents": ["literary-technique"],
+            "status": "provisional"
+          }
+        ],
+        "facets": {
+          "language": "french",
+          "religious_affiliation": "none",
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "French novelist whose obsessive prose craftsmanship and free indirect discourse shaped the modern novel and Joyce's narrative technique.",
+          "medium": "Flaubert's concept of le mot juste and his development of free indirect discourse (style indirect libre) were formative for Joyce's approach to interior consciousness in Ulysses. Madame Bovary and L'Éducation sentimentale are key precursors to the psychological realism of the Bloomsday chapters.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "Provisional key free-indirect-discourse proposed; this technique is sufficiently distinct and central to Joyce studies to warrant its own canonical handle.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "madame-bovary", "label": "Madame Bovary", "year": 1857, "year_precision": "exact", "tags": ["realism", "french-literature"], "notes": "Serialized in La Revue de Paris, 1856." },
+        { "id": "leducation-sentimentale", "label": "L'Éducation sentimentale", "year": 1869, "year_precision": "exact", "tags": ["realism", "french-literature"], "notes": "" }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Gustave Flaubert", "url": "https://www.britannica.com/biography/Gustave-Flaubert" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edouard-dujardin",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Édouard Dujardin",
+      "aliases": ["Dujardin", "Edouard Dujardin"],
+      "temporal": {
+        "start": 1861,
+        "end": 1949,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 10 November 1861, Saint-Gervais-d'Auvergne; died 31 October 1949, Paris.",
+        "display_mode": "exact",
+        "full_date": { "year": 1861, "month": 11, "day": 10 },
+        "full_date_end": { "year": 1949, "month": 10, "day": 31 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 48.8566,
+          "lon": 2.3522,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Paris, France",
+          "modern_equivalent": "Paris, France"
+        },
+        "active_regions": [{ "region_id": "france", "role": "active" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["symbolism", "french-literature", "stream-of-consciousness", "prose-technique"],
+        "keys": ["transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "french",
+          "religious_affiliation": null,
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "French symbolist writer credited by Joyce as the originator of the interior monologue technique.",
+          "medium": "Joyce publicly credited Dujardin's 1887 novel Les Lauriers sont coupés as the technical seed for the interior monologue in Ulysses. After Joyce's acknowledgment, Dujardin wrote a theoretical account of the technique. The influence is real but typically understood as a seed rather than a model of comparable scale or ambition.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.92,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "Joyce's own public testimony is the primary evidence; scholars accept the attribution while noting the enormous gap in scale and execution between the two works.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "les-lauriers-sont-coupes", "label": "Les Lauriers sont coupés", "year": 1887, "year_precision": "exact", "tags": ["symbolism", "stream-of-consciousness", "french-literature"], "notes": "Published in English as We to the Woods No More. First sustained interior monologue in European prose fiction." }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Édouard Dujardin", "url": "https://www.britannica.com/biography/Edouard-Dujardin" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "william-shakespeare",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "William Shakespeare",
+      "aliases": ["Shakespeare", "The Bard", "The Swan of Avon"],
+      "temporal": {
+        "start": 1564,
+        "end": 1616,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Baptized 26 April 1564, Stratford-upon-Avon; died 23 April 1616.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 52.1927,
+          "lon": -1.7082,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Stratford-upon-Avon, England",
+          "modern_equivalent": "Stratford-upon-Avon, Warwickshire, England"
+        },
+        "active_regions": [
+          { "region_id": "stratford-upon-avon", "role": "born" },
+          { "region_id": "london-england", "role": "active" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["english-literature", "drama", "english-renaissance", "tragedy"],
+        "keys": ["transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "early-modern-english",
+          "religious_affiliation": "church-of-england-nominal",
+          "institutional_affiliation": "globe-theatre"
+        },
+        "description": {
+          "short": "English playwright and poet; Hamlet is a major structural and thematic reference throughout Ulysses.",
+          "medium": "Episode 9 of Ulysses (Scylla and Charybdis) is built around Stephen Dedalus's theory that Hamlet is autobiographical — that Shakespeare identified with the Ghost rather than the Prince, and that the fatherhood-sonship nexus is the key to both the play and all art. Shakespeare allusions recur across multiple episodes.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.99,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "hamlet", "label": "Hamlet", "year": 1603, "year_precision": "approximate", "tags": ["tragedy", "drama", "english-renaissance"], "notes": "First quarto 1603; likely composed 1600–1601." }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — William Shakespeare", "url": "https://www.britannica.com/biography/William-Shakespeare" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "thomas-aquinas",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Thomas Aquinas",
+      "aliases": ["Aquinas", "Doctor Angelicus", "Thomas of Aquino"],
+      "temporal": {
+        "start": 1225,
+        "end": 1274,
+        "precision": "year",
+        "confidence": 0.9,
+        "fuzzy_range": { "earliest": 1224, "latest": 1226 },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born c. 1225, Roccasecca; died 7 March 1274, Fossanova. Birth year occasionally given as 1224 or 1226.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 41.5667,
+          "lon": 13.6,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Roccasecca, Kingdom of Sicily",
+          "modern_equivalent": "Roccasecca, Frosinone, Italy"
+        },
+        "active_regions": [
+          { "region_id": "kingdom-of-sicily", "role": "born" },
+          { "region_id": "paris-france", "role": "active" },
+          { "region_id": "naples-italy", "role": "active" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["scholasticism", "theology", "philosophy", "medieval", "catholicism"],
+        "keys": ["synthesis-of-knowledge", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "latin",
+          "religious_affiliation": "catholic-dominican",
+          "institutional_affiliation": "university-of-paris"
+        },
+        "description": {
+          "short": "Dominican philosopher and theologian whose aesthetics Joyce adapted for Stephen Dedalus's theory of art.",
+          "medium": "Stephen Dedalus's aesthetic theory in Portrait and Ulysses — the three conditions of beauty as integritas, consonantia, and claritas — derives directly from Aquinas's Summa Theologiae. Joyce received this through his Jesuit education and transformed it into a secular aesthetic creed.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Stanford Encyclopedia of Philosophy — Thomas Aquinas", "url": "https://plato.stanford.edu/entries/aquinas/" },
+        { "label": "Britannica — Thomas Aquinas", "url": "https://www.britannica.com/biography/Saint-Thomas-Aquinas" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "aristotle",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Aristotle",
+      "aliases": ["Aristoteles", "The Stagirite"],
+      "temporal": {
+        "start": -384,
+        "end": -322,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian_proleptic",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Dates well-attested in ancient sources.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.6401,
+          "lon": 23.5,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "Stagira, Chalcidice, Macedonia",
+          "modern_equivalent": "Stagira, Serres, Greece"
+        },
+        "active_regions": [
+          { "region_id": "ancient-greece", "role": "born" },
+          { "region_id": "athens-greece", "role": "active" },
+          { "region_id": "macedon", "role": "active" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["ancient-greece", "philosophy", "logic", "aesthetics", "natural-philosophy"],
+        "keys": ["natural-philosophy", "synthesis-of-knowledge", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "ancient-greek",
+          "religious_affiliation": "polytheist-greek-nominal",
+          "institutional_affiliation": "lyceum-athens"
+        },
+        "description": {
+          "short": "Greek philosopher; De Anima and the Poetics are directly absorbed into Stephen Dedalus's philosophical apparatus in Ulysses.",
+          "medium": "The opening pages of Ulysses invoke Aristotle's De Anima in Stephen's meditations on perception. The Poetics underlies his aesthetic theorizing throughout. Joyce encountered Aristotle through both scholastic transmission via Aquinas and direct reading, and the influence operates as intellectual substance and ironic counterpoint simultaneously.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Stanford Encyclopedia of Philosophy — Aristotle", "url": "https://plato.stanford.edu/entries/aristotle/" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "giambattista-vico",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Giambattista Vico",
+      "aliases": ["Vico", "Giovanni Battista Vico"],
+      "temporal": {
+        "start": 1668,
+        "end": 1744,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 23 June 1668, Naples; died 23 January 1744, Naples.",
+        "display_mode": "exact",
+        "full_date": { "year": 1668, "month": 6, "day": 23 },
+        "full_date_end": { "year": 1744, "month": 1, "day": 23 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 40.8518,
+          "lon": 14.2681,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Naples, Kingdom of Naples",
+          "modern_equivalent": "Naples, Italy"
+        },
+        "active_regions": [{ "region_id": "naples-italy", "role": "born_and_died" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["philosophy", "history", "italian-enlightenment"],
+        "keys": ["transmission-of-knowledge"],
+        "keys_provisional": [
+          {
+            "proposed_key": "cyclical-history",
+            "description": "The theory that history moves through recurring phases or cycles — in Vico's schema, the ages of gods, heroes, and men followed by ricorso — rather than linearly. Central to Finnegans Wake and latent in Ulysses.",
+            "candidate_canonical_parents": ["natural-philosophy"],
+            "status": "provisional"
+          }
+        ],
+        "facets": {
+          "language": "italian-latin",
+          "religious_affiliation": "catholic",
+          "institutional_affiliation": "university-of-naples"
+        },
+        "description": {
+          "short": "Neapolitan philosopher of history whose theory of cyclical recurrence (ricorso) is foundational to Finnegans Wake and latent in Ulysses.",
+          "medium": "Vico's New Science proposes that history cycles through three ages (theocratic, aristocratic, democratic) before collapsing into a ricorso. This schema structures Finnegans Wake explicitly; its influence on the cyclical and recursive logic of Ulysses — particularly the Homeric parallels as a form of eternal recurrence — is secondary but present.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.92,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "Vico's influence is primarily on Finnegans Wake. The Ulysses connection is real but secondary; edge strength reflects this. A future Finnegans Wake node should carry a higher-strength Vico edge.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "new-science", "label": "The New Science (Scienza Nuova)", "year": 1725, "year_precision": "exact", "tags": ["philosophy-of-history"], "notes": "Revised editions 1730 and 1744." }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Stanford Encyclopedia of Philosophy — Giambattista Vico", "url": "https://plato.stanford.edu/entries/vico/" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "arthur-symons",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Arthur Symons",
+      "aliases": ["Symons"],
+      "temporal": {
+        "start": 1865,
+        "end": 1945,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 28 February 1865, Milford Haven, Wales; died 22 January 1945, Wittersham, Kent.",
+        "display_mode": "exact",
+        "full_date": { "year": 1865, "month": 2, "day": 28 },
+        "full_date_end": { "year": 1945, "month": 1, "day": 22 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "London, England (primary base)",
+          "modern_equivalent": "London, England"
+        },
+        "active_regions": [
+          { "region_id": "london-england", "role": "active" },
+          { "region_id": "paris-france", "role": "active" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["symbolism", "aestheticism", "british-literature", "criticism", "1890s"],
+        "keys": ["transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": null,
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "British critic and poet whose 1899 book The Symbolist Movement in Literature was the primary conduit of French Symbolism to the young Joyce.",
+          "medium": "Symons's book introduced Joyce to Mallarmé, Verlaine, Rimbaud, and Maeterlinck, and to their ideas about the musicality of language and the symbol as the vehicle of meaning beyond statement. The concept of the epiphany — central to Dubliners and persisting in Ulysses — is partly a Symbolist inheritance mediated by Symons.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.93,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "symbolist-movement-in-literature", "label": "The Symbolist Movement in Literature", "year": 1899, "year_precision": "exact", "tags": ["criticism", "symbolism", "french-literature"], "notes": "Dedicated to W.B. Yeats." }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Arthur Symons", "url": "https://www.britannica.com/biography/Arthur-Symons" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "walter-pater",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Walter Pater",
+      "aliases": ["Pater", "Walter Horatio Pater"],
+      "temporal": {
+        "start": 1839,
+        "end": 1894,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 4 August 1839, Shadwell, London; died 30 July 1894, Oxford.",
+        "display_mode": "exact",
+        "full_date": { "year": 1839, "month": 8, "day": 4 },
+        "full_date_end": { "year": 1894, "month": 7, "day": 30 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 51.7520,
+          "lon": -1.2577,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Oxford, England",
+          "modern_equivalent": "Oxford, England"
+        },
+        "active_regions": [{ "region_id": "oxford-england", "role": "active" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["aestheticism", "british-literature", "criticism", "1890s"],
+        "keys": ["self-cultivation"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": "none",
+          "institutional_affiliation": "brasenose-college-oxford"
+        },
+        "description": {
+          "short": "British aestheticist critic whose doctrine of art for art's sake and ideal of prose-as-music inflected Joyce's early formation.",
+          "medium": "Pater's Studies in the History of the Renaissance (1873) — especially its Conclusion arguing that all art aspires to the condition of music — was a touchstone of 1890s aestheticism. Joyce absorbed this milieu through Symons and Oscar Wilde. Pater's ideal of concentrated prose intensity resonates with Joyce's concept of the epiphany.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.88,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "Influence is well-attested but primarily mediated through the aestheticist milieu Pater shaped rather than through direct relationship.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "works": [
+        { "id": "studies-renaissance", "label": "Studies in the History of the Renaissance", "year": 1873, "year_precision": "exact", "tags": ["criticism", "aestheticism"], "notes": "Retitled The Renaissance: Studies in Art and Poetry in later editions." }
+      ],
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Stanford Encyclopedia of Philosophy — Walter Pater", "url": "https://plato.stanford.edu/entries/walter-pater/" },
+        { "label": "Britannica — Walter Pater", "url": "https://www.britannica.com/biography/Walter-Pater" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "wb-yeats",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "W.B. Yeats",
+      "aliases": ["William Butler Yeats", "Yeats"],
+      "temporal": {
+        "start": 1865,
+        "end": 1939,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 13 June 1865, Sandymount, Dublin; died 28 January 1939, Menton, France.",
+        "display_mode": "exact",
+        "full_date": { "year": 1865, "month": 6, "day": 13 },
+        "full_date_end": { "year": 1939, "month": 1, "day": 28 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 53.3185,
+          "lon": -6.2146,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Sandymount, Dublin, Ireland",
+          "modern_equivalent": "Dublin, Ireland"
+        },
+        "active_regions": [
+          { "region_id": "dublin-ireland", "role": "born" },
+          { "region_id": "london-england", "role": "active" },
+          { "region_id": "county-sligo-ireland", "role": "active" }
+        ],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["irish-literature", "poetry", "mysticism", "irish-revival", "modernism"],
+        "keys": ["nationalism", "oral-tradition", "syncretism"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": "occultist-heterodox",
+          "institutional_affiliation": "abbey-theatre"
+        },
+        "description": {
+          "short": "Irish poet and Nobel laureate; a major presence in the Irish literary milieu Joyce defined himself against.",
+          "medium": "Joyce met Yeats as a young man and admired his early poetry, but resisted the Celtic Revival's romanticization of Irish peasant life. Yeats championed Joyce's early work. The two represent opposing poles of Irish literary modernism: Yeats's mythologizing nationalism versus Joyce's urban, ironic, cosmopolitan vision.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — W.B. Yeats", "url": "https://www.britannica.com/biography/William-Butler-Yeats" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "ezra-pound",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Ezra Pound",
+      "aliases": ["Pound", "E.P."],
+      "temporal": {
+        "start": 1885,
+        "end": 1972,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 30 October 1885, Hailey, Idaho; died 1 November 1972, Venice.",
+        "display_mode": "exact",
+        "full_date": { "year": 1885, "month": 10, "day": 30 },
+        "full_date_end": { "year": 1972, "month": 11, "day": 1 }
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          { "region_id": "london-england", "role": "active" },
+          { "region_id": "paris-france", "role": "active" },
+          { "region_id": "rapallo-italy", "role": "active" }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Active across multiple European cities in distinct periods; no single primary residential anchor is appropriate for this node."
+      },
+      "semantic": {
+        "tags": ["modernism", "poetry", "imagism", "criticism", "publishing"],
+        "keys": ["court-patronage", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": null,
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "American modernist poet and impresario who championed Joyce, arranged publication, and was a condition of Ulysses reaching print.",
+          "medium": "Pound first encountered Joyce's work in 1913 and became his most energetic advocate: arranging serialization of Portrait in The Egoist and Ulysses in The Little Review, securing grants, and promoting him to publishers and patrons. His imagist principles and conviction that modern poetry must make it new are part of the aesthetic air Joyce breathed.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Ezra Pound", "url": "https://www.britannica.com/biography/Ezra-Pound" },
+        { "label": "Forrest Read (ed.), Pound/Joyce Letters (New Directions, 1967)", "url": "https://www.ndbooks.com/book/poundjoyce/" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "ts-eliot",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "T.S. Eliot",
+      "aliases": ["Thomas Stearns Eliot", "Eliot"],
+      "temporal": {
+        "start": 1888,
+        "end": 1965,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 26 September 1888, St. Louis, Missouri; died 4 January 1965, London.",
+        "display_mode": "exact",
+        "full_date": { "year": 1888, "month": 9, "day": 26 },
+        "full_date_end": { "year": 1965, "month": 1, "day": 4 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "precision": "city",
+          "confidence": 0.95,
+          "place_label": "London, England (primary adult base)",
+          "modern_equivalent": "London, England"
+        },
+        "active_regions": [{ "region_id": "london-england", "role": "active" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["modernism", "poetry", "criticism"],
+        "keys": ["transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": "anglican-convert",
+          "institutional_affiliation": "faber-and-faber"
+        },
+        "description": {
+          "short": "American-British modernist poet who coined the term 'mythic method' in his 1923 review of Ulysses.",
+          "medium": "Eliot's 1923 Dial review argued that the Homeric parallel in Ulysses was not narrative decoration but a new method for ordering the chaos of modern experience. Eliot and Joyce are the twin peaks of high modernism in English; their mutual awareness was intense, their methods distinct.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — T.S. Eliot", "url": "https://www.britannica.com/biography/T-S-Eliot" },
+        { "label": "T.S. Eliot, 'Ulysses, Order, and Myth' (1923) — Modernism Lab, Yale", "url": "https://modernism.research.yale.edu/wiki/index.php/Ulysses,_Order,_and_Myth" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "sylvia-beach",
+      "schema_version": "1.0",
+      "node_type": "person",
+      "label": "Sylvia Beach",
+      "aliases": ["Beach"],
+      "temporal": {
+        "start": 1887,
+        "end": 1962,
+        "precision": "year",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Born 14 March 1887, Baltimore, Maryland; died 5 October 1962, Paris.",
+        "display_mode": "exact",
+        "full_date": { "year": 1887, "month": 3, "day": 14 },
+        "full_date_end": { "year": 1962, "month": 10, "day": 5 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 48.8528,
+          "lon": 2.3374,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Paris, France (Shakespeare and Company, 12 rue de l'Odéon)",
+          "modern_equivalent": "Paris, France"
+        },
+        "active_regions": [{ "region_id": "paris-france", "role": "active" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["publishing", "paris-expatriate-milieu", "modernism", "bookselling"],
+        "keys": ["court-patronage", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english-french",
+          "religious_affiliation": null,
+          "institutional_affiliation": "shakespeare-and-company"
+        },
+        "description": {
+          "short": "American bookseller in Paris who published the first edition of Ulysses through Shakespeare and Company.",
+          "medium": "After The Little Review was prosecuted for obscenity in 1921 and no major publisher would risk Ulysses, Beach offered to publish it herself. Shakespeare and Company issued the first edition on 2 February 1922. Her bookshop was also the social hub of the anglophone expatriate literary community in Paris.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.99,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "persons_list": { "name": "label", "born": "temporal.start", "died": "temporal.end", "region": "spatial.active_regions[0].region_id" },
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Sylvia Beach", "url": "https://www.britannica.com/biography/Sylvia-Beach" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "university-college-dublin",
+      "schema_version": "1.0",
+      "node_type": "institution",
+      "label": "University College Dublin",
+      "aliases": ["UCD", "Royal University of Ireland (predecessor)", "Catholic University of Ireland (predecessor)"],
+      "temporal": {
+        "start": 1854,
+        "end": null,
+        "precision": "year",
+        "confidence": 0.95,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Founded as the Catholic University of Ireland in 1854; became University College Dublin under the Royal University in 1882; reconstituted under the Irish Universities Act 1908.",
+        "display_mode": "exact"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 53.3093,
+          "lon": -6.2237,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Dublin, Ireland",
+          "modern_equivalent": "Belfield, Dublin 4, Ireland"
+        },
+        "active_regions": [{ "region_id": "dublin-ireland", "role": "located" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 0,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["education", "ireland", "catholic", "jesuit"],
+        "keys": ["transmission-of-knowledge", "court-patronage"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english",
+          "religious_affiliation": "catholic",
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "Catholic university in Dublin where Joyce studied 1898–1902, absorbing the Thomist and Aristotelian curriculum that shaped Stephen Dedalus.",
+          "medium": "Joyce studied modern languages and philosophy at UCD under Jesuit intellectual direction. The college debates, friendships (including Oliver St John Gogarty, the model for Buck Mulligan), and Thomist curriculum formed the biographical and intellectual matrix of Portrait and the opening episodes of Ulysses.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.97,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "UCD — James Joyce at UCD", "url": "https://www.ucd.ie/james-joyce/" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "irish-literary-revival",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "Irish Literary Revival",
+      "aliases": ["Celtic Revival", "Irish Renaissance", "Irish Literary Renaissance"],
+      "temporal": {
+        "start": 1880,
+        "end": 1930,
+        "precision": "decade",
+        "confidence": 0.75,
+        "fuzzy_range": { "earliest": 1878, "latest": 1935 },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Periodization varies by scholar; broadly covers Yeats's early career through the Free State period.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": {
+          "lat": 53.3498,
+          "lon": -6.2603,
+          "precision": "city",
+          "confidence": 0.9,
+          "place_label": "Dublin, Ireland (epicenter)",
+          "modern_equivalent": "Dublin, Ireland"
+        },
+        "active_regions": [
+          { "region_id": "ireland", "role": "primary" },
+          { "region_id": "london-england", "role": "secondary" }
+        ],
+        "spatial_mode": "region",
+        "fuzzy_radius_km": null,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["nationalism", "irish-literature", "poetry", "drama", "mythology"],
+        "keys": ["nationalism", "oral-tradition", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english-irish",
+          "religious_affiliation": null,
+          "institutional_affiliation": "abbey-theatre"
+        },
+        "description": {
+          "short": "The late 19th–early 20th-century movement to establish a distinctive Irish national literature; a context Joyce defined himself against.",
+          "medium": "The Revival — centered on Yeats, Lady Gregory, J.M. Synge, and the Abbey Theatre — sought to recover and reimagine Irish mythological and peasant traditions. Joyce was formed within this milieu but refused its nationalism and romanticization of rural Ireland. His urban, cosmopolitan, ironic Dublin stands in deliberate contrast.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.9,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "Britannica — Irish Literary Renaissance", "url": "https://www.britannica.com/art/Irish-Literary-Renaissance" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "european-modernism",
+      "schema_version": "1.0",
+      "node_type": "period",
+      "label": "European Literary Modernism",
+      "aliases": ["Literary Modernism", "High Modernism"],
+      "temporal": {
+        "start": 1890,
+        "end": 1945,
+        "precision": "decade",
+        "confidence": 0.7,
+        "fuzzy_range": { "earliest": 1885, "latest": 1950 },
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "Periodization is contested. High Modernism typically peaks 1910–1930; some scholars run the outer boundary to 1950.",
+        "display_mode": "range"
+      },
+      "spatial": {
+        "primary": null,
+        "active_regions": [
+          { "region_id": "paris-france", "role": "epicenter" },
+          { "region_id": "london-england", "role": "major-center" },
+          { "region_id": "zurich-switzerland", "role": "wartime-center" },
+          { "region_id": "vienna-austria", "role": "active" }
+        ],
+        "spatial_mode": "diffuse",
+        "fuzzy_radius_km": null,
+        "no_coordinates": true,
+        "no_coordinates_reason": "Literary modernism is a transnational movement with no single geographic center."
+      },
+      "semantic": {
+        "tags": ["modernism", "literature", "aesthetics", "stream-of-consciousness", "fragmentation"],
+        "keys": ["syncretism", "self-cultivation", "transmission-of-knowledge"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "multilingual",
+          "religious_affiliation": null,
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "The broad transnational literary and artistic movement in which Ulysses is the central prose monument.",
+          "medium": "European literary modernism rejected Victorian realist conventions — omniscient narration, coherent plot, stable character. Its key features — formal fragmentation, interior consciousness, mythic structural allusion — are all present in and largely defined by Ulysses.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.85,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {}
+      },
+      "sources": [
+        { "label": "Britannica — Modernism", "url": "https://www.britannica.com/art/modernism-art" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "dublin-1904",
+      "schema_version": "1.0",
+      "node_type": "place",
+      "label": "Dublin (Bloomsday, 1904)",
+      "aliases": ["Dublin", "Baile Átha Cliath", "Bloomsday Dublin"],
+      "temporal": {
+        "start": 1904,
+        "end": 1904,
+        "precision": "date",
+        "confidence": 0.99,
+        "fuzzy_range": null,
+        "ordinal_constraints": [],
+        "calendar_system": "gregorian",
+        "native_date": null,
+        "contested": false,
+        "dating_notes": "The diegetic setting of Ulysses is precisely 16 June 1904, Bloomsday.",
+        "display_mode": "exact",
+        "full_date": { "year": 1904, "month": 6, "day": 16 },
+        "full_date_end": { "year": 1904, "month": 6, "day": 16 }
+      },
+      "spatial": {
+        "primary": {
+          "lat": 53.3498,
+          "lon": -6.2603,
+          "precision": "city",
+          "confidence": 0.99,
+          "place_label": "Dublin, Ireland",
+          "modern_equivalent": "Dublin, Ireland"
+        },
+        "active_regions": [{ "region_id": "ireland", "role": "capital" }],
+        "spatial_mode": "point",
+        "fuzzy_radius_km": 5,
+        "no_coordinates": false,
+        "no_coordinates_reason": null
+      },
+      "semantic": {
+        "tags": ["ireland", "city", "urban", "colonial", "setting"],
+        "keys": ["urban-consciousness", "nationalism", "exile"],
+        "keys_provisional": [],
+        "facets": {
+          "language": "english-irish",
+          "religious_affiliation": "catholic-dominant",
+          "institutional_affiliation": null
+        },
+        "description": {
+          "short": "Dublin on 16 June 1904 — Bloomsday — the entire spatial and temporal setting of Ulysses.",
+          "medium": "Joyce said he wanted to give Dublin such a thorough fictional representation that if the city were destroyed it could be rebuilt from his book. The specificity of streets, pubs, newspapers, trams, and institutions is documentary. Dublin's colonial condition, Catholic culture, and provincial modernity are imbricated in every episode.",
+          "long": ""
+        }
+      },
+      "epistemic": {
+        "curation_status": "ingested",
+        "confidence_overall": 0.99,
+        "source_quality": "scholarly_consensus",
+        "epoch": "epoch-2026-03-james-joyce-ulysses-influences",
+        "ingestion_notes": "This node represents Dublin as the diegetic entity of Ulysses, not simply Dublin as a geographic place. Do not merge with a general Dublin place node; temporal fields reflect the novel's precise single-day setting.",
+        "contradictions": [],
+        "prose_cache_ids": []
+      },
+      "export": {
+        "csv_fields": {
+          "gis_points": { "name": "label", "lat": "spatial.primary.lat", "lon": "spatial.primary.lon", "date": "temporal.start" }
+        }
+      },
+      "sources": [
+        { "label": "The James Joyce Centre — Dublin and Ulysses", "url": "https://jamesjoyce.ie/ulysses/" }
+      ],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    }
+
+  ],
+
+  "edges": [
+
+    {
+      "id": "edge-joyce-authored-ulysses",
+      "schema_version": "1.0",
+      "source": "james-joyce",
+      "target": "ulysses-joyce",
+      "connection_class": "material",
+      "connection_types": ["produced"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": 1922, "notes": "Serialized from 1918; published in full 2 February 1922." },
+      "spatial_context": { "via": ["trieste-austria-hungary", "zurich-switzerland", "paris-france"], "notes": "Composed across three cities of exile." },
+      "semantic": { "tags": ["modernism", "irish-literature"], "keys": ["exile"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 1.0, "evidence_type": "primary_source", "reasoning": "", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Joyce is the author of Ulysses, composed across three cities of exile.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Britannica — Ulysses", "url": "https://www.britannica.com/topic/Ulysses-novel-by-Joyce" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-odyssey-structural-template-for-ulysses",
+      "schema_version": "1.0",
+      "source": "the-odyssey",
+      "target": "ulysses-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced", "structural-template"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": 1918, "notes": "Joyce began planning the Homeric correspondences by 1917 at latest; the schema was circulated privately before publication and published by Stuart Gilbert in 1930." },
+      "spatial_context": { "via": [], "notes": "" },
+      "semantic": { "tags": ["epic-poetry", "modernism"], "keys": ["transmission-of-knowledge", "syncretism"], "keys_provisional": ["mythic-method"] },
+      "epistemic": { "curation_status": "ingested", "confidence": 1.0, "evidence_type": "primary_source", "reasoning": "Attested by the Linati and Gilbert schemas circulated by Joyce himself, and by every major scholarly study of Ulysses.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "The Odyssey is the structural and thematic backbone of Ulysses; each of the eighteen episodes maps to a Homeric book.", "detailed": "Joyce assigned each episode a Homeric title, a character correspondence (Bloom = Odysseus, Molly = Penelope, Stephen = Telemachus), a symbol, an art, and a bodily organ. The schema operates as ironic parallel: the grandeur of Homeric heroism throws the mundanity of Bloom's day into comic and elegiac relief.", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Stuart Gilbert, James Joyce's Ulysses (Princeton UP, 1930)", "url": "https://press.princeton.edu/books/paperback/9780394700144/james-joyces-ulysses" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-dante-influenced-joyce",
+      "schema_version": "1.0",
+      "source": "dante-alighieri",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.9,
+      "temporal_context": { "approximate_year": 1898, "notes": "Absorbed primarily through Jesuit curriculum at Belvedere College and UCD; deepened throughout Joyce's career." },
+      "spatial_context": { "via": ["university-college-dublin"], "notes": "" },
+      "semantic": { "tags": ["aesthetics", "exile", "encyclopedic-ambition"], "keys": ["exile", "transmission-of-knowledge", "syncretism"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.93, "evidence_type": "scholarly_consensus", "reasoning": "Attested by biographical accounts and extensive scholarly literature on the Joyce-Dante connection.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Dante's encyclopedic ambition, urban cosmology, and figure of the exiled poet-wanderer are foundational models for Joyce's self-conception and structural ambitions.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Mary Reynolds, Joyce and Dante: The Shaping Imagination (Princeton UP, 1981)", "url": "https://press.princeton.edu/books/hardcover/9780691064635/joyce-and-dante" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-ibsen-influenced-joyce",
+      "schema_version": "1.0",
+      "source": "henrik-ibsen",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.92,
+      "temporal_context": { "approximate_year": 1900, "notes": "Joyce published his admiring review of Ibsen in the Fortnightly Review in April 1900, age eighteen. He taught himself Dano-Norwegian to read Ibsen in the original." },
+      "spatial_context": { "via": [], "notes": "" },
+      "semantic": { "tags": ["realism", "social-criticism", "exile", "artist-vs-society"], "keys": ["exile", "social-criticism", "self-cultivation"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.97, "evidence_type": "primary_source", "reasoning": "Attested by Joyce's published essay, his learning of Dano-Norwegian, and a letter of thanks Ibsen sent to Joyce via William Archer.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Ibsen was Joyce's first great literary idol; his social realism and conception of the uncompromising artist in exile from provincial conformity were formative models.", "detailed": "Ibsen wrote to Joyce via William Archer after reading the Fortnightly Review essay — a response Joyce treasured. The Ibsenian model of the artist as solitary truth-teller became one of the structuring myths of Joyce's self-understanding throughout his career.", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Richard Ellmann, James Joyce (Oxford UP, rev. ed. 1982)", "url": "https://global.oup.com/academic/product/james-joyce-9780195033816" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-flaubert-influenced-joyce",
+      "schema_version": "1.0",
+      "source": "gustave-flaubert",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.88,
+      "temporal_context": { "approximate_year": 1903, "notes": "Joyce was reading Flaubert during his Paris period and subsequently in Trieste." },
+      "spatial_context": { "via": ["paris-france"], "notes": "" },
+      "semantic": { "tags": ["prose-technique", "realism"], "keys": ["self-cultivation"], "keys_provisional": ["free-indirect-discourse"] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.88, "evidence_type": "scholarly_consensus", "reasoning": "Widely attested in Joyce scholarship; Flaubert's free indirect discourse is a documented formal precursor to Joyce's stream-of-consciousness technique.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Flaubert's stylistic perfectionism and development of free indirect discourse are direct formal precursors to Joyce's narrative technique in Ulysses.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Britannica — Gustave Flaubert", "url": "https://www.britannica.com/biography/Gustave-Flaubert" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-dujardin-influenced-joyce-interior-monologue",
+      "schema_version": "1.0",
+      "source": "edouard-dujardin",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced", "technical-precursor"],
+      "direction": "source_to_target",
+      "strength": 0.8,
+      "temporal_context": { "approximate_year": 1903, "notes": "Joyce reportedly picked up a copy of Les Lauriers sont coupés in a Paris bookstall c. 1903." },
+      "spatial_context": { "via": ["paris-france"], "notes": "" },
+      "semantic": { "tags": ["stream-of-consciousness", "interior-monologue", "symbolism"], "keys": ["transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.85, "evidence_type": "primary_source", "reasoning": "Joyce explicitly credited Dujardin in a public acknowledgment that led directly to Dujardin writing Le Monologue intérieur (1931).", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Dujardin's Les Lauriers sont coupés provided the technical seed for the interior monologue in Ulysses, on Joyce's own testimony.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Britannica — Édouard Dujardin", "url": "https://www.britannica.com/biography/Edouard-Dujardin" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-shakespeare-referenced-in-ulysses",
+      "schema_version": "1.0",
+      "source": "william-shakespeare",
+      "target": "ulysses-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced", "extended"],
+      "direction": "source_to_target",
+      "strength": 0.92,
+      "temporal_context": { "approximate_year": 1922, "notes": "Episode 9 (Scylla and Charybdis) is built entirely around Hamlet; Shakespeare allusions recur across multiple episodes." },
+      "spatial_context": { "via": [], "notes": "" },
+      "semantic": { "tags": ["hamlet", "fatherhood", "aesthetics"], "keys": ["transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.98, "evidence_type": "primary_source", "reasoning": "Explicit in the text of Ulysses Episode 9; Stephen's Shakespeare theory is one of the novel's central intellectual set-pieces.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Hamlet is a central thematic and structural reference in Ulysses; Stephen's theory in Episode 9 holds that Shakespeare projected his own biography onto the play, identifying with the Ghost rather than the Prince.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "The James Joyce Centre — Scylla and Charybdis", "url": "https://jamesjoyce.ie/scylla-and-charybdis/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-aquinas-aesthetic-theory-joyce",
+      "schema_version": "1.0",
+      "source": "thomas-aquinas",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.87,
+      "temporal_context": { "approximate_year": 1898, "notes": "Absorbed primarily through Jesuit curriculum at Belvedere College and UCD, 1893–1902." },
+      "spatial_context": { "via": ["university-college-dublin"], "notes": "" },
+      "semantic": { "tags": ["aesthetics", "scholasticism", "beauty"], "keys": ["self-cultivation", "transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.92, "evidence_type": "primary_source", "reasoning": "Stephen's aesthetic theory explicitly cites Aquinas in Portrait and is carried into Ulysses; attested by critical consensus and by Joyce's notebooks.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Aquinas's three conditions of beauty — integritas, consonantia, claritas — are the explicit source of Stephen Dedalus's aesthetic philosophy in Portrait and Ulysses.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Stanford Encyclopedia of Philosophy — Thomas Aquinas", "url": "https://plato.stanford.edu/entries/aquinas/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-aristotle-influenced-joyce",
+      "schema_version": "1.0",
+      "source": "aristotle",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.85,
+      "temporal_context": { "approximate_year": 1898, "notes": "Via both the Jesuit scholastic curriculum (Aquinas's Aristotelianism) and Joyce's direct reading." },
+      "spatial_context": { "via": ["university-college-dublin"], "notes": "" },
+      "semantic": { "tags": ["philosophy", "perception", "poetics"], "keys": ["natural-philosophy", "transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.9, "evidence_type": "primary_source", "reasoning": "De Anima is invoked in the opening pages of Ulysses; the Poetics informs Stephen's aesthetic theory throughout.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Aristotle's De Anima and Poetics are invoked in the opening pages of Ulysses and underlie Stephen Dedalus's entire philosophical apparatus.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Stanford Encyclopedia of Philosophy — Aristotle", "url": "https://plato.stanford.edu/entries/aristotle/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-vico-influenced-joyce",
+      "schema_version": "1.0",
+      "source": "giambattista-vico",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.78,
+      "temporal_context": { "approximate_year": 1917, "notes": "Vico's influence is most explicit in Finnegans Wake (begun c. 1922) but latent in the cyclical structure of Ulysses." },
+      "spatial_context": { "via": [], "notes": "" },
+      "semantic": { "tags": ["historiography", "cyclical-history"], "keys": ["transmission-of-knowledge"], "keys_provisional": ["cyclical-history"] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.8, "evidence_type": "scholarly_consensus", "reasoning": "Well-attested for Finnegans Wake; the Ulysses connection is secondary. Edge strength reflects this hierarchy.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Vico's theory of historical cycles (ricorso) informs the Joycean project of cyclical mythic paralleling; most explicitly in Finnegans Wake, latent in Ulysses.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Stanford Encyclopedia of Philosophy — Giambattista Vico", "url": "https://plato.stanford.edu/entries/vico/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-symons-transmitted-symbolism-to-joyce",
+      "schema_version": "1.0",
+      "source": "arthur-symons",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["transmitted", "influenced"],
+      "direction": "source_to_target",
+      "strength": 0.85,
+      "temporal_context": { "approximate_year": 1901, "notes": "The Symbolist Movement in Literature (1899) was read by Joyce in his early literary formation." },
+      "spatial_context": { "via": ["dublin-ireland"], "notes": "" },
+      "semantic": { "tags": ["symbolism", "aestheticism", "epiphany"], "keys": ["transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.88, "evidence_type": "scholarly_consensus", "reasoning": "Attested in Ellmann's biography and in Joyce scholarship on the symbolist roots of the epiphany concept.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Symons's book was the primary conduit through which French Symbolism reached the young Joyce, shaping his concept of the epiphany and his ideal of prose-as-music.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Britannica — Arthur Symons", "url": "https://www.britannica.com/biography/Arthur-Symons" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-pater-influenced-joyce",
+      "schema_version": "1.0",
+      "source": "walter-pater",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced"],
+      "direction": "source_to_target",
+      "strength": 0.72,
+      "temporal_context": { "approximate_year": 1902, "notes": "Influence mediated through the 1890s aestheticist milieu; Pater absorbed via Symons, Wilde, and direct reading." },
+      "spatial_context": { "via": [], "notes": "" },
+      "semantic": { "tags": ["aestheticism", "prose-style"], "keys": ["self-cultivation"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.75, "evidence_type": "scholarly_consensus", "reasoning": "Paterian aestheticism is part of the broader cultural formation from which Joyce emerged; direct influence is attested but more mediated than Ibsen or Flaubert.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Pater's aestheticist ideal of prose intensity and art-for-art's-sake doctrine was part of the cultural formation that shaped Joyce's early aesthetics.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Stanford Encyclopedia of Philosophy — Walter Pater", "url": "https://plato.stanford.edu/entries/walter-pater/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-pound-championed-joyce",
+      "schema_version": "1.0",
+      "source": "ezra-pound",
+      "target": "james-joyce",
+      "connection_class": "biographical",
+      "connection_types": ["patronized", "promoted"],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": { "approximate_year": 1914, "notes": "Pound first contacted Joyce in December 1913; from 1914 he was Joyce's most energetic literary champion." },
+      "spatial_context": { "via": ["london-england", "paris-france"], "notes": "" },
+      "semantic": { "tags": ["modernism", "publishing", "patronage"], "keys": ["court-patronage", "transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.98, "evidence_type": "primary_source", "reasoning": "Extensively documented in the Pound-Joyce correspondence and in Ellmann's biography.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Pound was Joyce's most energetic advocate: arranging serialization of Portrait and Ulysses, securing grants, and promoting him to publishers and patrons.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Forrest Read (ed.), Pound/Joyce Letters (New Directions, 1967)", "url": "https://www.ndbooks.com/book/poundjoyce/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-eliot-defined-mythic-method-in-ulysses",
+      "schema_version": "1.0",
+      "source": "ts-eliot",
+      "target": "ulysses-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["critiqued", "defined"],
+      "direction": "source_to_target",
+      "strength": 0.88,
+      "temporal_context": { "approximate_year": 1923, "notes": "Eliot's review 'Ulysses, Order, and Myth' published in The Dial, November 1923." },
+      "spatial_context": { "via": ["london-england"], "notes": "" },
+      "semantic": { "tags": ["literary-criticism", "modernism"], "keys": ["transmission-of-knowledge"], "keys_provisional": ["mythic-method"] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.97, "evidence_type": "primary_source", "reasoning": "Eliot's review is a published primary source and one of the most influential critical texts in the Joyce reception history.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Eliot's 1923 Dial review coined the term 'mythic method' to describe Joyce's use of the Homeric parallel as a structural and ordering device for modern experience.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "T.S. Eliot, 'Ulysses, Order, and Myth' (1923) — Modernism Lab, Yale", "url": "https://modernism.research.yale.edu/wiki/index.php/Ulysses,_Order,_and_Myth" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-beach-published-ulysses",
+      "schema_version": "1.0",
+      "source": "sylvia-beach",
+      "target": "ulysses-joyce",
+      "connection_class": "material",
+      "connection_types": ["produced", "transmitted"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": 1922, "notes": "Published 2 February 1922, Joyce's fortieth birthday, Shakespeare and Company, 12 rue de l'Odéon, Paris." },
+      "spatial_context": { "via": ["paris-france"], "notes": "" },
+      "semantic": { "tags": ["publishing", "modernism"], "keys": ["court-patronage", "transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 1.0, "evidence_type": "primary_source", "reasoning": "First-edition publication data.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Sylvia Beach published the first edition of Ulysses through Shakespeare and Company, Paris, on 2 February 1922.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Britannica — Sylvia Beach", "url": "https://www.britannica.com/biography/Sylvia-Beach" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-ucd-educated-joyce",
+      "schema_version": "1.0",
+      "source": "university-college-dublin",
+      "target": "james-joyce",
+      "connection_class": "biographical",
+      "connection_types": ["educated"],
+      "direction": "source_to_target",
+      "strength": 0.95,
+      "temporal_context": { "approximate_year": 1898, "notes": "Joyce attended UCD 1898–1902." },
+      "spatial_context": { "via": ["dublin-ireland"], "notes": "" },
+      "semantic": { "tags": ["education", "ireland", "jesuit", "scholasticism"], "keys": ["transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.99, "evidence_type": "primary_source", "reasoning": "Biographical fact.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Joyce studied modern languages and philosophy at UCD 1898–1902, receiving the Thomist and Aristotelian formation that shaped Stephen Dedalus's intellectual character.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "UCD — James Joyce at UCD", "url": "https://www.ucd.ie/james-joyce/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-joyce-reacted-against-irish-revival",
+      "schema_version": "1.0",
+      "source": "irish-literary-revival",
+      "target": "james-joyce",
+      "connection_class": "intellectual",
+      "connection_types": ["influenced", "critiqued"],
+      "direction": "source_to_target",
+      "strength": 0.8,
+      "temporal_context": { "approximate_year": 1901, "notes": "Joyce's 1901 pamphlet 'The Day of the Rabblement' attacked the Irish Literary Theatre directly." },
+      "spatial_context": { "via": ["dublin-ireland"], "notes": "" },
+      "semantic": { "tags": ["nationalism", "irish-literature", "exile"], "keys": ["nationalism", "exile", "social-criticism"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.93, "evidence_type": "primary_source", "reasoning": "The 1901 pamphlet is a primary source; Joyce's anti-revivalist stance is thoroughly documented in his letters and in Ellmann's biography.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Joyce was formed within the Irish Literary Revival milieu but explicitly rejected its nationalism and rural romanticism — a tension that defines the texture of Ulysses.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Richard Ellmann, James Joyce (Oxford UP, rev. ed. 1982)", "url": "https://global.oup.com/academic/product/james-joyce-9780195033816" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-joyce-yeats-contemporary",
+      "schema_version": "1.0",
+      "source": "james-joyce",
+      "target": "wb-yeats",
+      "connection_class": "biographical",
+      "connection_types": ["contemporary-with"],
+      "direction": "source_to_target",
+      "strength": 0.75,
+      "temporal_context": { "approximate_year": 1902, "notes": "The two met in 1902 when Joyce was a young man; Yeats later supported his work with recommendations and grants." },
+      "spatial_context": { "via": ["dublin-ireland", "london-england"], "notes": "" },
+      "semantic": { "tags": ["irish-literature", "modernism"], "keys": ["nationalism", "exile"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.93, "evidence_type": "primary_source", "reasoning": "Attested in Ellmann's biography and in the correspondence of both writers.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Joyce and Yeats met in 1902; their relationship was one of mutual respect and guarded distance, representing opposing poles of Irish literary modernism.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Richard Ellmann, James Joyce (Oxford UP, rev. ed. 1982)", "url": "https://global.oup.com/academic/product/james-joyce-9780195033816" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-ulysses-set-in-dublin-1904",
+      "schema_version": "1.0",
+      "source": "ulysses-joyce",
+      "target": "dublin-1904",
+      "connection_class": "spatial",
+      "connection_types": ["set-in"],
+      "direction": "source_to_target",
+      "strength": 1.0,
+      "temporal_context": { "approximate_year": 1904, "notes": "Ulysses is set entirely on 16 June 1904 (Bloomsday)." },
+      "spatial_context": { "via": [], "notes": "" },
+      "semantic": { "tags": ["dublin", "setting", "urban"], "keys": ["urban-consciousness"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 1.0, "evidence_type": "primary_source", "reasoning": "The diegetic setting of Ulysses is explicitly 16 June 1904, Dublin.", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Ulysses is set entirely in Dublin on 16 June 1904; the city is both setting and subject.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "The James Joyce Centre", "url": "https://jamesjoyce.ie/ulysses/" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    },
+
+    {
+      "id": "edge-joyce-defined-european-modernism",
+      "schema_version": "1.0",
+      "source": "james-joyce",
+      "target": "european-modernism",
+      "connection_class": "temporal",
+      "connection_types": ["participated-in", "defined"],
+      "direction": "source_to_target",
+      "strength": 0.99,
+      "temporal_context": { "approximate_year": 1914, "notes": "From Dubliners (1914) through Finnegans Wake (1939), Joyce is a central and defining figure of the movement." },
+      "spatial_context": { "via": ["paris-france", "trieste-austria-hungary", "zurich-switzerland"], "notes": "" },
+      "semantic": { "tags": ["modernism"], "keys": ["syncretism", "transmission-of-knowledge"], "keys_provisional": [] },
+      "epistemic": { "curation_status": "ingested", "confidence": 0.99, "evidence_type": "scholarly_consensus", "reasoning": "", "contradictions": [], "epoch": "epoch-2026-03-james-joyce-ulysses-influences" },
+      "description": { "short": "Joyce is not merely a participant in European literary modernism but one of its two or three defining figures.", "detailed": "", "prose_cache_id": null, "prose_angles_covered": [] },
+      "sources": [{ "label": "Britannica — Modernism", "url": "https://www.britannica.com/art/modernism-art" }],
+      "created_at": "2026-03-24T00:00:00Z",
+      "updated_at": "2026-03-24T00:00:00Z"
+    }
+
+  ],
+
+  "provisional_keys": [
+    {
+      "proposed_key": "mythic-method",
+      "description": "The structural use of classical myth as a scaffolding or ironic parallel for modern narrative — a technique in which ancient heroic schema is mapped onto contemporary experience, simultaneously elevating and ironizing the mundane. Coined by T.S. Eliot in his 1923 Dial review of Ulysses.",
+      "candidate_canonical_parents": ["syncretism", "literary-technique"],
+      "status": "provisional",
+      "used_in_nodes": ["ulysses-joyce"],
+      "used_in_edges": ["edge-odyssey-structural-template-for-ulysses", "edge-eliot-defined-mythic-method-in-ulysses"]
+    },
+    {
+      "proposed_key": "free-indirect-discourse",
+      "description": "A narratological technique blending third-person narration with a character's inner voice without quotation marks or explicit attribution (French: style indirect libre). Flaubert's central formal innovation; a direct precursor to stream-of-consciousness narration in Ulysses.",
+      "candidate_canonical_parents": ["literary-technique"],
+      "status": "provisional",
+      "used_in_nodes": ["gustave-flaubert"],
+      "used_in_edges": ["edge-flaubert-influenced-joyce"]
+    },
+    {
+      "proposed_key": "cyclical-history",
+      "description": "The theory that historical time moves through recurring phases or cycles rather than linear progression — associated with Vico's ricorso (ages of gods, heroes, and men) and with the structural logic of Finnegans Wake.",
+      "candidate_canonical_parents": ["natural-philosophy"],
+      "status": "provisional",
+      "used_in_nodes": ["giambattista-vico"],
+      "used_in_edges": ["edge-vico-influenced-joyce"]
+    }
+  ],
+
+  "ingestion_notes": "Primary schema change applied: edge `epistemic` blocks now carry `contradictions: []` as an explicit field; all edges in this batch have been updated accordingly. | Three provisional keys proposed (mythic-method, free-indirect-discourse, cyclical-history) — all are sufficiently distinct and central to Joyce studies to warrant their own canonical handles rather than being collapsed into existing keys. | The Homer node deliberately encodes contested authorship uncertainty; do not flatten to a confident single-person record. | The Vico-to-Ulysses edge is marked at lower strength (0.78) than a Vico-to-Finnegans-Wake edge would be; a follow-on batch for Finnegans Wake should carry a higher-strength connection. | The dublin-1904 node is distinct from a general Dublin geographic node and must not be merged with one; its temporal fields reflect the novel's precise single-day diegetic setting. | Candidates for a follow-on ingestion batch: Oliver St John Gogarty (Buck Mulligan model), Nora Barnacle (biographical anchor), John Henry Newman (prose style influence on Joyce's Catholic formation), Stéphane Mallarmé (primary symbolist source behind Symons), and Stuart Gilbert (curator of the Ulysses schema).",
+
+  "sources_consulted": [
+    { "label": "Richard Ellmann, James Joyce (Oxford UP, rev. ed. 1982)", "url": "https://global.oup.com/academic/product/james-joyce-9780195033816" },
+    { "label": "Stuart Gilbert, James Joyce's Ulysses (Princeton UP, 1930)", "url": "https://press.princeton.edu/books/paperback/9780394700144/james-joyces-ulysses" },
+    { "label": "Mary Reynolds, Joyce and Dante: The Shaping Imagination (Princeton UP, 1981)", "url": "https://press.princeton.edu/books/hardcover/9780691064635/joyce-and-dante" },
+    { "label": "T.S. Eliot, 'Ulysses, Order, and Myth,' The Dial (1923) — Modernism Lab, Yale", "url": "https://modernism.research.yale.edu/wiki/index.php/Ulysses,_Order,_and_Myth" },
+    { "label": "Forrest Read (ed.), Pound/Joyce Letters (New Directions, 1967)", "url": "https://www.ndbooks.com/book/poundjoyce/" },
+    { "label": "The James Joyce Centre, Dublin", "url": "https://jamesjoyce.ie/" },
+    { "label": "Stanford Encyclopedia of Philosophy — multiple entries", "url": "https://plato.stanford.edu/" },
+    { "label": "Encyclopedia Britannica — multiple entries", "url": "https://www.britannica.com/" }
+  ]
+}
