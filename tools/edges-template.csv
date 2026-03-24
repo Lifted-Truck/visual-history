@@ -1,0 +1,7 @@
+id,source,target,connection_class,direction,strength,description_short,description_det,curation_status,confidence,source_quality,epoch,source_url,source_label,approx_year,temporal_notes
+# Leave 'id' blank to auto-generate (e.g. "edge-person-aristotle-biographical-person-plato")
+# connection_class: causal | intellectual | biographical | spatial | temporal | material | analogical | ecological
+# direction: source_to_target | target_to_source | bidirectional | undirected
+# strength: 0.0 – 1.0
+,person-aristotle,person-plato,biographical,source_to_target,0.9,Aristotle studied at Plato's Academy for approximately 20 years starting around 367 BCE.,,canonical,0.92,scholarly_consensus,greek-philosophers,https://en.wikipedia.org/wiki/Aristotle#Plato,Wikipedia,-367,
+,person-aristotle,person-plato,intellectual,bidirectional,0.85,Aristotle's philosophy developed in direct dialogue and critique of Platonic ideas.,,canonical,0.9,scholarly_consensus,greek-philosophers,,,

@@ -18,7 +18,9 @@ const EDGE_COLORS: Record<ConnectionClass, [number, number, number]> = {
   ecological:   [ 60, 180,  80],
 };
 
-export function makeFlowLayer(flows: FlowPath[]) {
+export { EDGE_COLORS };
+
+export function makeFlowLayer(flows: FlowPath[], selectedEdgeId: string | null = null) {
   return new ArcLayer<FlowPath>({
     id: 'flows',
     data: flows,
@@ -27,16 +29,26 @@ export function makeFlowLayer(flows: FlowPath[]) {
     getTargetPosition: (fp) => [fp.target_coords[1], fp.target_coords[0]],
     getSourceColor: (fp) => {
       const [r, g, b] = EDGE_COLORS[fp.edge.connection_class] ?? [200, 200, 200];
-      const alpha = fp.edge.epistemic.curation_status === 'canonical' ? 200 : 110;
+      const selected = fp.edge.id === selectedEdgeId;
+      const alpha = selected ? 255 : fp.edge.epistemic.curation_status === 'canonical' ? 200 : 110;
       return [r, g, b, alpha];
     },
     getTargetColor: (fp) => {
       const [r, g, b] = EDGE_COLORS[fp.edge.connection_class] ?? [200, 200, 200];
-      const alpha = fp.edge.epistemic.curation_status === 'canonical' ? 160 : 80;
+      const selected = fp.edge.id === selectedEdgeId;
+      const alpha = selected ? 220 : fp.edge.epistemic.curation_status === 'canonical' ? 160 : 80;
       return [r, g, b, alpha];
     },
-    getWidth: (fp) => Math.max(1, fp.edge.strength * 4),
+    getWidth: (fp) => {
+      const selected = fp.edge.id === selectedEdgeId;
+      return selected ? Math.max(3, fp.edge.strength * 6) : Math.max(1, fp.edge.strength * 4);
+    },
     widthUnits: 'pixels',
-    pickable: false,
+    pickable: true,
+    updateTriggers: {
+      getSourceColor: [selectedEdgeId],
+      getTargetColor: [selectedEdgeId],
+      getWidth: [selectedEdgeId],
+    },
   });
 }

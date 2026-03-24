@@ -13,7 +13,7 @@ import { subgraphFromGraph, clustersFromGraph, flowPathsFromGraph } from '@/engi
 import { makePointLayers } from './layers/PointLayer';
 import { makeFlowLayer } from './layers/FlowLayer';
 import { makeDensityLayer } from './layers/DensityLayer';
-import type { ChronosNode } from '@/engine/types';
+import type { ChronosNode, FlowPath } from '@/engine/types';
 
 const INITIAL_VIEW_STATE = {
   longitude: 30,
@@ -28,7 +28,7 @@ const INITIAL_VIEW_STATE = {
 const MAP_STYLE = 'https://demotiles.maplibre.org/style.json';
 
 export default function MapView() {
-  const { graph, scope, showDensity, setSelectedNode } = useScopeStore();
+  const { graph, scope, showDensity, selectedEdgeId, setSelectedNode, setSelectedEdge } = useScopeStore();
 
   const { nodes, edges: _edges } = useMemo(
     () => graph ? subgraphFromGraph(graph, scope) : { nodes: [], edges: [] },
@@ -47,20 +47,27 @@ export default function MapView() {
 
   const layers = useMemo(() => [
     ...makePointLayers(nodes),
-    makeFlowLayer(flowData),
+    makeFlowLayer(flowData, selectedEdgeId),
     makeDensityLayer(clusterData, showDensity),
-  ], [nodes, flowData, clusterData, showDensity]);
+  ], [nodes, flowData, clusterData, showDensity, selectedEdgeId]);
 
   const handleClick = useCallback(
     (info: { object?: unknown }) => {
       const obj = info.object;
-      if (obj && typeof obj === 'object' && 'id' in obj && 'node_type' in obj) {
+      if (!obj || typeof obj !== 'object') {
+        setSelectedNode(null);
+        return;
+      }
+      // FlowPath has edge.id — detect by presence of 'edge' key
+      if ('edge' in obj && obj.edge && typeof obj.edge === 'object' && 'id' in (obj.edge as object)) {
+        setSelectedEdge(((obj as FlowPath).edge).id);
+      } else if ('id' in obj && 'node_type' in obj) {
         setSelectedNode((obj as ChronosNode).id);
       } else {
         setSelectedNode(null);
       }
     },
-    [setSelectedNode],
+    [setSelectedNode, setSelectedEdge],
   );
 
   return (
@@ -70,9 +77,15 @@ export default function MapView() {
       layers={layers}
       onClick={handleClick}
       getTooltip={(info: { object?: unknown }) => {
-        const obj = info.object as ChronosNode | null;
-        if (obj?.label) {
-          return { html: `<b>${obj.label}</b><br/><span style="color:#888;font-size:11px">${obj.node_type}</span>` };
+        const obj = info.object;
+        if (!obj || typeof obj !== 'object') return null;
+        if ('edge' in obj) {
+          const fp = obj as FlowPath;
+          return { html: `<b>${fp.edge.connection_class}</b><br/><span style="color:#888;font-size:11px">${fp.edge.id}</span>` };
+        }
+        const node = obj as ChronosNode;
+        if (node?.label) {
+          return { html: `<b>${node.label}</b><br/><span style="color:#888;font-size:11px">${node.node_type}</span>` };
         }
         return null;
       }}

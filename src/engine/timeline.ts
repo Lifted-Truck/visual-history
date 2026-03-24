@@ -19,11 +19,14 @@ import { subgraph } from './graph';
  *   0.0 = fully gradient-faded edges
  */
 const PRECISION_CERTAINTY: Record<string, number> = {
-  exact: 1.0,
-  year: 0.95,
-  decade: 0.7,
-  century: 0.35,
-  ordinal: 0.1,
+  datetime: 1.0,
+  date:     1.0,
+  month:    0.98,
+  year:     0.95,
+  exact:    0.95, // legacy alias for 'year'
+  decade:   0.7,
+  century:  0.35,
+  ordinal:  0.1,
 };
 
 // ── fuzzyPosition ──────────────────────────────────────────────────────────────

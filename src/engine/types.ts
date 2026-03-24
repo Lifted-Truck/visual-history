@@ -23,8 +23,12 @@ export const CurationStatusEnum = z.enum([
 ]);
 export type CurationStatus = z.infer<typeof CurationStatusEnum>;
 
-export const TemporalPrecisionEnum = z.enum(['exact', 'year', 'decade', 'century', 'ordinal']);
+export const TemporalPrecisionEnum = z.enum([
+  'datetime', 'date', 'month', 'year', 'exact', 'decade', 'century', 'ordinal',
+]);
 export type TemporalPrecision = z.infer<typeof TemporalPrecisionEnum>;
+// Note: 'exact' is kept for backward compatibility and treated as 'year'.
+// New sub-year values: 'datetime' (to the minute), 'date' (day), 'month' (month).
 
 export const DisplayModeEnum = z.enum(['exact', 'fuzzy', 'range', 'ordinal']);
 export type DisplayMode = z.infer<typeof DisplayModeEnum>;
@@ -54,6 +58,24 @@ export const FuzzyRangeSchema = z.object({
 });
 export type FuzzyRange = z.infer<typeof FuzzyRangeSchema>;
 
+/**
+ * Sub-year date precision. `year` is kept in sync with TemporalBlock.start
+ * for backward compatibility. month/day/hour/minute are all optional so the
+ * struct doubles as a partial date depending on the precision level.
+ *
+ * BCE years are expressed as negative integers (490 BCE → year: -490).
+ * timezone is an IANA zone string and is only meaningful for datetime precision.
+ */
+export const FullDateSchema = z.object({
+  year:     z.number().int(),
+  month:    z.number().int().min(1).max(12).optional(),
+  day:      z.number().int().min(1).max(31).optional(),
+  hour:     z.number().int().min(0).max(23).optional(),
+  minute:   z.number().int().min(0).max(59).optional(),
+  timezone: z.string().optional(),
+});
+export type FullDate = z.infer<typeof FullDateSchema>;
+
 export const NativeDateSchema = z.object({
   system: z.string(),
   value: z.string(),
@@ -72,6 +94,10 @@ export const TemporalBlockSchema = z.object({
   contested: z.boolean().optional(),
   dating_notes: z.string().optional(),
   display_mode: DisplayModeEnum,
+  /** Sub-year start date. Must be consistent with `start` (same year). */
+  full_date: FullDateSchema.optional(),
+  /** Sub-year end date. Must be consistent with `end` (same year). */
+  full_date_end: FullDateSchema.optional(),
 });
 export type TemporalBlock = z.infer<typeof TemporalBlockSchema>;
 

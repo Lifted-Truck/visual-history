@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chronos — Epoch Builder</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0a0a; color: #bbb; font-family: 'SF Mono', 'Consolas', monospace; font-size: 12px; height: 100vh; display: flex; flex-direction: column; }
+  a { color: #5599dd; }
+
+  /* ── Layout ── */
+  header { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid #1a1a1a; flex-shrink: 0; }
+  header h1 { font-size: 13px; font-weight: 700; color: #e8e8e8; letter-spacing: 0.06em; }
+  .epoch-name { flex: 1; max-width: 280px; background: #161616; border: 1px solid #252525; color: #bbb; padding: 4px 8px; border-radius: 3px; font-family: inherit; font-size: 11px; }
+  .epoch-name::placeholder { color: #333; }
+  .header-btns { display: flex; gap: 6px; margin-left: auto; }
+
+  .workspace { display: flex; flex: 1; overflow: hidden; }
+  .form-panel { width: 380px; flex-shrink: 0; border-right: 1px solid #1a1a1a; overflow-y: auto; display: flex; flex-direction: column; }
+  .items-panel { flex: 1; overflow-y: auto; padding: 12px; }
+
+  /* ── Buttons ── */
+  .btn { padding: 4px 12px; border-radius: 3px; border: 1px solid; cursor: pointer; font-family: inherit; font-size: 11px; transition: opacity 0.1s; }
+  .btn:hover { opacity: 0.8; }
+  .btn-primary { background: #1e3a5f; border-color: #3a6aaf; color: #88bbee; }
+  .btn-accent  { background: #2a1a3a; border-color: #7744aa; color: #aa77dd; }
+  .btn-ghost   { background: none; border-color: #252525; color: #555; }
+  .btn-danger  { background: none; border-color: #442222; color: #883333; padding: 2px 6px; }
+  .btn-add     { margin: 12px; padding: 7px; background: #141414; border: 1px dashed #2a2a2a; color: #555; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 11px; width: calc(100% - 24px); text-align: center; transition: all 0.1s; }
+  .btn-add:hover { border-color: #3a6aaf; color: #5599dd; }
+
+  /* ── Tabs ── */
+  .tabs { display: flex; border-bottom: 1px solid #1a1a1a; flex-shrink: 0; }
+  .tab { flex: 1; padding: 8px; background: none; border: none; border-bottom: 2px solid transparent; color: #444; cursor: pointer; font-family: inherit; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; transition: all 0.1s; }
+  .tab.active { color: #5599dd; border-bottom-color: #3a6aaf; }
+  .tab:hover:not(.active) { color: #777; }
+
+  /* ── Form ── */
+  .form-body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .field { display: flex; flex-direction: column; gap: 3px; }
+  .field label { font-size: 10px; color: #444; text-transform: uppercase; letter-spacing: 0.06em; }
+  .field label .req { color: #883333; }
+  .field-row { display: flex; gap: 8px; }
+  .field-row .field { flex: 1; }
+  input, select, textarea { background: #161616; border: 1px solid #252525; color: #bbb; padding: 4px 7px; border-radius: 3px; font-family: inherit; font-size: 11px; width: 100%; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #3a6aaf; }
+  input[type=number] { -moz-appearance: textfield; }
+  textarea { resize: vertical; min-height: 52px; }
+  select option { background: #161616; }
+  .section-label { font-size: 10px; color: #333; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 0 2px; border-top: 1px solid #151515; margin-top: 4px; }
+  .checkbox-row { display: flex; align-items: center; gap: 6px; color: #555; }
+  .checkbox-row input[type=checkbox] { width: auto; }
+
+  /* ── Items list ── */
+  .items-header { font-size: 10px; color: #333; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .item-card { background: #111; border: 1px solid #1a1a1a; border-radius: 3px; padding: 8px 10px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .item-info { flex: 1; min-width: 0; }
+  .item-label { font-size: 12px; color: #ddd; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .item-meta { font-size: 10px; color: #444; margin-top: 3px; }
+  .item-id { font-size: 10px; color: #333; font-family: monospace; margin-top: 2px; word-break: break-all; }
+  .badge { display: inline-block; padding: 1px 6px; border-radius: 2px; font-size: 9px; margin-right: 4px; }
+  .badge-node { background: #1a2a3a; color: #5599dd; border: 1px solid #2a4a7a; }
+  .badge-edge { background: #2a1a3a; color: #aa77dd; border: 1px solid #5a3a8a; }
+  .empty-state { color: #2a2a2a; text-align: center; padding: 40px 20px; font-size: 11px; }
+
+  /* ── Preview modal ── */
+  .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 100; }
+  .modal-backdrop.open { display: flex; align-items: center; justify-content: center; }
+  .modal { background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 4px; width: 700px; max-width: 90vw; max-height: 80vh; display: flex; flex-direction: column; }
+  .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid #1a1a1a; }
+  .modal-title { font-size: 12px; color: #e8e8e8; font-weight: 600; }
+  .modal-body { overflow-y: auto; flex: 1; }
+  .modal-body pre { padding: 14px; font-size: 11px; color: #8ab; line-height: 1.5; }
+  .modal-footer { padding: 8px 14px; border-top: 1px solid #1a1a1a; display: flex; gap: 8px; justify-content: flex-end; }
+
+  /* ── Error ── */
+  .error-msg { color: #cc5544; font-size: 10px; padding: 4px 0; }
+  .field.error input, .field.error textarea, .field.error select { border-color: #cc4433; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CHRONOS / EPOCH BUILDER</h1>
+  <input class="epoch-name" id="epochName" placeholder="epoch-name (e.g. greek-philosophers)" />
+  <div class="header-btns">
+    <button class="btn btn-ghost" onclick="previewJSON()">Preview</button>
+    <button class="btn btn-accent" onclick="downloadJSON()">Download JSON</button>
+  </div>
+</header>
+
+<div class="workspace">
+  <!-- Form panel -->
+  <div class="form-panel">
+    <div class="tabs">
+      <button class="tab active" id="tab-node" onclick="showTab('node')">Node</button>
+      <button class="tab" id="tab-edge" onclick="showTab('edge')">Edge</button>
+    </div>
+
+    <!-- NODE FORM -->
+    <div id="form-node" class="form-body">
+
+      <div class="field-row">
+        <div class="field" style="flex:2">
+          <label>Label <span class="req">*</span></label>
+          <input id="n_label" oninput="autoNodeId()" placeholder="e.g. Aristotle" />
+        </div>
+        <div class="field" style="flex:1">
+          <label>Type <span class="req">*</span></label>
+          <select id="n_node_type" onchange="autoNodeId()">
+            <option>person</option><option>event</option><option>period</option>
+            <option>place</option><option>work</option><option>concept</option>
+            <option>institution</option><option>technology</option>
+            <option>route</option><option>phenomenon</option><option>dataset</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>ID <span style="color:#333">(auto-generated if blank)</span></label>
+        <input id="n_id" placeholder="person-aristotle" />
+      </div>
+
+      <div class="section-label">Temporal</div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Start year</label>
+          <input id="n_start" type="number" placeholder="-384" />
+        </div>
+        <div class="field">
+          <label>End year</label>
+          <input id="n_end" type="number" placeholder="-322" />
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Precision</label>
+          <select id="n_precision" onchange="toggleDateFields()">
+            <option value="year">year</option>
+            <option value="month">month</option>
+            <option value="date">date</option>
+            <option value="datetime">datetime</option>
+            <option value="decade">decade</option>
+            <option value="century">century</option>
+            <option value="ordinal">ordinal</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Display mode</label>
+          <select id="n_display_mode">
+            <option value="exact">exact</option>
+            <option value="fuzzy">fuzzy</option>
+            <option value="range">range</option>
+            <option value="ordinal">ordinal</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Confidence</label>
+          <input id="n_conf" type="number" min="0" max="1" step="0.05" value="0.8" />
+        </div>
+      </div>
+
+      <!-- Sub-year date fields — shown for month / date / datetime precision -->
+      <div id="subYearFields" style="display:none">
+        <div class="field-row">
+          <div class="field">
+            <label>Month</label>
+            <select id="n_month">
+              <option value="">—</option>
+              <option value="1">January</option><option value="2">February</option>
+              <option value="3">March</option><option value="4">April</option>
+              <option value="5">May</option><option value="6">June</option>
+              <option value="7">July</option><option value="8">August</option>
+              <option value="9">September</option><option value="10">October</option>
+              <option value="11">November</option><option value="12">December</option>
+            </select>
+          </div>
+          <div class="field" id="dayField" style="display:none">
+            <label>Day</label>
+            <input id="n_day" type="number" min="1" max="31" placeholder="1–31" />
+          </div>
+        </div>
+        <div class="field-row" id="timeFields" style="display:none">
+          <div class="field">
+            <label>Hour (0–23)</label>
+            <input id="n_hour" type="number" min="0" max="23" placeholder="14" />
+          </div>
+          <div class="field">
+            <label>Minute (0–59)</label>
+            <input id="n_minute" type="number" min="0" max="59" placeholder="22" />
+          </div>
+          <div class="field">
+            <label>Timezone</label>
+            <input id="n_timezone" placeholder="UTC" />
+          </div>
+        </div>
+        <!-- End date sub-year fields (optional) -->
+        <div class="section-label" style="font-size:9px">End date detail <span style="color:#222">(if different from start)</span></div>
+        <div class="field-row">
+          <div class="field">
+            <label>End month</label>
+            <select id="n_end_month">
+              <option value="">—</option>
+              <option value="1">January</option><option value="2">February</option>
+              <option value="3">March</option><option value="4">April</option>
+              <option value="5">May</option><option value="6">June</option>
+              <option value="7">July</option><option value="8">August</option>
+              <option value="9">September</option><option value="10">October</option>
+              <option value="11">November</option><option value="12">December</option>
+            </select>
+          </div>
+          <div class="field" id="endDayField" style="display:none">
+            <label>End day</label>
+            <input id="n_end_day" type="number" min="1" max="31" placeholder="1–31" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section-label">Spatial</div>
+
+      <div class="checkbox-row" style="margin-bottom:6px">
+        <input type="checkbox" id="n_nocoords" onchange="toggleCoords()" />
+        <label for="n_nocoords" style="text-transform:none;font-size:11px;color:#555">No coordinates / diffuse location</label>
+      </div>
+
+      <div id="coordFields">
+        <div class="field-row">
+          <div class="field">
+            <label>Latitude</label>
+            <input id="n_lat" type="number" step="0.0001" placeholder="37.9755" />
+          </div>
+          <div class="field">
+            <label>Longitude</label>
+            <input id="n_lon" type="number" step="0.0001" placeholder="23.7348" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Place label</label>
+            <input id="n_place_label" placeholder="Athens" />
+          </div>
+          <div class="field">
+            <label>Modern equivalent</label>
+            <input id="n_modern_equiv" placeholder="Athens, Greece" />
+          </div>
+        </div>
+      </div>
+
+      <div id="noCoordReason" style="display:none">
+        <div class="field">
+          <label>No-coords reason</label>
+          <input id="n_nocoords_reason" placeholder="Mythological location" />
+        </div>
+      </div>
+
+      <div class="section-label">Description</div>
+
+      <div class="field">
+        <label>Short <span class="req">*</span></label>
+        <textarea id="n_desc_short" rows="2" placeholder="1–2 sentence summary."></textarea>
+      </div>
+      <div class="field">
+        <label>Medium <span style="color:#333">(optional)</span></label>
+        <textarea id="n_desc_medium" rows="3" placeholder="Paragraph description."></textarea>
+      </div>
+
+      <div class="section-label">Epistemic</div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Curation status</label>
+          <select id="n_status">
+            <option>canonical</option><option>ingested</option><option>provisional</option>
+            <option>inferred</option><option>contested</option><option>deprecated</option><option>stub</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Overall confidence</label>
+          <input id="n_conf_overall" type="number" min="0" max="1" step="0.05" value="0.8" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Source quality</label>
+        <select id="n_quality">
+          <option value="scholarly_consensus">scholarly consensus</option>
+          <option value="primary_source">primary source</option>
+          <option value="scholarly_debate">scholarly debate</option>
+          <option value="popular_synthesis">popular synthesis</option>
+          <option value="ai_inference">ai inference</option>
+          <option value="unverified">unverified</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Tags <span style="color:#333">(comma-separated)</span></label>
+        <input id="n_tags" placeholder="philosopher, ancient-greece" />
+      </div>
+
+      <div class="section-label">Source <span style="color:#333">(optional)</span></div>
+
+      <div class="field-row">
+        <div class="field" style="flex:2">
+          <label>URL</label>
+          <input id="n_src_url" type="url" placeholder="https://..." />
+        </div>
+        <div class="field" style="flex:1">
+          <label>Label</label>
+          <input id="n_src_label" placeholder="Wikipedia" />
+        </div>
+      </div>
+
+      <div id="n_error" class="error-msg" style="display:none"></div>
+      <button class="btn-add" onclick="addNode()">+ Add Node</button>
+    </div>
+
+    <!-- EDGE FORM -->
+    <div id="form-edge" class="form-body" style="display:none">
+
+      <div class="field-row">
+        <div class="field">
+          <label>Source node ID <span class="req">*</span></label>
+          <input id="e_source" list="nodeIdList" placeholder="person-aristotle" />
+        </div>
+        <div class="field">
+          <label>Target node ID <span class="req">*</span></label>
+          <input id="e_target" list="nodeIdList" placeholder="person-plato" />
+        </div>
+      </div>
+      <datalist id="nodeIdList"></datalist>
+
+      <div class="field">
+        <label>ID <span style="color:#333">(auto-generated if blank)</span></label>
+        <input id="e_id" placeholder="edge-aristotle-to-plato" />
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Connection class <span class="req">*</span></label>
+          <select id="e_class">
+            <option>intellectual</option><option>causal</option><option>biographical</option>
+            <option>spatial</option><option>temporal</option><option>material</option>
+            <option>analogical</option><option>ecological</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Direction</label>
+          <select id="e_direction">
+            <option value="source_to_target">→ source to target</option>
+            <option value="target_to_source">← target to source</option>
+            <option value="bidirectional">↔ bidirectional</option>
+            <option value="undirected">— undirected</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Strength (0 – 1)</label>
+        <input id="e_strength" type="number" min="0" max="1" step="0.05" value="0.7" />
+      </div>
+
+      <div class="section-label">Description</div>
+
+      <div class="field">
+        <label>Short <span class="req">*</span></label>
+        <textarea id="e_desc_short" rows="2" placeholder="Brief description of this connection."></textarea>
+      </div>
+      <div class="field">
+        <label>Detailed <span style="color:#333">(optional)</span></label>
+        <textarea id="e_desc_detailed" rows="3"></textarea>
+      </div>
+
+      <div class="section-label">Epistemic</div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Curation status</label>
+          <select id="e_status">
+            <option>canonical</option><option>ingested</option><option>provisional</option>
+            <option>inferred</option><option>contested</option><option>deprecated</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Confidence</label>
+          <input id="e_conf" type="number" min="0" max="1" step="0.05" value="0.8" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Source quality</label>
+        <select id="e_quality">
+          <option value="scholarly_consensus">scholarly consensus</option>
+          <option value="primary_source">primary source</option>
+          <option value="scholarly_debate">scholarly debate</option>
+          <option value="popular_synthesis">popular synthesis</option>
+          <option value="ai_inference">ai inference</option>
+          <option value="unverified">unverified</option>
+        </select>
+      </div>
+
+      <div class="section-label">Temporal context <span style="color:#333">(optional)</span></div>
+      <div class="field-row">
+        <div class="field">
+          <label>Approximate year</label>
+          <input id="e_approx_year" type="number" placeholder="-347" />
+        </div>
+        <div class="field">
+          <label>Notes</label>
+          <input id="e_temporal_notes" placeholder="When this connection occurred" />
+        </div>
+      </div>
+
+      <div class="section-label">Source <span style="color:#333">(optional)</span></div>
+      <div class="field-row">
+        <div class="field" style="flex:2">
+          <label>URL</label>
+          <input id="e_src_url" type="url" placeholder="https://..." />
+        </div>
+        <div class="field" style="flex:1">
+          <label>Label</label>
+          <input id="e_src_label" placeholder="Wikipedia" />
+        </div>
+      </div>
+
+      <div id="e_error" class="error-msg" style="display:none"></div>
+      <button class="btn-add" onclick="addEdge()">+ Add Edge</button>
+    </div>
+  </div>
+
+  <!-- Items panel -->
+  <div class="items-panel">
+    <div class="items-header" id="itemsHeader">No items yet</div>
+    <div id="itemsList">
+      <div class="empty-state">
+        Add nodes and edges using the form on the left.<br>
+        Download the epoch JSON when done, then run:<br><br>
+        <code>npx tsx scripts/stage-epoch.ts &lt;file&gt;</code><br>
+        <code>npx tsx scripts/compile-graph.ts</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Preview modal -->
+<div class="modal-backdrop" id="previewModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">Epoch JSON Preview</span>
+      <button class="btn btn-ghost" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <pre id="previewContent"></pre>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="copyJSON()">Copy to clipboard</button>
+      <button class="btn btn-primary" onclick="downloadJSON()">Download</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── State ───────────────────────────────────────────────────────────────────
+const state = { nodes: [], edges: [] };
+
+// ── Utilities ───────────────────────────────────────────────────────────────
+function slugify(s) {
+  return s.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function now() {
+  return new Date().toISOString();
+}
+
+function val(id) {
+  return document.getElementById(id)?.value?.trim() ?? '';
+}
+
+function numVal(id, fallback) {
+  const v = val(id);
+  if (v === '') return fallback;
+  const n = parseFloat(v);
+  return isNaN(n) ? fallback : n;
+}
+
+function intVal(id) {
+  const v = val(id);
+  if (v === '') return undefined;
+  const n = parseInt(v, 10);
+  return isNaN(n) ? undefined : n;
+}
+
+function checked(id) {
+  return document.getElementById(id)?.checked ?? false;
+}
+
+// ── Tab switching ────────────────────────────────────────────────────────────
+function showTab(tab) {
+  document.getElementById('form-node').style.display = tab === 'node' ? '' : 'none';
+  document.getElementById('form-edge').style.display = tab === 'edge' ? '' : 'none';
+  document.getElementById('tab-node').classList.toggle('active', tab === 'node');
+  document.getElementById('tab-edge').classList.toggle('active', tab === 'edge');
+}
+
+// ── Auto-ID ──────────────────────────────────────────────────────────────────
+function autoNodeId() {
+  const label = val('n_label');
+  const type = val('n_node_type');
+  if (label && type) {
+    document.getElementById('n_id').placeholder = `${type}-${slugify(label)}`;
+  }
+}
+
+// ── Date field visibility ─────────────────────────────────────────────────────
+function toggleDateFields() {
+  const p = val('n_precision');
+  const sub = p === 'month' || p === 'date' || p === 'datetime';
+  const hasDay = p === 'date' || p === 'datetime';
+  const hasTime = p === 'datetime';
+  document.getElementById('subYearFields').style.display = sub ? '' : 'none';
+  document.getElementById('dayField').style.display = hasDay ? '' : 'none';
+  document.getElementById('endDayField').style.display = hasDay ? '' : 'none';
+  document.getElementById('timeFields').style.display = hasTime ? '' : 'none';
+}
+
+// ── Coord toggle ─────────────────────────────────────────────────────────────
+function toggleCoords() {
+  const noCoords = checked('n_nocoords');
+  document.getElementById('coordFields').style.display = noCoords ? 'none' : '';
+  document.getElementById('noCoordReason').style.display = noCoords ? '' : 'none';
+}
+
+// ── Validation ───────────────────────────────────────────────────────────────
+function showError(id, msg) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.style.display = msg ? 'block' : 'none';
+}
+
+// ── Build node object ────────────────────────────────────────────────────────
+function buildNode() {
+  const label = val('n_label');
+  const nodeType = val('n_node_type');
+  if (!label) { showError('n_error', 'Label is required.'); return null; }
+  if (!val('n_desc_short')) { showError('n_error', 'Short description is required.'); return null; }
+  showError('n_error', '');
+
+  const id = val('n_id') || `${nodeType}-${slugify(label)}`;
+  const noCoords = checked('n_nocoords');
+  const startYear = intVal('n_start');
+  const endYear = intVal('n_end');
+  const precision = val('n_precision') || 'year';
+  const displayMode = val('n_display_mode') || 'exact';
+
+  let temporal = {
+    precision,
+    confidence: numVal('n_conf', 0.8),
+    display_mode: displayMode,
+  };
+  if (startYear !== undefined) temporal.start = startYear;
+  if (endYear !== undefined) temporal.end = endYear;
+
+  // Sub-year full_date
+  if ((precision === 'month' || precision === 'date' || precision === 'datetime') && startYear !== undefined) {
+    const month = parseInt(val('n_month'), 10) || undefined;
+    const day = parseInt(val('n_day'), 10) || undefined;
+    const hour = parseInt(val('n_hour'), 10);
+    const minute = parseInt(val('n_minute'), 10);
+    const timezone = val('n_timezone') || undefined;
+    const fd = { year: startYear };
+    if (month) fd.month = month;
+    if (day) fd.day = day;
+    if (!isNaN(hour)) fd.hour = hour;
+    if (!isNaN(minute)) fd.minute = minute;
+    if (timezone) fd.timezone = timezone;
+    temporal.full_date = fd;
+    // End sub-date (only if end year differs or end month is set)
+    const endMonth = parseInt(val('n_end_month'), 10) || undefined;
+    const endDay = parseInt(val('n_end_day'), 10) || undefined;
+    if (endMonth || endDay) {
+      const fde = { year: endYear ?? startYear };
+      if (endMonth) fde.month = endMonth;
+      if (endDay) fde.day = endDay;
+      temporal.full_date_end = fde;
+    }
+  }
+
+  let spatial = { spatial_mode: noCoords ? 'diffuse' : 'point', no_coordinates: noCoords };
+  if (noCoords) {
+    const reason = val('n_nocoords_reason');
+    if (reason) spatial.no_coordinates_reason = reason;
+  } else {
+    const lat = numVal('n_lat', undefined);
+    const lon = numVal('n_lon', undefined);
+    if (lat !== undefined && lon !== undefined) {
+      spatial.primary = {
+        lat, lon,
+        precision: 'city',
+        confidence: 0.8,
+      };
+      const placeLabel = val('n_place_label');
+      const modernEquiv = val('n_modern_equiv');
+      if (placeLabel) spatial.primary.place_label = placeLabel;
+      if (modernEquiv) spatial.primary.modern_equivalent = modernEquiv;
+    } else {
+      spatial.no_coordinates = true;
+      spatial.spatial_mode = 'diffuse';
+    }
+  }
+
+  const descShort = val('n_desc_short');
+  const descMedium = val('n_desc_medium');
+  const description = { short: descShort };
+  if (descMedium) description.medium = descMedium;
+
+  const tagsRaw = val('n_tags');
+  const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim()).filter(Boolean) : [];
+
+  const epochName = val('epochName') || 'unnamed-epoch';
+
+  const sources = [];
+  const srcUrl = val('n_src_url');
+  const srcLabel = val('n_src_label');
+  if (srcUrl || srcLabel) {
+    sources.push({ label: srcLabel || srcUrl, url: srcUrl || '', type: 'url' });
+  }
+
+  return {
+    id,
+    schema_version: '1.0',
+    node_type: nodeType,
+    label,
+    temporal,
+    spatial,
+    semantic: { tags, keys: [], description },
+    epistemic: {
+      curation_status: val('n_status') || 'ingested',
+      confidence_overall: numVal('n_conf_overall', 0.8),
+      source_quality: val('n_quality') || 'scholarly_consensus',
+      epoch: epochName,
+    },
+    sources,
+    created_at: now(),
+    updated_at: now(),
+  };
+}
+
+// ── Build edge object ────────────────────────────────────────────────────────
+function buildEdge() {
+  const source = val('e_source');
+  const target = val('e_target');
+  const descShort = val('e_desc_short');
+  if (!source) { showError('e_error', 'Source node ID is required.'); return null; }
+  if (!target) { showError('e_error', 'Target node ID is required.'); return null; }
+  if (!descShort) { showError('e_error', 'Short description is required.'); return null; }
+  showError('e_error', '');
+
+  const connClass = val('e_class') || 'intellectual';
+  const id = val('e_id') || `edge-${slugify(source)}-${slugify(connClass)}-${slugify(target)}`;
+
+  const epochName = val('epochName') || 'unnamed-epoch';
+
+  let temporal_context = undefined;
+  const approxYear = intVal('e_approx_year');
+  const temporalNotes = val('e_temporal_notes');
+  if (approxYear !== undefined || temporalNotes) {
+    temporal_context = {};
+    if (approxYear !== undefined) temporal_context.approximate_year = approxYear;
+    if (temporalNotes) temporal_context.notes = temporalNotes;
+  }
+
+  const sources = [];
+  const srcUrl = val('e_src_url');
+  const srcLabel = val('e_src_label');
+  if (srcUrl || srcLabel) {
+    sources.push({ label: srcLabel || srcUrl, url: srcUrl || '', type: 'url' });
+  }
+
+  const detailedDesc = val('e_desc_detailed');
+  const description = { short: descShort };
+  if (detailedDesc) description.detailed = detailedDesc;
+
+  const edge = {
+    id,
+    schema_version: '1.0',
+    source,
+    target,
+    connection_class: connClass,
+    direction: val('e_direction') || 'source_to_target',
+    strength: numVal('e_strength', 0.7),
+    description,
+    epistemic: {
+      curation_status: val('e_status') || 'ingested',
+      confidence: numVal('e_conf', 0.8),
+      source_quality: val('e_quality') || 'scholarly_consensus',
+      epoch: epochName,
+    },
+    sources,
+    created_at: now(),
+    updated_at: now(),
+  };
+  if (temporal_context) edge.temporal_context = temporal_context;
+  return edge;
+}
+
+// ── Add items ────────────────────────────────────────────────────────────────
+function addNode() {
+  const node = buildNode();
+  if (!node) return;
+  state.nodes.push(node);
+  renderItems();
+  updateNodeIdList();
+  clearNodeForm();
+}
+
+function addEdge() {
+  const edge = buildEdge();
+  if (!edge) return;
+  state.edges.push(edge);
+  renderItems();
+  clearEdgeForm();
+}
+
+function removeNode(id) {
+  state.nodes = state.nodes.filter(n => n.id !== id);
+  renderItems();
+  updateNodeIdList();
+}
+
+function removeEdge(id) {
+  state.edges = state.edges.filter(e => e.id !== id);
+  renderItems();
+}
+
+// ── Render items ─────────────────────────────────────────────────────────────
+function renderItems() {
+  const list = document.getElementById('itemsList');
+  const total = state.nodes.length + state.edges.length;
+  document.getElementById('itemsHeader').textContent =
+    total === 0 ? 'No items yet' : `${state.nodes.length} node${state.nodes.length !== 1 ? 's' : ''}, ${state.edges.length} edge${state.edges.length !== 1 ? 's' : ''}`;
+
+  if (total === 0) {
+    list.innerHTML = '<div class="empty-state">Add nodes and edges using the form on the left.<br>Download the epoch JSON when done, then run:<br><br><code>npx tsx scripts/stage-epoch.ts &lt;file&gt;</code><br><code>npx tsx scripts/compile-graph.ts</code></div>';
+    return;
+  }
+
+  const COLOR = {
+    person:'#ffa040', event:'#dc5050', period:'#6490ff', place:'#50c878',
+    work:'#c878dc', concept:'#ffdc3c', institution:'#a07850', technology:'#3cc8dc',
+    route:'#b4b43c', phenomenon:'#a050c8', dataset:'#787878',
+  };
+
+  const EDGE_COLOR = {
+    causal:'#ff643c', intellectual:'#6490ff', biographical:'#ffc83c',
+    spatial:'#50c878', temporal:'#c8c8c8', material:'#c87850',
+    analogical:'#c864dc', ecological:'#3cb450',
+  };
+
+  let html = '';
+
+  for (const node of state.nodes) {
+    const c = COLOR[node.node_type] || '#888';
+    const startStr = node.temporal.start !== undefined ? (node.temporal.start < 0 ? `${Math.abs(node.temporal.start)} BCE` : `${node.temporal.start} CE`) : '';
+    const endStr = node.temporal.end !== undefined && node.temporal.end !== node.temporal.start ? (node.temporal.end < 0 ? `–${Math.abs(node.temporal.end)} BCE` : `–${node.temporal.end} CE`) : '';
+    html += `<div class="item-card">
+      <div class="item-info">
+        <div class="item-label">${esc(node.label)}</div>
+        <div class="item-meta">
+          <span class="badge badge-node" style="color:${c};border-color:${c}44;background:${c}11">${node.node_type}</span>
+          ${startStr}${endStr}
+        </div>
+        <div class="item-id">${esc(node.id)}</div>
+      </div>
+      <button class="btn btn-danger" onclick="removeNode('${esc(node.id)}')">✕</button>
+    </div>`;
+  }
+
+  for (const edge of state.edges) {
+    const c = EDGE_COLOR[edge.connection_class] || '#888';
+    const dir = { source_to_target:'→', target_to_source:'←', bidirectional:'↔', undirected:'—' };
+    html += `<div class="item-card">
+      <div class="item-info">
+        <div class="item-label">${esc(edge.source)} ${dir[edge.direction]||'→'} ${esc(edge.target)}</div>
+        <div class="item-meta">
+          <span class="badge badge-edge" style="color:${c};border-color:${c}44;background:${c}11">${edge.connection_class}</span>
+          strength ${Math.round(edge.strength * 100)}%
+        </div>
+        <div class="item-id">${esc(edge.id)}</div>
+      </div>
+      <button class="btn btn-danger" onclick="removeEdge('${esc(edge.id)}')">✕</button>
+    </div>`;
+  }
+
+  list.innerHTML = html;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// ── Datalist for node IDs in edge form ──────────────────────────────────────
+function updateNodeIdList() {
+  const dl = document.getElementById('nodeIdList');
+  dl.innerHTML = state.nodes.map(n => `<option value="${esc(n.id)}">${esc(n.label)}</option>`).join('');
+}
+
+// ── Clear forms ──────────────────────────────────────────────────────────────
+function clearNodeForm() {
+  ['n_label','n_id','n_start','n_end','n_desc_short','n_desc_medium','n_tags','n_src_url','n_src_label','n_place_label','n_modern_equiv','n_lat','n_lon','n_nocoords_reason'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  document.getElementById('n_conf').value = '0.8';
+  document.getElementById('n_conf_overall').value = '0.8';
+  document.getElementById('n_nocoords').checked = false;
+  toggleCoords();
+}
+
+function clearEdgeForm() {
+  ['e_source','e_target','e_id','e_desc_short','e_desc_detailed','e_src_url','e_src_label','e_approx_year','e_temporal_notes'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  document.getElementById('e_conf').value = '0.8';
+  document.getElementById('e_strength').value = '0.7';
+}
+
+// ── JSON output ──────────────────────────────────────────────────────────────
+function buildEpoch() {
+  return { nodes: state.nodes, edges: state.edges };
+}
+
+function previewJSON() {
+  document.getElementById('previewContent').textContent = JSON.stringify(buildEpoch(), null, 2);
+  document.getElementById('previewModal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('previewModal').classList.remove('open');
+}
+
+function copyJSON() {
+  navigator.clipboard.writeText(JSON.stringify(buildEpoch(), null, 2));
+}
+
+function downloadJSON() {
+  const epochName = val('epochName') || 'epoch';
+  const blob = new Blob([JSON.stringify(buildEpoch(), null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${slugify(epochName)}.json`;
+  a.click();
+}
+
+// Close modal on backdrop click
+document.getElementById('previewModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
+</body>
+</html>

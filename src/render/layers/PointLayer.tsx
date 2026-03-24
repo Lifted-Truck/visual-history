@@ -9,8 +9,9 @@
  *   decade / century → filled circle + outer halo ring (fuzzy)
  *   ordinal / stub → dim filled circle, very low opacity
  */
-import { ScatterplotLayer } from 'deck.gl';
+import { ScatterplotLayer, IconLayer } from 'deck.gl';
 import type { ChronosNode, NodeType } from '@/engine/types';
+import { ICON_URLS } from './iconAtlas';
 
 export const NODE_TYPE_COLORS: Record<NodeType, [number, number, number]> = {
   person:      [255, 160,  64],
@@ -105,6 +106,32 @@ export function makePointLayers(nodes: ChronosNode[]) {
       getRadius: 4,
       radiusUnits: 'pixels',
       pickable: true,
+    }));
+  }
+
+  // Symbol overlay — rendered on crisp + fuzzy nodes (not on dim/stub)
+  const symbolNodes = [...crisp, ...fuzzy];
+  if (symbolNodes.length > 0) {
+    layers.push(new IconLayer<ChronosNode>({
+      id: 'symbols',
+      data: symbolNodes,
+      // Auto-atlas mode: getIcon returns a descriptor object; deck.gl caches by URL
+      getIcon: (n) => ({
+        url: ICON_URLS[n.node_type],
+        width: 32,
+        height: 32,
+        anchorX: 16,
+        anchorY: 16,
+        mask: true,
+      }),
+      getPosition: getPos,
+      getSize: 18,
+      sizeUnits: 'pixels',
+      getColor: (n) => {
+        const [r, g, b] = NODE_TYPE_COLORS[n.node_type] ?? [200, 200, 200];
+        return [r, g, b, 220];
+      },
+      pickable: false,
     }));
   }
 

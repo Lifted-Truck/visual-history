@@ -148,12 +148,60 @@ You are NOT the primary interface or visualizer. You are a **research and packag
 |-------|------|-------|
 | `start` | integer | Year as integer; BCE years are negative |
 | `end` | integer or null | null if ongoing or unknown |
-| `precision` | enum | `"exact"`, `"year"`, `"decade"`, `"century"`, `"ordinal"` |
+| `precision` | enum | See precision table below |
 | `confidence` | float 0–1 | Your confidence in the stated dates |
 | `fuzzy_range` | object | `earliest` and `latest` plausible bounds |
 | `ordinal_constraints` | array | Relative constraints when absolute dates unavailable |
 | `display_mode` | enum | `"exact"`, `"fuzzy"`, `"range"`, `"ordinal"` — tells the renderer how to display |
 | `contested` | boolean | Set true if dates are subject to active scholarly dispute |
+| `full_date` | object | Sub-year start date — see below |
+| `full_date_end` | object | Sub-year end date — only needed when end detail differs from start |
+
+#### Precision Values
+
+| Value | Resolution | When to use |
+|-------|-----------|-------------|
+| `"datetime"` | minute | Modern events with a known time (e.g. moon landing, 20:17 UTC 20 Jul 1969) |
+| `"date"` | day | Events with a known calendar date (e.g. Battle of Marathon, 12 Sep 490 BCE) |
+| `"month"` | month | Events known to month but not day |
+| `"year"` | year | Standard — most ancient/medieval nodes |
+| `"decade"` | decade | Approximate decade-level knowledge |
+| `"century"` | century | Rough century-level placement |
+| `"ordinal"` | relative | No absolute date; use `ordinal_constraints` |
+
+#### Sub-year dates: `full_date` and `full_date_end`
+
+Use these when `precision` is `"datetime"`, `"date"`, or `"month"`. The `start`/`end` integer year fields must still be populated (they drive the timeline scrubber); `full_date` provides the finer resolution shown in the detail panel.
+
+```json
+"temporal": {
+  "start": -490,
+  "end": -490,
+  "precision": "date",
+  "confidence": 0.9,
+  "display_mode": "exact",
+  "full_date": {
+    "year": -490,
+    "month": 9,
+    "day": 12
+  }
+}
+```
+
+For timed events, add `hour`, `minute`, and `timezone` (IANA zone string, e.g. `"UTC"`, `"America/New_York"`):
+
+```json
+"full_date": {
+  "year": 1969,
+  "month": 7,
+  "day": 20,
+  "hour": 20,
+  "minute": 17,
+  "timezone": "UTC"
+}
+```
+
+BCE years are expressed as negative integers (`490 BCE → year: -490`). Do **not** use ISO 8601 astronomical year numbering.
 
 **For nodes with no reliable dates:** set `precision: "ordinal"`, populate `ordinal_constraints`, and set `display_mode: "ordinal"`. Do NOT invent years.
 

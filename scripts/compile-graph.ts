@@ -107,13 +107,9 @@ function main(): void {
   for (const edge of edgeMap.values()) {
     if (!adjacency.has(edge.source)) adjacency.set(edge.source, []);
     if (!adjacency.has(edge.target)) adjacency.set(edge.target, []);
+    // Add every edge to both endpoints so neighbours are reachable from either side
     adjacency.get(edge.source)!.push(edge.id);
-
-    // Add reverse direction entry so undirected/bidirectional edges are traversable both ways
-    const dir = (edge as Record<string, unknown>)['direction'];
-    if (dir === 'bidirectional' || dir === 'undirected') {
-      adjacency.get(edge.target)!.push(edge.id);
-    }
+    adjacency.get(edge.target)!.push(edge.id);
   }
 
   const nodesObj: Record<string, NodeLike> = {};

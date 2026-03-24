@@ -40,7 +40,7 @@
         },
         "precision": {
           "type": "string",
-          "enum": ["exact", "year", "decade", "century", "ordinal"]
+          "enum": ["datetime", "date", "month", "year", "exact", "decade", "century", "ordinal"]
         },
         "confidence": {
           "type": "number",
@@ -94,6 +94,34 @@
         "display_mode": {
           "type": "string",
           "enum": ["exact", "fuzzy", "range", "ordinal"]
+        },
+        "full_date": {
+          "type": "object",
+          "description": "Sub-year start date. BCE years are negative integers.",
+          "required": ["year"],
+          "additionalProperties": false,
+          "properties": {
+            "year":     { "type": "integer" },
+            "month":    { "type": "integer", "minimum": 1, "maximum": 12 },
+            "day":      { "type": "integer", "minimum": 1, "maximum": 31 },
+            "hour":     { "type": "integer", "minimum": 0, "maximum": 23 },
+            "minute":   { "type": "integer", "minimum": 0, "maximum": 59 },
+            "timezone": { "type": "string" }
+          }
+        },
+        "full_date_end": {
+          "type": "object",
+          "description": "Sub-year end date. Only needed when end precision is finer than year.",
+          "required": ["year"],
+          "additionalProperties": false,
+          "properties": {
+            "year":     { "type": "integer" },
+            "month":    { "type": "integer", "minimum": 1, "maximum": 12 },
+            "day":      { "type": "integer", "minimum": 1, "maximum": 31 },
+            "hour":     { "type": "integer", "minimum": 0, "maximum": 23 },
+            "minute":   { "type": "integer", "minimum": 0, "maximum": 59 },
+            "timezone": { "type": "string" }
+          }
         }
       }
     },

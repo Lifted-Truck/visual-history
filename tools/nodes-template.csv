@@ -1,0 +1,10 @@
+id,label,node_type,start_year,end_year,precision,confidence,display_mode,start_date,end_date,lat,lon,spatial_precision,place_label,modern_equivalent,description_short,description_med,tags,curation_status,confidence_overall,source_quality,epoch,source_url,source_label
+# Leave 'id' blank to auto-generate from node_type + label (e.g. "person-aristotle")
+# Negative years = BCE. precision: datetime | date | month | year | decade | century | ordinal
+# start_date / end_date format: YYYY-MM-DD or YYYY-MM-DDTHH:MM  (negative year = BCE)
+#   examples: -490-09-12   1453-05-29T10:00   -44-03-15   1969-07-20T20:17
+# Leave lat/lon blank for diffuse/non-located nodes. Quote comma-separated tags: "tag1,tag2"
+,Aristotle,person,-384,-322,year,0.95,exact,,,37.9755,23.7348,city,Athens,Athens Greece,Ancient Greek philosopher; student of Plato and tutor of Alexander the Great.,Aristotle founded the Lyceum and wrote on logic physics biology ethics politics and rhetoric.,"philosopher,ancient-greece,peripatetic",canonical,0.95,scholarly_consensus,greek-philosophers,https://en.wikipedia.org/wiki/Aristotle,Wikipedia
+,Plato,person,-428,-348,year,0.9,exact,,,37.9755,23.7348,city,Athens,Athens Greece,Athenian philosopher and mathematician; founder of the Academy.,Plato's dialogues are foundational texts of Western philosophy.,"philosopher,ancient-greece,academy",canonical,0.92,scholarly_consensus,greek-philosophers,https://en.wikipedia.org/wiki/Plato,Wikipedia
+# Example with full date precision (Battle of Marathon):
+,Battle of Marathon,event,-490,-490,date,0.9,exact,-490-09-12,,-38.15,24.02,city,Marathon,Marathon Greece,Athenian victory over the Persian invasion force at the coastal plain of Marathon.,,battle marathon persia athens,canonical,0.9,scholarly_consensus,greco-persian-wars,https://en.wikipedia.org/wiki/Battle_of_Marathon,Wikipedia

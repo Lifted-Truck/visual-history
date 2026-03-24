@@ -1,8 +1,10 @@
 /**
  * ScopePanel — Filter and activation controls.
  * All changes write directly to the Zustand scope store.
+ * Time range inputs are debounced (350 ms) to avoid recomputing the
+ * subgraph on every keystroke.
  */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useScopeStore } from '@/state/scope-store';
 import type { NodeType, ConnectionClass } from '@/engine/types';
 
@@ -35,6 +37,39 @@ const chip = (active: boolean, accent: string): React.CSSProperties => ({
   color: active ? accent + 'cc' : '#444',
   transition: 'all 0.1s',
 });
+
+function DebouncedYearInput({
+  value,
+  onChange,
+  style,
+}: {
+  value: number;
+  onChange: (v: number) => void;
+  style?: React.CSSProperties;
+}) {
+  const [local, setLocal] = useState(String(value));
+
+  // Sync local display when external scope changes (e.g. scrubber)
+  useEffect(() => {
+    setLocal(String(value));
+  }, [value]);
+
+  useEffect(() => {
+    const parsed = parseInt(local, 10);
+    if (isNaN(parsed) || parsed === value) return;
+    const id = setTimeout(() => onChange(parsed), 350);
+    return () => clearTimeout(id);
+  }, [local]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <input
+      type="number"
+      value={local}
+      onChange={e => setLocal(e.target.value)}
+      style={style}
+    />
+  );
+}
 
 export default function ScopePanel() {
   const { scope, updateScope, showDensity, toggleDensity } = useScopeStore();
@@ -71,17 +106,15 @@ export default function ScopePanel() {
       <div style={{ marginBottom: 12 }}>
         <span style={label}>Time range</span>
         <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
-          <input
-            type="number"
+          <DebouncedYearInput
             value={scope.time_range[0]}
-            onChange={e => updateScope({ time_range: [+e.target.value, scope.time_range[1]] })}
+            onChange={v => updateScope({ time_range: [v, scope.time_range[1]] })}
             style={input}
           />
           <span style={{ color: '#333' }}>—</span>
-          <input
-            type="number"
+          <DebouncedYearInput
             value={scope.time_range[1]}
-            onChange={e => updateScope({ time_range: [scope.time_range[0], +e.target.value] })}
+            onChange={v => updateScope({ time_range: [scope.time_range[0], v] })}
             style={input}
           />
         </div>

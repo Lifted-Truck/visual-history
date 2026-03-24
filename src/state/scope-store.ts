@@ -29,11 +29,13 @@ interface ScopeStore {
   graph: RuntimeGraph | null;
   scope: Scope;
   selectedNodeId: string | null;
+  selectedEdgeId: string | null;
   showDensity: boolean;
   loadGraph: () => Promise<void>;
   setScope: (scope: Scope) => void;
   updateScope: (partial: Partial<Scope>) => void;
   setSelectedNode: (id: string | null) => void;
+  setSelectedEdge: (id: string | null) => void;
   toggleDensity: () => void;
 }
 
@@ -41,6 +43,7 @@ export const useScopeStore = create<ScopeStore>((set) => ({
   graph: null,
   scope: DEFAULT_SCOPE,
   selectedNodeId: null,
+  selectedEdgeId: null,
   showDensity: false,
 
   loadGraph: async () => {
@@ -53,7 +56,9 @@ export const useScopeStore = create<ScopeStore>((set) => ({
   updateScope: (partial) =>
     set((state) => ({ scope: { ...state.scope, ...partial } })),
 
-  setSelectedNode: (id) => set({ selectedNodeId: id }),
+  setSelectedNode: (id) => set({ selectedNodeId: id, selectedEdgeId: null }),
+
+  setSelectedEdge: (id) => set({ selectedEdgeId: id, selectedNodeId: null }),
 
   toggleDensity: () => set((state) => ({ showDensity: !state.showDensity })),
 }));
